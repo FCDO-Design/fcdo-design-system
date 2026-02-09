@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FCDO Design System - FCDO Frontend CSS
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-xl">Get Started</span>
+    <h1 class="govuk-heading-xl">FCDO Frontend CSS</h1>
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">FCDO Frontend CSS</h1>
+  <p class="govuk-body">To use the CSS from FCDO Frontend include the compiled CSS file directly in your HTML:</p>
+
+  <pre class="govuk-!-font-size-16"><code>&lt;link rel="stylesheet" href="/assets/css/govuk-frontend-5.13.0.min.css"&gt;</code></pre>
+  <pre class="govuk-!-font-size-16"><code>&lt;link rel="stylesheet" href="/assets/css/fcdo-frontend.css"&gt;</code></pre>
+
+  <h2 class="govuk-heading-m">Use components</h2>
+        <p class="govuk-body">Once installed, add components into your HTML. For example:</p>
+        <pre class="govuk-!-font-size-16"><code>&lt;button class="fcdo-button"&gt;Start now&lt;/button&gt;</code></pre>
+{% endblock %}

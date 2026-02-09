@@ -1,0 +1,69 @@
+<nav class="app-nav">
+  <ul class="app-nav__list">
+    {% macro renderNav(items, level=0) %}
+    {% for item in items %}
+    {% set isActive = (currentPath == item.url) %}
+    {% set hasChildren = item.children and item.children | length > 0 %}
+    {% set hasActiveChild = false %}
+
+    {# Determine if any descendant is active #}
+    {% if hasChildren %}
+    {% for child in item.children %}
+    {% if currentPath == child.url %}
+    {% set hasActiveChild = true %}
+    {% endif %}
+    {% if child.children %}
+    {% for grandchild in child.children %}
+    {% if currentPath == grandchild.url %}
+    {% set hasActiveChild = true %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% set itemClass = 'app-nav__item--has-children' if hasChildren else 'app-nav__item--no-children' %}
+
+    <li class="app-nav__item {{ itemClass }}">
+      {% if hasChildren %}
+      {% set toggleClass = 'app-nav__toggle--active' if hasActiveChild else '' %}
+      {% set sublistClass = 'app-nav__sublist--show' if hasActiveChild else '' %}
+
+      {# Top-level items (level 0) get the toggle button style #}
+      {% if level == 0 %}
+      <button class="app-nav__toggle {{ toggleClass }}">{{ item.name }}</button>
+      {% else %}
+      <span class="app-nav__submenu-title">{{ item.name }}</span>
+      {% endif %}
+
+      <ul class="app-nav__sublist {{ sublistClass }}">
+        {{ renderNav(item.children, level+1) }}
+      </ul>
+
+      {% else %}
+      {# Leaf items: top-level uses toggle class, deeper levels use normal link #}
+      {% if level == 0 %}
+      <a href="{{ item.url }}" class="app-nav__link-no-children {% if isActive %}app-nav__link-no-children--active{% endif %}">
+        {{ item.name }}
+      </a>
+      {% else %}
+      <a href="{{ item.url }}" class="app-nav__link {% if isActive %}app-nav__link--active{% endif %}">
+        {{ item.name }}
+      </a>
+      {% endif %}
+      {% endif %}
+    </li>
+    {% endfor %}
+    {% endmacro %}
+
+    {% for section in sections %}
+    <li class="app-nav__section">
+      <span class="app-nav__section-title">{{ section.title }}</span>
+      <ul class="app-nav__sublist app-nav__sublist--show">
+        {{ renderNav(section.items) }}
+      </ul>
+    </li>
+    {% endfor %}
+
+  </ul>
+</nav>

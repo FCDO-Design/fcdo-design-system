@@ -1,0 +1,119 @@
+.fcdo-page-navigation {
+    &__container {
+        border-top: 1px solid rgba(255, 255, 255, 0.20);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding: 5px 0 5px 10px;
+        border-left: 5px solid $fcdo-colour-7;
+
+        &:hover, &--active {
+            border-left: none;
+            border-left: 5px solid $fcdo-colour-3;
+            color: #005ea5;
+            background-color:  #f3f2f1;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        @include govuk-font($size: 19);
+        color:  $govuk-link-colour;
+
+        &:focus-visible {
+            outline: 3px solid rgba(0, 0, 0, 0);
+            color: #fff;
+            background-color: $fcdo-colour-2;
+        }
+    }
+}
+
+// dark theme styles
+[data-theme="dark"] {
+    .fcdo-page-navigation {
+        background-color: $fcdo-dark-colour-1;
+
+         &__container {
+            border-top: $fcdo-dark-colour-1;
+        }
+
+        &__item {
+            list-style-type: none;
+            padding: 5px 0 5px 10px;
+            border-left: 5px solid transparent;
+
+        &:hover, &--active {
+            border-left: none;
+            border-left: 5px solid $fcdo-dark-colour-2;
+            color: #005ea5;
+            background-color: $fcdo-dark-colour-1;
+
+            a {
+                color: $fcdo-dark-colour-2;
+            }
+        }
+    }
+
+        &__link {
+            color: $fcdo-dark-colour-2;
+
+            &:hover {
+                color: $fcdo-dark-colour-3;
+            }
+
+            &:focus-visible {
+                outline: 3px solid rgba(0, 0, 0, 0);
+                color: #fff;
+                background-color: $fcdo-dark-colour-2;
+            }
+        }
+    }
+}
+
+// high contrast theme styles
+[data-theme="highContrast"] {
+    .fcdo-page-navigation {
+        background-color: $fcdo-high-contrast-colour-1;
+
+         &__container {
+            border-top: $fcdo-high-contrast-colour-1;
+        }
+
+        &__item {
+            list-style-type: none;
+            padding: 5px 0 5px 10px;
+            border-left: 5px solid transparent;
+
+        &:hover, &--active {
+            border-left: none;
+            border-left: 5px solid $fcdo-high-contrast-colour-3;
+            color: $fcdo-high-contrast-colour-3;
+            background-color: $fcdo-high-contrast-colour-1;
+
+            a {
+                color: $fcdo-high-contrast-colour-3;
+            }
+        }
+    }
+
+        &__link {
+            color: $fcdo-high-contrast-colour-2;
+
+            &:focus-visible {
+                outline: 3px solid rgba(0, 0, 0, 0);
+                color: #fff;
+                background-color: $fcdo-dark-colour-2;
+            }
+        }
+    }
+}

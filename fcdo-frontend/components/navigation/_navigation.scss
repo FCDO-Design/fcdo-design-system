@@ -1,0 +1,134 @@
+.fcdo-navigation {
+    background-color: $fcdo-colour-1;
+
+    &__container {
+        border-top: 1px solid rgba(255, 255, 255, 0.20);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 0 10px 0;
+        display: flex;
+        gap: 5px;
+        flex-direction: column;
+
+        &[hidden] {
+            display: none;
+        }
+
+        @include govuk-media-query($from: tablet) {
+            gap: 30px;
+            padding: 0;
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        list-style-type: none;
+        padding: $fcdo-spacing-1 0 $fcdo-spacing-1 0;
+
+        &--active {
+            border-left: 5px solid $fcdo-colour-3;
+            padding-left: $fcdo-spacing-1;
+        }
+
+        @include govuk-media-query($from: tablet) {
+            padding: $fcdo-spacing-2 0 $fcdo-spacing-2 0;
+
+            &:hover,
+            &--active {
+                border-left: none;
+                padding-left: 0;
+                border-bottom: 5px solid $fcdo-colour-3;
+                color: #005ea5;
+            }
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        @include govuk-font($size: 19);
+
+        &:focus-visible {
+            outline: 3px solid rgba(0, 0, 0, 0);
+            color: #fff;
+            background-color: $fcdo-colour-2;
+        }
+    }
+
+}
+
+.fcdo-navigation__toggle {
+    position: relative;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: $fcdo-spacing-2 $fcdo-spacing-4 $fcdo-spacing-2 0;
+    font-family: $govuk-font-family;
+    cursor: pointer;
+    @include govuk-font($size: 19);
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        right: 4px;
+        transform: rotate(45deg);
+        border-right: 2px solid;
+        border-bottom: 2px solid;
+        height: 6px;
+        width: 6px;
+    }
+
+}
+
+@media (min-width: 640px) {
+    .fcdo-navigation__list {
+        display: flex !important;
+        flex-direction: row;
+    }
+
+    .fcdo-navigation__toggle {
+        display: none;
+    }
+}
+
+// dark theme styles
+[data-theme="dark"] {
+    .fcdo-navigation {  
+        background-color: $fcdo-dark-colour-1;
+
+        &__item {
+            &:hover {
+                border-bottom: 5px solid $fcdo-dark-colour-2;
+            }
+
+            &--active {
+                border-bottom: 5px solid $fcdo-dark-colour-2;
+            }
+        }
+    }
+}
+
+// dark theme styles
+[data-theme="highContrast"] {
+    .fcdo-navigation {  
+        background-color: $fcdo-high-contrast-colour-1;
+
+        &__item {
+            &:hover {
+                border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+            }
+
+            &--active {
+                border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+            }
+        }
+
+        &__link {
+            color: $fcdo-high-contrast-colour-2 !important;
+        }
+    }
+}

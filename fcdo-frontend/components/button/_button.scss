@@ -1,0 +1,66 @@
+.fcdo-button {
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    background-color: $fcdo-colour-1;
+    @include govuk-font($size: 19);
+    color: #fff;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 0 $fcdo-colour-7;
+
+    &:hover {
+        background-color: $fcdo-colour-2;
+        cursor: pointer;
+    }
+
+    &:focus {
+        border-color: $govuk-focus-colour;
+        color: $govuk-text-colour;
+        background-color: $govuk-focus-colour;
+        box-shadow: 0 2px 0 $govuk-text-colour;
+    }
+
+    &--outline {
+        padding: 3px $fcdo-spacing-3;
+        @include govuk-font($size: 16);
+        color: $govuk-text-colour;
+        border: 1px solid $fcdo-colour-1;
+        background-color: #fff;
+        box-shadow: 0 2px 0 $govuk-text-colour;
+
+        &:hover {
+            background-color: #fff;
+        }
+
+        &:focus {
+            background-color: $govuk-focus-colour;
+        }
+    }
+}
+
+[data-theme="highContrast"] {
+    .fcdo-button {
+        background-color: $fcdo-high-contrast-colour-1;
+        border: 1px solid #fff;
+        border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+
+        &:focus {
+            border-color: $fcdo-high-contrast-colour-3;
+            background-color: $fcdo-high-contrast-colour-4;
+            box-shadow: none;
+        }
+
+        &--outline {
+         background-color: $fcdo-high-contrast-colour-1;
+        border: 1px solid #fff;
+        border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+        color: #fff;
+
+        &:focus {
+            border-color: $fcdo-high-contrast-colour-3;
+            background-color: $fcdo-high-contrast-colour-4;
+            box-shadow: none;
+            color: $govuk-text-colour;
+        }
+    }
+
+    }
+}

@@ -1,0 +1,109 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FCDO Design System Styles
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-xl">Design system</span>
+    <h1 class="govuk-heading-xl">Styles</h1>
+{% endblock %}
+
+{% block content %}
+    <h2 class="govuk-heading-l">Styles</h2>
+    <p class="govuk-body">In the new FCDO Design System, CSS styles are designed to be consistent, reusable, and scalable, ensuring that all government services provided by the department follow the same visual and functional guidelines.</p>
+    <p class="govuk-body"> Here's how the CSS styles work in the new FCDO design system:</p>
+    <h3 class="govuk-heading-s">Single CSS file</h3>
+    <p class="govuk-body">The FCDO Design System, shall use a single CSS file sits on top of the <a href="https://design-system.service.gov.uk/styles/" target="_blank" class="govuk-link">GOV.UK Design System styles</a> to apply FCDO-specific branding, styling, and enhancements. This file ensures that the core GOV.UK styles remain intact, while introducing custom styles that reflect the FCDO's unique requirements.</p>
+
+    <details class="govuk-details govuk-!-margin-bottom-0">
+        <summary class="govuk-details__summary fcdo-details__summary">
+            <span class="govuk-details__summary-text">Extends GOV.UK design system</span>
+        </summary>
+        <div class="govuk-details__text">
+            <p class="govuk-body">
+                The FCDO CSS file builds on the existing GOV.UK Frontend styles, leveraging its typography, grid system, and components.
+            </p>
+            <p class="govuk-body">Instead of modifying GOV.UK styles directly, the FCDO layer overrides and extends them, ensuring future compatibility when GOV.UK updates its design system.</p>
+        </div>
+    </details>
+
+    <details class="govuk-details govuk-!-margin-bottom-0">
+        <summary class="govuk-details__summary fcdo-details__summary">
+            <span class="govuk-details__summary-text">Custom FCDO styles</span>
+        </summary>
+        <div class="govuk-details__text">
+            <p class="govuk-body">
+                The file introduces FCDO specific design SCSS variable (e.g., colors, spacing, typography).
+            </p>
+            <p class="govuk-body">It includes new components or alternative styling for elements that need to align with FCDO's branding.</p>
+
+            <p class="govuk-body">For example, it may modify:</p>
+
+            <ul class="govuk-list govuk-list--bullet">
+                <li>Primary color scheme (e.g., buttons, links, backgrounds)</li>
+                <li>Typography (e.g., heading font weights, text sizes)</li>
+                <li>Borders and shadows for enhanced visual differentiation</li>
+            </ul>
+
+        </div>
+    </details>
+
+    <details class="govuk-details govuk-!-margin-bottom-0">
+        <summary class="govuk-details__summary fcdo-details__summary">
+            <span class="govuk-details__summary-text">BEM (Block, Element, Modifier) naming</span>
+        </summary>
+        <div class="govuk-details__text">
+            <p class="govuk-body">
+                The CSS file follows the BEM methodology to keep styles modular and maintainable.
+            </p>
+            <p class="govuk-body">Classes follow the fcdo- prefix to differentiate from govuk- classes, for example:</p>
+            <pre><code class="language-css">
+        .fcdo-button {
+        background-color: #005ea5; /* FCDO primary color */
+        color: #ffffff;
+        }
+    </code></pre>
+
+        </div>
+    </details>
+
+    <details class="govuk-details govuk-!-margin-bottom-0">
+        <summary class="govuk-details__summary fcdo-details__summary">
+            <span class="govuk-details__summary-text">Overrides with minimal disruption</span>
+        </summary>
+        <div class="govuk-details__text">
+            <p class="govuk-body">
+                The file is lightweight and designed to override GOV.UK styles where necessary.
+            </p>
+            <p class="govuk-body">It ensures consistency across all FCDO services, without affecting the core GOV.UK framework.</p>
+
+            <p class="govuk-body">Here is how a standard GOV.UK button might be modified for FCDO:</p>
+
+            <pre><code class="language-css">
+        /* default GOV.UK button */
+        .govuk-button {
+            background-color: #00703c;
+        }
+        
+        /* FCDO override */
+        .fcdo-button {
+            background-color: #005ea5; /* FCDO blue */
+            border-radius: 4px;
+        }
+        </code></pre>
+        </div>
+    </details>
+
+    <details class="govuk-details govuk-!-margin-bottom-0">
+        <summary class="govuk-details__summary fcdo-details__summary">
+            <span class="govuk-details__summary-text">Single source file</span>
+        </summary>
+        <div class="govuk-details__text">
+            <p class="govuk-body">
+                By maintaining one central CSS file, teams across FCDO can apply consistent styles without duplicating effort.
+            </p>
+            <p class="govuk-body">Updates to FCDO branding can be made globally by modifying this single file.</p>
+        </div>
+    </details>
+{% endblock %}

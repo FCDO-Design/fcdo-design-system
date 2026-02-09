@@ -1,0 +1,30 @@
+{
+  "name": "fcdo-design-system",
+  "version": "1.0.0",
+  "main": "app.js",
+  "homepage": "https://webfarmmedia.github.io/fcdo-design-system",
+  "scripts": {
+    "start": "node .",
+    "build-js": "esbuild \"fcdo-frontend/all.js\" --bundle --minify --outfile=\"/assets/javascript/fcdo-frontend.min.js\" --log-level=debug",
+    "watch-js": "esbuild fcdo-frontend/all.js --bundle --minify --outfile=assets/javascript/fcdo-frontend.min.js --watch",
+    "dev": "concurrently \"nodemon .\" \"npm run scss\" \"npm run build-js\"",
+    "build": "node build.js",
+    "scss": "sass --watch --load-path=node_modules assets/scss/fcdo-design-system.scss:assets/css/fcdo-design-system.min.css fcdo-frontend/fcdo-frontend.scss:assets/css/fcdo-frontend.min.css  --no-source-map --style=compressed",
+    "deploy": "gh-pages -d dist --cname www.skwebsolutions.co.uk"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "govuk-frontend": "^5.11.0",
+    "nunjucks": "^3.2.4",
+    "sass": "^1.89.2"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0",
+    "esbuild": "^0.25.8",
+    "gh-pages": "^6.3.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2"
+  }
+}

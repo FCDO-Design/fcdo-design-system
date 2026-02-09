@@ -1,0 +1,33 @@
+{% set mainItem = null %}
+{% for item in navItems %}
+  {% if item.slug == pageSection %}
+    {% set mainItem = item %}
+  {% endif %}
+{% endfor %}
+
+{% if mainItem and mainItem.children and mainItem.children.length %}
+<nav class="fcdo-section-navigation" role="navigation" aria-label="Secondary Navigation">
+  <div class="govuk-width-container fcdo-section-navigation__container">
+    <ul class="fcdo-section-navigation__list">
+      {% for child in mainItem.children %}
+
+        {# Check if child or any of its direct children is active #}
+        {% set isActive = (currentPath == child.url) %}
+        {% if not isActive and child.children %}
+          {% for sub in child.children %}
+            {% set subActive = (currentPath == sub.url) or (currentPath | slice(0, (sub.url | length + 1)) == sub.url ~ '/') %}
+            {% if subActive %}
+              {% set isActive = true %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+
+        <li class="fcdo-section-navigation__item{% if isActive %} fcdo-section-navigation__item--active{% endif %}">
+          <a href="{{ child.url }}" class="fcdo-section-navigation__link">{{ child.name }}</a>
+        </li>
+
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}

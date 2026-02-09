@@ -1,0 +1,209 @@
+.app-nav {
+  width: 100%;
+
+  @include govuk-media-query('desktop') {
+    width: 300px;
+  }
+
+  &__list,
+  &__sublist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__toggle {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    @include govuk-font($size: 19);
+    color: $govuk-link-colour;
+
+    &:hover {
+      background-color: $fcdo-colour-2;
+      color: #fff;
+
+      &:after {
+        border-color: #fff !important;
+      }
+
+    }
+
+  }
+
+  &__link {
+    display: block;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    cursor: pointer;
+    text-decoration: none;
+    @include govuk-font($size: 16);
+    color: $govuk-link-colour;
+    margin:0 $fcdo-spacing-3;
+
+    &:hover {
+      background-color: $fcdo-colour-2;
+      color: #fff;
+    }
+
+  }
+
+  &__sublist {
+    display: none;
+
+    &--show {
+      display: block;
+    }
+  }
+
+  &__toggle {
+    
+    &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    width: 0.4375em !important;
+    height: 0.4375em !important;
+    margin: auto 0;
+    transform: rotate(135deg);
+    border: solid;
+    border-width: 2px 2px 0 0 !important;
+    border-color: $govuk-link-colour !important;
+    clip-path: none !important;
+    }
+
+    &--active::after {
+      top: 20px;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__section {
+
+    &:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background-color: govuk-colour("mid-grey");
+      margin: $fcdo-spacing-4 $fcdo-spacing-3 0;
+    }
+
+    &-title {
+      display: block;
+      padding: $fcdo-spacing-5 $fcdo-spacing-3 $fcdo-spacing-1;
+      color: #555;
+      text-transform: uppercase;
+       @include govuk-font($size: 14, $weight: "bold");
+    }
+  }
+
+  &__link--active {
+    background-color: $fcdo-colour-1;
+      color: #fff;
+  }
+
+  &__link-no-children {
+    display: block;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    @include govuk-font($size: 19);
+    color: $govuk-link-colour;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $fcdo-colour-2;
+      color: #fff;
+    }
+
+    &--active {
+      background-color: $fcdo-colour-2;
+      color: #fff;
+    }
+  }
+}
+
+[data-theme="dark"] {
+  .app-nav__section-title {
+    color: #fff;
+  }
+
+  .app-nav__link-no-children, .app-nav__toggle {
+    color: $fcdo-dark-colour-2;
+
+    &:after {
+      border-color: $fcdo-dark-colour-2 !important;
+    }
+
+    &:hover {
+      background-color: $fcdo-colour-2;
+      color: #fff;
+
+      &:after {
+        border-color: #fff !important;
+      }
+    }
+  }
+  
+  .app-nav__link {
+      color: #fff;
+      &:hover {
+        background-color: $fcdo-colour-2;
+        color: #fff;
+      }
+
+    &--active {
+      background-color: $fcdo-dark-colour-1;
+      border-left: 3px solid $fcdo-dark-colour-2;
+    }
+  }
+}
+
+[data-theme="highContrast"] {
+
+  .app-nav__section {
+    &:after {
+      background-color: #fff;
+    }
+  }
+
+  .app-nav__section-title {
+    color: $fcdo-high-contrast-colour-4;
+  }
+
+  .app-nav__link-no-children, .app-nav__toggle {
+    color: $fcdo-high-contrast-colour-2;
+
+    &:after {
+      border-color: $fcdo-high-contrast-colour-2 !important;
+    }
+
+    &:hover {
+      background-color: $fcdo-high-contrast-colour-1;
+      color: $fcdo-high-contrast-colour-3;
+
+      &:after {
+        border-color: $fcdo-high-contrast-colour-3 !important;
+      }
+    }
+  }
+  
+  .app-nav__link {
+      color: $fcdo-high-contrast-colour-2;
+      &:hover {
+        background-color: $fcdo-high-contrast-colour-1;
+        color: $fcdo-high-contrast-colour-3;
+      }
+
+    &--active {
+      background-color: $fcdo-high-contrast-colour-1;
+      border-left: 3px solid $fcdo-high-contrast-colour-3;
+      color: $fcdo-high-contrast-colour-3;
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Details
+{% endblock %}
+
+{% block pageTitle %}
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Details</h1>
+{% endblock %}
+
+{% block content %}
+<div class="fcdo-component">
+    <div class="fcdo-component__tabs">
+        <div class="govuk-tabs" data-module="govuk-tabs">
+            <h2 class="govuk-tabs__title">
+                Contents
+            </h2>
+            <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                    <a class="govuk-tabs__tab" href="#example">
+                        Example
+                    </a>
+                </li>
+                <li class="govuk-tabs__list-item">
+                    <a class="govuk-tabs__tab" href="#html">
+                        HTML
+                    </a>
+                </li>
+            </ul>
+            <div class="govuk-tabs__panel" id="example">
+<details class="govuk-details">
+        <summary class="govuk-details__summary fcdo-details__summary">
+        <span class="govuk-details__summary-text">Show more information</span>
+        </summary>
+        <div class="govuk-details__text">
+            The Details component provides a toggleable section that users can click to expand and view more information. This helps keep pages clean and focused, especially when dealing with complex or optional content.
+        </div>
+    </details>
+            </div>
+
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
+                <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
+                <pre class="language-html">
+                    <code class="language-html" id="htmlCode">
+&lt;details class=&quot;govuk-details&quot;&gt;
+    &lt;summary class=&quot;govuk-details__summary fcdo-details__summary&quot;&gt;
+        &lt;span class=&quot;govuk-details__summary-text&quot;&gt;Show more information&lt;/span&gt;
+    &lt;/summary&gt;
+    &lt;div class=&quot;govuk-details__text&quot;&gt;
+        The Details component provides a toggleable section that users can click to expand and view more information. This helps keep pages clean and focused, especially when dealing with complex or optional content.
+    &lt;/div&gt;
+&lt;/details&gt;
+                </code>
+                </pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Make a page easier to scan by letting users reveal more detailed information only if they need it.</p>
+
+<script>
+    function copyCode() {
+        const code = document.getElementById('htmlCode').innerText;
+        const button = document.getElementById('copyHTML');
+
+        navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Code copied';
+            //button.disabled = true;
+            setTimeout(() => {
+                button.textContent = 'Copy code';
+                button.disabled = false;
+            }, 2000);
+        });
+    }
+</script>
+{% endblock %}

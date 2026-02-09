@@ -1,0 +1,30 @@
+{% set mainItem = null %}
+{% for item in navItems %}
+  {% if item.slug == pageSection %}
+    {% set mainItem = item %}
+  {% endif %}
+{% endfor %}
+
+{# Find currently active second-level nav item by matching currentPath #}
+{% set activeChild = null %}
+{% if mainItem and mainItem.children %}
+  {% for child in mainItem.children %}
+    {% if currentPath == child.url or currentPath.startsWith(child.url + '/') %}
+      {% set activeChild = child %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if activeChild and activeChild.children and activeChild.children.length %}
+<nav class="fcdo-page-navigation" role="navigation" aria-label="Tertiary Navigation">
+  <div class="fcdo-page-navigation__container">
+    <ul class="fcdo-page-navigation__list">
+      {% for subpage in activeChild.children %}
+        <li class="fcdo-page-navigation__item{% if currentPath == subpage.url %} fcdo-page-navigation__item--active{% endif %}">
+          <a href="{{ subpage.url }}" class="fcdo-page-navigation__link">{{ subpage.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endif %}

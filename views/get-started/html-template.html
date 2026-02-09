@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FCDO Design System - FCDO Frontend HTML Template
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-xl">Get Started</span>
+    <h1 class="govuk-heading-xl">FCDO Frontend HTML Template</h1>
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">FCDO Frontend HTML Template</h1>
+  <p class="govuk-body">Use this simple template to get started with FCDO Design System</p>
+  <pre class="govuk-!-font-size-16"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en" class="govuk-template"&gt;
+  &lt;head&gt;
+    &lt;title&gt;FCDO and GOV.UK&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"&gt;
+    &lt;link rel="stylesheet" href="/assets/css/govuk-frontend-5.13.0.min.css"&gt;
+    &lt;link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css"&gt;
+  &lt;/head&gt;
+  &lt;body class="govuk-template__body"&gt;
+    &lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');&lt;/script&gt;
+    &lt;script type="module" src="/assets/javascript/govuk-frontend-5.13.0.min.js"&gt;&lt;/script&gt;
+    &lt;script type="module"&gt;
+      import { initAll } from '/assets/javascript/govuk-frontend-5.13.0.min.js'
+      initAll()
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+  </code></pre>
+
+
+{% endblock %}

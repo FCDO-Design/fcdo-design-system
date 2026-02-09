@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    FCDO Design System - FCDO Frontend CSS
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-xl">Get Started</span>
+    <h1 class="govuk-heading-xl">FCDO Frontend Javascript</h1>
+{% endblock %}
+
+{% block content %}
+  <h1 class="govuk-heading-l">FCDO Frontend Javascript</h1>
+  <p class="govuk-body">To use the Javascript from FCDO Frontend include the compiled Javascript file directly in your HTML:</p>
+  <pre class="govuk-!-font-size-16"><code>&lt;script type="module" src="/assets/javascript/govuk-frontend-5.13.0.min.js"&gt;&lt;/script&gt;</code></pre>
+  <pre class="govuk-!-font-size-16"><code>&lt;script src="/assets/javascript/fcdo-frontend.min.js"&gt;&lt;/script&gt;</code></pre>
+  <pre class="govuk-!-font-size-16"><code>&lt;script type="module"&gt;
+    import { initAll } from '/assets/javascript/govuk-frontend-5.13.0.min.js'
+    initAll()
+&lt;/script&gt;
+</code>
+</pre>
+
+
+{% endblock %}

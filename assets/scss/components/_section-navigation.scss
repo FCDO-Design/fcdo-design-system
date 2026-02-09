@@ -1,0 +1,82 @@
+.fcdo-section-navigation {
+    background-color: govuk-colour("light-grey");
+
+    &__container {
+        border-top: 1px solid rgba(255, 255, 255, 0.20);
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding: 10px 0 15px 0;
+        border-bottom: 5px solid transparent;
+
+        &:hover, &--active {
+            border-bottom: 5px solid $fcdo-colour-3;
+            color: #005ea5;
+            cursor: pointer;
+
+            a:hover {
+            text-decoration: none;
+        }
+
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        @include govuk-font($size: 19);
+
+        &:hover {
+            text-decoration: none;
+            text-decoration-thickness: max(3px);
+        }
+
+        &:visited {
+            color:  $govuk-link-colour;
+        }
+
+        &:focus-visible {
+            outline: 3px solid rgba(0, 0, 0, 0);
+            color: #fff;
+            background-color: $fcdo-dark-colour-2
+        }
+    }
+}
+
+
+[data-theme="dark"] {
+    .fcdo-section-navigation {
+       background-color: $fcdo-dark-colour-1;
+
+       &__link {
+        display: inline-block;
+        text-decoration: none;
+        @include govuk-font($size: 19);
+
+        &:hover {
+            text-decoration: none;
+            text-decoration-thickness: max(3px);
+        }
+
+        &:visited {
+            color: #fff;
+        }
+
+        &:focus-visible {
+            outline: 3px solid rgba(0, 0, 0, 0);
+            color: #fff;
+            background-color: $fcdo-dark-colour-2;
+        }
+    }
+
+    }
+}

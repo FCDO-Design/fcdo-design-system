@@ -1,0 +1,90 @@
+.fcdo-details[open] .fcdo-details__summary,
+.fcdo-details__summary {
+    margin-top: 10px;
+    padding-left: 16px;
+
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -3px;
+        width: 0.4375em !important;
+        height: 0.4375em !important;
+        margin: auto 0;
+        transform: rotate(45deg);
+        border: solid;
+        border-width: 2px 2px 0 0 !important;
+        border-color: $govuk-link-colour !important;
+        clip-path: none !important;
+    }
+}
+
+.fcdo-details[open] .fcdo-details__summary:before {
+    top: -3px;
+    transform: rotate(135deg) !important;
+}
+
+
+[data-theme="dark"] {
+    .govuk-details__summary {
+        color: #fff;
+
+        &.fcdo-details__summary:before {
+            border-color: #fff !important;
+        }
+
+        &.fcdo-details__summary:hover {
+            color: #fff !important;
+        }
+
+        &.fcdo-details__summary:focus {
+            
+            &:hover {
+                color: $fcdo-dark-colour-1 !important;
+            }
+            
+            &:before {
+                border-color: $fcdo-dark-colour-1 !important;
+            }
+
+
+        }
+
+        &:hover:before {
+                border-color: #fff !important;
+        }
+    }
+}
+
+[data-theme="highContrast"] {
+    .govuk-details__summary {
+        color: $fcdo-high-contrast-colour-2;
+
+        &.fcdo-details__summary:before {
+            border-color: $fcdo-high-contrast-colour-2 !important;
+        }
+
+        &.fcdo-details__summary:hover {
+            color: $fcdo-high-contrast-colour-2 !important;
+        }
+
+        &.fcdo-details__summary:focus {
+            
+            &:hover {
+                color: $fcdo-high-contrast-colour-1 !important;
+            }
+            
+            &:before {
+                border-color: $fcdo-high-contrast-colour-3 !important;
+            }
+
+
+        }
+
+        &:hover:before {
+                border-color: #fff !important;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+<header class="app-header" data-module="fcdo-header">
+  <div class="app-header__container">
+    <div class="app-header__logo"></div>
+    <div class="app-header__service-name">
+      <a href="/" class="app-header__link">
+        <span>FCDO</span> Design System 
+      </a>
+    </div>
+    <ul id="fcdoThemeList" class="app-header__theme-list"></ul>
+    <button class="app-header__toggle-nav" id="toggleNav" aria-expanded="false" aria-controls="nav">
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const root = document.documentElement;
+    const themeList = document.getElementById("fcdoThemeList");
+
+    // map of internal theme values to user-facing labels
+    const themes = {
+        normal: "Standard",
+        dark: "Dark Mode",
+        highContrast: "High Contrast Mode"
+    };
+
+    // load saved preference or default
+    let currentTheme = localStorage.getItem("theme") || "normal";
+    applyTheme(currentTheme);
+
+    function renderList() {
+        // clear previous list
+        themeList.innerHTML = "";
+
+        // rebuild list with <li><a></a></li> structure
+        Object.entries(themes).forEach(([value, label]) => {
+            if (value !== currentTheme) {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+
+                a.textContent = label;
+                a.href = "#";
+                a.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    currentTheme = value;
+                    applyTheme(currentTheme);
+                    localStorage.setItem("theme", currentTheme);
+                    renderList(); // re-render to show remaining themes
+                });
+
+                li.appendChild(a);
+                themeList.appendChild(li);
+            }
+        });
+    }
+
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            root.setAttribute("data-theme", "dark");
+        } else if (theme === "highContrast") {
+            root.setAttribute("data-theme", "highContrast");
+        } else {
+            root.removeAttribute("data-theme");
+        }
+    }
+
+    renderList();
+});
+</script>

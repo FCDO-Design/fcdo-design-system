@@ -1,0 +1,144 @@
+.app-header {
+    padding: $fcdo-spacing-3 $fcdo-spacing-2;
+    background-color: $fcdo-colour-1;
+    border-bottom: $fcdo-spacing-2 solid $fcdo-colour-2;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 40px;
+        height: 40px;
+        margin-right: $fcdo-spacing-1;
+        background: #fff;
+        mask-image:url("/assets/images/govuk-crest.svg");
+        mask-repeat:no-repeat;
+        mask-position:50% 0%;
+        mask-size:36px 36px
+    }
+
+    &__service-name {
+        color: #fff;
+    }
+
+    &__link {
+        display: block;
+        @include govuk-font($size: 24, $weight: "normal");
+        color: #fff;
+        text-decoration: none;
+
+        span {
+            @include govuk-font($size: 24, $weight: "bold");
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__toggle-nav {
+        display: inline-flex;
+        position: relative;
+        @include govuk-font($size: 19, $weight: "bold");
+        color: #fff;
+        background: none;
+        border: 0;
+        padding: $fcdo-spacing-1 $fcdo-spacing-2;
+        gap: 10px;
+        margin-left: auto;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            margin-top: 1px;
+            transform: rotate(135deg);
+            border: solid;
+            border-width: 2px 2px 0 0;
+            border-color: #fff;
+            cursor: pointer;
+        }
+
+        @include govuk-media-query('desktop') {
+            display: none;
+        }
+
+        &:focus {
+            background-color: #fd0;
+            border-color: #fd0;
+            box-shadow: 0 2px 0 transparent;
+            color: #0b0c0c;
+            outline: none;
+
+            &::before {
+                border-color: #0b0c0c;
+            }
+        }
+
+         &[aria-expanded="true"] {
+            background-color: $fcdo-colour-2;
+            color: #fff;
+
+            &::before {
+                transform: rotate(-45deg); // rotate arrow for open state
+                border-color: #fff;
+                margin-top: 8px;
+            }
+        }    
+           
+    }
+
+    &__theme-list {
+        list-style: none;
+        margin: 0 0 0 auto;
+        padding: 0;
+        display: flex;
+        gap: $fcdo-spacing-2;
+
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+    }
+
+}
+
+// dark theme styles
+[data-theme="dark"] .app-header {
+    background-color: $fcdo-dark-colour-1;
+}
+
+.app-header__service-name a {
+    color: #fff !important;
+
+    &:focus {
+        outline: 3px solid rgba(0, 0, 0, 0);
+        color: #000;
+        background-color: $fcdo-dark-colour-2;
+    }
+}
+
+[data-theme="highContrast"] {
+    .app-header {
+        background-color: $fcdo-high-contrast-colour-1;
+        border-bottom: $fcdo-spacing-2 solid $fcdo-high-contrast-colour-4;
+
+        &__logo {
+            background: $fcdo-high-contrast-colour-4;
+        }
+
+        &__service-name a {
+            color: $fcdo-high-contrast-colour-4 !important;
+
+            &:focus {
+                outline: 3px solid $fcdo-high-contrast-colour-4;
+                color: #000 !important;
+                background-color: $fcdo-high-contrast-colour-3;
+            }
+        }
+    }
+}

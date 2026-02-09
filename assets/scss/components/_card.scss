@@ -1,0 +1,38 @@
+
+.app-card {
+    border: 1px solid $fcdo-colour-7;
+    padding: $fcdo-spacing-3;
+    border-bottom: 5px solid $fcdo-colour-3;
+    background-color: #fff;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        margin-bottom: $fcdo-spacing-2;
+    }
+
+    &__description {
+        @include govuk-font($size: 19);
+        margin-top: $fcdo-spacing-2;
+    }
+}
+
+[data-theme="dark"] {
+    .app-card {
+        background-color: $fcdo-dark-colour-1;
+        border: none;
+        border-bottom: 5px solid $fcdo-colour-3;
+    }
+}
+
+[data-theme="highContrast"] {
+    .app-card {
+        background-color: $fcdo-high-contrast-colour-1;
+        border: 3px solid $fcdo-high-contrast-colour-4;
+        border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+    }
+
+}
