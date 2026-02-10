@@ -2,7 +2,7 @@
   "name": "fcdo-design-system",
   "version": "1.0.0",
   "main": "app.js",
-  "homepage": "https://webfarmmedia.github.io/fcdo-design-system",
+  "homepage": "https://fcdo-design.github.io/fcdo-design-system",
   "scripts": {
     "start": "node .",
     "build-js": "esbuild \"fcdo-frontend/all.js\" --bundle --minify --outfile=\"/assets/javascript/fcdo-frontend.min.js\" --log-level=debug",
