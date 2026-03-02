@@ -2,27 +2,35 @@ document.addEventListener("DOMContentLoaded", () => {
     const toggle = document.getElementById("theme-toggle");
     const root = document.documentElement;
 
-    // Load saved preference or detect system default
+    // Get saved theme (if any)
     let theme = localStorage.getItem("theme");
-    if (!theme) {
-        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "highContrast";
+
+    // Apply saved theme only — no default fallback
+    if (theme) {
+        applyTheme(theme);
     }
-    applyTheme(theme);
 
     toggle.addEventListener("click", (e) => {
-        e.preventDefault(); // prevent page jump
-        theme = theme === "dark" ? "highContrast" : "dark";
+        e.preventDefault();
+
+        // If no theme yet, start with dark
+        if (!theme) {
+            theme = "dark";
+        } else {
+            theme = theme === "dark" ? "highContrast" : "dark";
+        }
+
         applyTheme(theme);
         localStorage.setItem("theme", theme);
-        toggle.textContent = theme === "dark" ? "Toggle High Contrast" : "Toggle Dark Mode";
     });
 
     function applyTheme(theme) {
+        root.setAttribute("data-theme", theme);
+
         if (theme === "dark") {
-            root.setAttribute("data-theme", "dark");
+            toggle.textContent = "Toggle High Contrast";
         } else {
-            root.setAttribute("data-theme", "highContrast");
+            toggle.textContent = "Toggle Dark Mode";
         }
-        toggle.textContent = theme === "dark" ? "Toggle High Contrast" : "Toggle Dark Mode";
     }
 });

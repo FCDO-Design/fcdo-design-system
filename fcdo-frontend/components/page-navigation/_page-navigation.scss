@@ -1,50 +1,144 @@
 .fcdo-page-navigation {
-    &__container {
-        border-top: 1px solid rgba(255, 255, 255, 0.20);
+
+  &__container {
+    border-top: 1px solid rgba(255,255,255,.2);
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  /* ===============================
+     TRIGGER (summary)
+  =============================== */
+
+  &__trigger {
+    display: block;
+    position: relative;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    cursor: pointer;
+    color: govuk-color("blue");
+    @include fcdo-font-size(19);
+
+    /* remove default marker */
+    &::-webkit-details-marker { display: none; }
+    &::marker { content: ""; }
+
+    /* arrow */
+    &::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      width: .4375em;
+      height: .4375em;
+      transform: rotate(135deg);
+      border: solid;
+      border-width: 2px 2px 0 0;
+      border-color: govuk-color("blue");
     }
 
-    &__list {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 5px;
-        flex-direction: column;
+    &:hover {
+      background: govuk-color("blue");
+      color: #fff;
+
+      &::after {
+        border-color: #fff;
+      }
     }
 
-    &__item {
-        list-style-type: none;
-        padding: 5px 0 5px 10px;
-        border-left: 5px solid $fcdo-colour-7;
+    &:focus-visible {
+      outline: 3px solid transparent;
+      background: fcdo-color("default", "2");
+      color: #fff;
+    }
+  }
 
-        &:hover, &--active {
-            border-left: none;
-            border-left: 5px solid $fcdo-colour-3;
-            color: #005ea5;
-            background-color:  #f3f2f1;
-        }
+  /* Open state */
+  &__details[open] > &__trigger {
+    background: fcdo-color("default", "1");
+    color: #fff;
+
+    &::after {
+      transform: rotate(315deg);
+      border-color: #fff;
+      top: 20px;
+    }
+  }
+
+  /* ===============================
+     LINKS
+  =============================== */
+
+  &__link {
+    display: block;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    text-decoration: none;
+    color: govuk-color("blue");
+    @include fcdo-font-size(19);
+
+    &:hover {
+      background: govuk-color("blue");
+      color: #fff;
     }
 
-    &__link {
-        display: inline-block;
-        text-decoration: none;
-        @include govuk-font($size: 19);
-        color:  $govuk-link-colour;
-
-        &:focus-visible {
-            outline: 3px solid rgba(0, 0, 0, 0);
-            color: #fff;
-            background-color: $fcdo-colour-2;
-        }
+    &:focus-visible {
+      outline: 3px solid transparent;
+      background: fcdo-color("default", "2");
+      color: #fff;
     }
+  }
+
+  /* ===============================
+     SUBLIST
+  =============================== */
+
+  &__sublist {
+    margin: $fcdo-spacing-2 0 $fcdo-spacing-2 $fcdo-spacing-3;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__subitem {
+    list-style: none;
+  }
+
+  &__sublink {
+    display: block;
+    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    text-decoration: none;
+    color: govuk-color("blue");
+    @include fcdo-font-size(16);
+
+    &:hover {
+      background: govuk-color("blue");
+      color: #fff;
+    }
+
+    &:focus-visible {
+      outline: 3px solid transparent;
+      background: fcdo-color("default", "2");
+      color: #fff;
+    }
+  }
 }
 
 // dark theme styles
 [data-theme="dark"] {
     .fcdo-page-navigation {
-        background-color: $fcdo-dark-colour-1;
+        background-color: fcdo-color("dark", "1");
 
          &__container {
-            border-top: $fcdo-dark-colour-1;
+            border-top: 1px solid fcdo-color("dark", "1");
         }
 
         &__item {
@@ -54,27 +148,27 @@
 
         &:hover, &--active {
             border-left: none;
-            border-left: 5px solid $fcdo-dark-colour-2;
+            border-left: 5px solid fcdo-color("dark", "2");
             color: #005ea5;
-            background-color: $fcdo-dark-colour-1;
+            background-color: fcdo-color("dark", "1");
 
             a {
-                color: $fcdo-dark-colour-2;
+                color: fcdo-color("dark", "2");
             }
         }
     }
 
         &__link {
-            color: $fcdo-dark-colour-2;
+            color: fcdo-color("dark", "2");
 
             &:hover {
-                color: $fcdo-dark-colour-3;
+                color: fcdo-color("dark", "3");
             }
 
             &:focus-visible {
                 outline: 3px solid rgba(0, 0, 0, 0);
                 color: #fff;
-                background-color: $fcdo-dark-colour-2;
+                background-color: fcdo-color("dark", "2");
             }
         }
     }
@@ -83,10 +177,10 @@
 // high contrast theme styles
 [data-theme="highContrast"] {
     .fcdo-page-navigation {
-        background-color: $fcdo-high-contrast-colour-1;
+        background-color: fcdo-color("high-contrast", "1");
 
          &__container {
-            border-top: $fcdo-high-contrast-colour-1;
+            border-top: 1px solid fcdo-color("high-contrast", "4");
         }
 
         &__item {
@@ -96,23 +190,23 @@
 
         &:hover, &--active {
             border-left: none;
-            border-left: 5px solid $fcdo-high-contrast-colour-3;
-            color: $fcdo-high-contrast-colour-3;
-            background-color: $fcdo-high-contrast-colour-1;
+            border-left: 5px solid fcdo-color("high-contrast", "3");
+            color: fcdo-color("high-contrast", "3");
+            background-color: fcdo-color("high-contrast", "1");
 
             a {
-                color: $fcdo-high-contrast-colour-3;
+                color: fcdo-color("high-contrast", "3");
             }
         }
     }
 
         &__link {
-            color: $fcdo-high-contrast-colour-2;
+            color: fcdo-color("high-contrast", "2");
 
             &:focus-visible {
                 outline: 3px solid rgba(0, 0, 0, 0);
                 color: #fff;
-                background-color: $fcdo-dark-colour-2;
+                background-color: fcdo-color("high-contrast", "4");
             }
         }
     }

@@ -10,13 +10,13 @@
     "dev": "concurrently \"nodemon .\" \"npm run scss\" \"npm run build-js\"",
     "build": "node build.js",
     "scss": "sass --watch --load-path=node_modules assets/scss/fcdo-design-system.scss:assets/css/fcdo-design-system.min.css fcdo-frontend/fcdo-frontend.scss:assets/css/fcdo-frontend.min.css  --no-source-map --style=compressed",
-    "deploy": "gh-pages -d dist --cname www.skwebsolutions.co.uk"
+    "deploy": "gh-pages -d dist --cname design.fcdo.gov.uk"
   },
   "dependencies": {
     "chokidar": "^3.6.0",
     "express": "^5.1.0",
     "fs-extra": "^11.3.0",
-    "govuk-frontend": "^5.11.0",
+    "govuk-frontend": "^6.0.0",
     "nunjucks": "^3.2.4",
     "sass": "^1.89.2"
   },

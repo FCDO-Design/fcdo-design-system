@@ -1,0 +1,27 @@
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 641px;
+$breakpoint-desktop: 769px;
+
+// ---------------------------------------------------------------------------------------------
+// media queries and breakpoints
+// ---------------------------------------------------------------------------------------------
+@mixin fcdo-media-query($breakpoint) {
+	@if $breakpoint=='mobile' {
+		@media only screen and (min-width: $breakpoint-mobile) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint=='tablet' {
+		@media only screen and (min-width: $breakpoint-tablet) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint=='large' {
+		@media only screen and (min-width: $breakpoint-desktop) {
+			@content;
+		}
+	}
+}
+

@@ -1,8 +1,8 @@
 
 .fcdo-card {
-    border: 1px solid $fcdo-colour-7;
+    border: 1px solid fcdo-color("default", "2");
     padding: $fcdo-spacing-3;
-    border-bottom: 5px solid $fcdo-colour-3;
+    border-bottom: 5px solid fcdo-color("default", "3");
     max-width: 400px;
 
     &__container {
@@ -15,13 +15,13 @@
     }
 
     &__description {
-        @include govuk-font($size: 19);
+        // @include govuk-font($size: 19);
         margin-top: $fcdo-spacing-2;
     }
 
     &:hover {
         cursor: pointer;
-        background-color: $fcdo-colour-1;
+        background-color: fcdo-color("default", "1");
         color: #fff;
 
         h2, p {
@@ -32,16 +32,16 @@
 
 [data-theme="dark"] {
     .fcdo-card {
-        background-color: $fcdo-dark-colour-1;
+        background-color: fcdo-color("dark", "1");
         border: none;
-        border-bottom: 5px solid $fcdo-colour-2;
+        border-bottom: 5px solid fcdo-color("dark", "2");
     }
 }
 
 [data-theme="highContrast"] {
     .fcdo-card {
-        background-color: $fcdo-high-contrast-colour-1;
-        border: 3px solid $fcdo-high-contrast-colour-4;
-        border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+        background-color: fcdo-color("high-contrast", "1");
+        border: 3px solid fcdo-color("high-contrast", "4");
+        border-bottom: 5px solid fcdo-color("high-contrast", "4");
     }
 }

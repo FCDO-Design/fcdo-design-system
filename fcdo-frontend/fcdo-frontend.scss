@@ -1,11 +1,10 @@
-@import "govuk-frontend/dist/govuk";
 @import "settings/all";
 @import "helpers/all";
 @import "components/all";
 
 [data-theme="dark"] {
     body {
-        background-color: $fcdo-dark-colour-1;
+        background-color: fcdo-color("dark", "1");
         color: #fff;
     }
 
@@ -17,13 +16,12 @@
 
 [data-theme="highContrast"] {
     body {
-        background-color: $fcdo-high-contrast-colour-1;
-        color: $fcdo-high-contrast-colour-2;
+        background-color: fcdo-color("high-contrast", "1");
+        color: fcdo-color("high-contrast", "2");
     }
 
     h1, h2, h3, h4, ul {
-        color: $fcdo-high-contrast-colour-2;
+        color: fcdo-color("high-contrast", "2");
     }
-
 }
 

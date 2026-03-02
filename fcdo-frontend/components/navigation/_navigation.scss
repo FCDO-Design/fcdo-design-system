@@ -1,5 +1,5 @@
 .fcdo-navigation {
-    background-color: $fcdo-colour-1;
+    background-color: fcdo-color("default", "1");
 
     &__container {
         border-top: 1px solid rgba(255, 255, 255, 0.20);
@@ -16,7 +16,7 @@
             display: none;
         }
 
-        @include govuk-media-query($from: tablet) {
+        @include fcdo-media-query("tablet") {
             gap: 30px;
             padding: 0;
             flex-direction: row;
@@ -28,18 +28,18 @@
         padding: $fcdo-spacing-1 0 $fcdo-spacing-1 0;
 
         &--active {
-            border-left: 5px solid $fcdo-colour-3;
+            border-left: 5px solid fcdo-color("default", "3");
             padding-left: $fcdo-spacing-1;
         }
 
-        @include govuk-media-query($from: tablet) {
+        @include fcdo-media-query("tablet") {
             padding: $fcdo-spacing-2 0 $fcdo-spacing-2 0;
 
             &:hover,
             &--active {
                 border-left: none;
                 padding-left: 0;
-                border-bottom: 5px solid $fcdo-colour-3;
+                border-bottom: 5px solid fcdo-color("default", "3");
                 color: #005ea5;
             }
         }
@@ -49,15 +49,14 @@
         display: inline-block;
         color: #fff;
         text-decoration: none;
-        @include govuk-font($size: 19);
+        @include fcdo-font-size(19);
 
         &:focus-visible {
             outline: 3px solid rgba(0, 0, 0, 0);
             color: #fff;
-            background-color: $fcdo-colour-2;
+            background-color: fcdo-color("default", "2");
         }
     }
-
 }
 
 .fcdo-navigation__toggle {
@@ -66,9 +65,9 @@
     border: none;
     color: #fff;
     padding: $fcdo-spacing-2 $fcdo-spacing-4 $fcdo-spacing-2 0;
-    font-family: $govuk-font-family;
+    font-family: $fcdo-font-family;
     cursor: pointer;
-    @include govuk-font($size: 19);
+     @include fcdo-font-size(19);
 
     &:after {
         content: "";
@@ -98,15 +97,15 @@
 // dark theme styles
 [data-theme="dark"] {
     .fcdo-navigation {  
-        background-color: $fcdo-dark-colour-1;
+        background-color: fcdo-color("dark", "1");
 
         &__item {
             &:hover {
-                border-bottom: 5px solid $fcdo-dark-colour-2;
+                border-bottom: 5px solid fcdo-color("dark", "2");
             }
 
             &--active {
-                border-bottom: 5px solid $fcdo-dark-colour-2;
+                border-bottom: 5px solid fcdo-color("dark", "2");
             }
         }
     }
@@ -115,20 +114,20 @@
 // dark theme styles
 [data-theme="highContrast"] {
     .fcdo-navigation {  
-        background-color: $fcdo-high-contrast-colour-1;
+        background-color: fcdo-color("high-contrast", "1");
 
         &__item {
             &:hover {
-                border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+                border-bottom: 5px solid fcdo-color("high-contrast", "4");
             }
 
             &--active {
-                border-bottom: 5px solid $fcdo-high-contrast-colour-4;
+                border-bottom: 5px solid fcdo-color("high-contrast", "4");
             }
         }
 
         &__link {
-            color: $fcdo-high-contrast-colour-2 !important;
+            color: fcdo-color("high-contrast", "2") !important;
         }
     }
 }

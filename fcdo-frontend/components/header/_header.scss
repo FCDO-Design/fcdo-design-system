@@ -1,7 +1,7 @@
 .fcdo-header {
     padding: $fcdo-spacing-3 $fcdo-spacing-2;
-    background-color: $fcdo-colour-1;
-    border-bottom: $fcdo-spacing-2 solid $fcdo-colour-2;
+    background-color: fcdo-color("default", "1");
+    border-bottom: $fcdo-spacing-2 solid fcdo-color("default", "2");
 
     &__container {
         display: flex;
@@ -25,12 +25,11 @@
 
     &__link {
         display: block;
-        @include govuk-font($size: 24, $weight: "normal");
         color: #fff;
         text-decoration: none;
-
+    
         span {
-            @include govuk-font($size: 24, $weight: "bold");
+            
         }
 
         &:hover {
@@ -41,7 +40,6 @@
     &__toggle-nav {
         display: inline-flex;
         position: relative;
-        @include govuk-font($size: 19, $weight: "bold");
         color: #fff;
         background: none;
         border: 0;
@@ -62,7 +60,7 @@
             cursor: pointer;
         }
 
-        @include govuk-media-query('desktop') {
+        @include fcdo-media-query('large') {
             display: none;
         }
 
@@ -79,7 +77,7 @@
         }
 
          &[aria-expanded="true"] {
-            background-color: $fcdo-colour-2;
+            background-color: fcdo-color("default", "2");
             color: #fff;
 
             &::before {
@@ -109,7 +107,7 @@
 
 // dark theme styles
 [data-theme="dark"] .fcdo-header {
-    background-color: $fcdo-dark-colour-1;
+    background-color: fcdo-color("dark", "1");
 }
 
 .fcdo-header__service-name a {
@@ -118,26 +116,26 @@
     &:focus {
         outline: 3px solid rgba(0, 0, 0, 0);
         color: #000;
-        background-color: $fcdo-dark-colour-2;
+        background-color: fcdo-color("dark", "2");
     }
 }
 
 [data-theme="highContrast"] {
     .fcdo-header {
-        background-color: $fcdo-high-contrast-colour-1;
-        border-bottom: $fcdo-spacing-2 solid $fcdo-high-contrast-colour-4;
+        background-color: fcdo-color("high-contrast", "1");
+        border-bottom: $fcdo-spacing-2 solid fcdo-color("high-contrast", "4");
 
         &__logo {
-            background: $fcdo-high-contrast-colour-4;
+            background: fcdo-color("high-contrast", "4");
         }
 
         &__service-name a {
-            color: $fcdo-high-contrast-colour-4 !important;
+            color: fcdo-color("high-contrast", "4") !important;
 
             &:focus {
-                outline: 3px solid $fcdo-high-contrast-colour-4;
+                outline: 3px solid fcdo-color("high-contrast", "4");
                 color: #000 !important;
-                background-color: $fcdo-high-contrast-colour-3;
+                background-color: fcdo-color("high-contrast", "3");
             }
         }
     }
