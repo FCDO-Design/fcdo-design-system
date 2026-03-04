@@ -46,7 +46,6 @@
                 <button onclick="check()" class="fcdo-button">Submit</button>
                 <script>
                     async function check() {
-                        const text = await fetch("protected.hash").then(r => r.text());
                         const input = document.getElementById("pw").value;
                         const hash = await crypto.subtle.digest(
                             "SHA-256",
