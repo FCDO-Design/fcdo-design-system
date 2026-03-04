@@ -45,17 +45,21 @@
                 </div>
                 <button onclick="check()" class="fcdo-button">Submit</button>
                 <script>
+                    const expectedHash = "dfd975028957f662fc04436f49cc8da2e01f43c6b556c0465551a2b3e9383383";
+
                     async function check() {
                         const input = document.getElementById("pw").value;
+
                         const hash = await crypto.subtle.digest(
                             "SHA-256",
                             new TextEncoder().encode(input)
                         );
+
                         const hex = Array.from(new Uint8Array(hash))
                             .map(b => b.toString(16).padStart(2, "0"))
                             .join("");
 
-                        if (hex.trim() === text.trim()) {
+                        if (hex === expectedHash) {
                             sessionStorage.setItem("auth", "true");
                             window.location = "/";
                         } else {
