@@ -22,7 +22,8 @@ Components
 
 <body class="govuk-template__body">
   <script>
-    if (sessionStorage.getItem("auth") !== "true") {
+    if (window.location.hostname !== "localhost" &&
+      sessionStorage.getItem("auth") !== "true") {
       window.location = "/login.html";
     }
   </script>
