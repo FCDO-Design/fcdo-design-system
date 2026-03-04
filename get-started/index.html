@@ -21,7 +21,11 @@
 </head>
 
 <body class="govuk-template__body">
-
+  <script>
+    if (sessionStorage.getItem("auth") !== "true") {
+      window.location = "/login.html";
+    }
+  </script>
   <script type="module" src="/assets/javascript/govuk-frontend.min.js"></script>
   <script type="module">
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
