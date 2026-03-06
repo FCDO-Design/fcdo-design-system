@@ -1,0 +1,58 @@
+{% set headerTitle = "Service Name" %}
+{% include "includes/component-html/header.html" %}
+<div class="fcdo-application-layout">
+  <div class="fcdo-application-layout__sidebar" id="pageNavigation">
+    <nav class="fcdo-page-navigation" style="min-width: 300px;">
+      <div class="fcdo-page-navigation__container">
+        <div class="fcdo-page-navigation__title">Programmes</div>
+        <ul class="fcdo-page-navigation__list">
+          <li class="fcdo-page-navigation__item fcdo-page-navigation__item--has-children">
+            <details class="fcdo-page-navigation__details">
+              <summary class="fcdo-page-navigation__trigger">
+                My programmes
+              </summary>
+              <ul class="fcdo-page-navigation__sublist">
+                <li class="fcdo-page-navigation__subitem">
+                  <a href="#" class="fcdo-page-navigation__sublink">
+                    Page Navigation Sub Item
+                  </a>
+                </li>
+                <li class="fcdo-page-navigation__subitem">
+                  <a href="#" class="fcdo-page-navigation__sublink">
+                    Page Navigation Sub Item
+                  </a>
+                </li>
+              </ul>
+            </details>
+          </li>
+          <li class="fcdo-page-navigation__item">
+            <a href="#" class="fcdo-page-navigation__link">
+              Find programme
+            </a>
+          </li>
+          <li class="fcdo-page-navigation__item">
+            <a href="#" class="fcdo-page-navigation__link">
+              Create programme
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="fcdo-application-layout__content" id="main-content">
+    <div class="fcdo-application-layout__title">
+      <span class="govuk-caption-m">Caption</span>
+      <h1 class="govuk-heading-l govuk-!-margin-0">Page title</h1>
+    </div>
+    <div class="fcdo-application-layout__card">
+      <h2 class="govuk-heading-m fcdo-application-layout__card-title">Application Card</h2>
+    </div>
+  </div>
+</div>
+<footer class="fcdo-application-layout__footer">
+    <div class="fcdo-application-layout__footer-content">
+      <a class="fcdo-application-layout__footer-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+        © Crown copyright
+      </a>
+    </div>
+</footer>

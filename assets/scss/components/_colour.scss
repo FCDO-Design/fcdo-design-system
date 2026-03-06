@@ -14,11 +14,11 @@
     &__name {
         @include govuk-font($size: 19);
         font-family: $fcdo-font-family-mono;
+        min-width: 250px;
     }
 
     &__hex {
         @include govuk-font($size: 19);
-        margin-left: $fcdo-spacing-5;
         font-family: $fcdo-font-family-mono;
     }
 }

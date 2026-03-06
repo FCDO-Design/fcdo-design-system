@@ -30,9 +30,9 @@ module.exports = {
           ]
         },
          { 
-          name: 'Pages', slug: 'pages', url: '/design-system/pages',
+          name: 'Layouts', slug: 'layouts', url: '/design-system/layouts',
           children: [
-            { name: 'Internal Application', slug: 'application', url: '#' },
+            { name: 'Internal Application', slug: 'application', url: '/design-system/layouts/application' },
           ]
         }
       ]

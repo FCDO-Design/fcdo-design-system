@@ -29,50 +29,29 @@
                 </li>
             </ul>
             <div class="govuk-tabs__panel" id="example">
-                <nav class="fcdo-navigation" role="navigation" aria-label="Navigation">
-                    <div class="govuk-width-container fcdo-navigation__container">
-                        <button class="fcdo-navigation__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu" id="navigationExampleToggle">
-                        Menu
-                        </button>
-                        <ul id="navigationExampleMenu" class="fcdo-navigation__list" hidden>
-                            <li class="fcdo-navigation__item fcdo-navigation__item--active">
-                                <a href="#" class="fcdo-navigation__link">Navigation Item 1</a>
-                            </li>
-                            <li class="fcdo-navigation__item">
-                                <a href="#" class="fcdo-navigation__link">Navigation Item 2</a>
-                            </li>
-                            <li class="fcdo-navigation__item">
-                                <a href="#" class="fcdo-navigation__link">Navigation Item 3</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
+                {% include "includes/component-html/navigation.html" %}
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html">
-                    <code class="language-html" id="htmlCode">
-&lt;nav class="fcdo-navigation" role="navigation" aria-label="Navigation"&gt;
-    &lt;div class="govuk-width-container fcdo-navigation__container"&gt;
-        &lt;button class="fcdo-navigation__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu" id="navigationToggle"&gt;
+                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;nav class=&quot;fcdo-navigation&quot; role=&quot;navigation&quot; aria-label=&quot;Navigation&quot;&gt;
+    &lt;div class=&quot;govuk-width-container fcdo-navigation__container&quot;&gt;
+        &lt;button class=&quot;fcdo-navigation__toggle&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav-menu&quot; aria-label=&quot;Toggle menu&quot; id=&quot;navigationToggle&quot;&gt;
         Menu
         &lt;/button&gt;
-        &lt;ul id="navigationMenu" class="fcdo-navigation__list" hidden&gt;
-            &lt;li class="fcdo-navigation__item fcdo-navigation__item--active"&gt;
-                &lt;a href="#" class="fcdo-navigation__link"&gt;Navigation Item 1&lt;/a&gt;
+        &lt;ul id=&quot;navigationMenu&quot; class=&quot;fcdo-navigation__list&quot; hidden&gt;
+            &lt;li class=&quot;fcdo-navigation__item fcdo-navigation__item--active&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 1&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="fcdo-navigation__item"&gt;
-                &lt;a href="#" class="fcdo-navigation__link"&gt;Navigation Item 2&lt;/a&gt;
+            &lt;li class=&quot;fcdo-navigation__item&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 2&lt;/a&gt;
             &lt;/li&gt;
-            &lt;li class="fcdo-navigation__item"&gt;
-                &lt;a href="#" class="fcdo-navigation__link"&gt;Navigation Item 3&lt;/a&gt;
+            &lt;li class=&quot;fcdo-navigation__item&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 3&lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/div&gt;
-&lt;/nav&gt;
-                </code>
-                </pre>
+&lt;/nav&gt;</code></pre>
             </div>
         </div>
     </div>
@@ -95,28 +74,5 @@
             }, 2000);
         });
     }
-
-    document.addEventListener("DOMContentLoaded", () => {
-    const menuButton = document.getElementById("navigationExampleToggle");
-    const navMenu = document.getElementById("navigationExampleMenu");
-
-    if (!menuButton || !navMenu) {
-        console.error("menuButton or navMenu not found");
-        return;
-    }
-
-    menuButton.addEventListener("click", () => {
-        const isOpen = navMenu.hasAttribute("hidden") === false;
-
-        if (isOpen) {
-        navMenu.setAttribute("hidden", "");
-        menuButton.setAttribute("aria-expanded", "false");
-        } else {
-        navMenu.removeAttribute("hidden");
-        menuButton.setAttribute("aria-expanded", "true");
-        }
-    });
-    });
-
 </script>
 {% endblock %}

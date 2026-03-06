@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="govuk-template govuk-template--rebranded" data-theme="">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        FCDO Design System - Login
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#1d70b8">
+    <link rel="icon" sizes="48x48" href="/assets/rebrand/images/favicon.ico">
+    <link rel="icon" sizes="any" href="/assets/rebrand/images/favicon.svg" type="image/svg+xml">
+    <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+    <link rel="apple-touch-icon" href="/assets/rebrand/images/govuk-icon-180.png">
+    <link rel="manifest" href="/assets/rebrand/manifest.json">
+    <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
+    <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+</head>
+
+<body class="govuk-template__body">
+
+    <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+    <header class="app-header" data-module="fcdo-header">
+        <div class="app-header__container">
+            <div class="app-header__logo"></div>
+            <div class="app-header__service-name">
+                <a href="/" class="app-header__link">
+                    <span>FCDO</span> Design System
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="app-page-content govuk-!-padding-4">
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="event-name">
+                        Enter Password
+                    </label>
+                    <input class="govuk-input govuk-input--width-20" id="pw" name="pw" type="password">
+                </div>
+                <button onclick="check()" class="fcdo-button">Submit</button>
+                <script>
+                    const expectedHash = "{{ passwordHash }}";
+
+                    async function check() {
+                        const input = document.getElementById("pw").value;
+
+                        const hash = await crypto.subtle.digest(
+                            "SHA-256",
+                            new TextEncoder().encode(input)
+                        );
+
+                        const hex = Array.from(new Uint8Array(hash))
+                            .map(b => b.toString(16).padStart(2, "0"))
+                            .join("");
+
+                        if (hex === expectedHash) {
+                            sessionStorage.setItem("auth", "true");
+                            window.location = "/";
+                        } else {
+                            alert("Wrong password");
+                        }
+                    }
+
+                    if (sessionStorage.getItem("auth") === "true") {
+                        window.location = "/";
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

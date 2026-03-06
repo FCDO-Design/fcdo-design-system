@@ -1,11 +1,20 @@
 .fcdo-page-navigation {
-
+  
   &__container {
-    border-top: 1px solid rgba(255,255,255,.2);
+    border-top: 1px solid rgba(255, 255, 255, .2);
+  }
+
+  &__title {
+    display: block;
+    padding: $fcdo-spacing-5 $fcdo-spacing-3 $fcdo-spacing-3 $fcdo-spacing-3;
+    color: #555;
+    text-transform: uppercase;
+    @include fcdo-font-size(16);
+    font-weight: 700;
   }
 
   &__list {
-    margin: 0;
+    margin: 0 $fcdo-spacing-3 0 0;
     padding: 0;
     list-style: none;
     display: flex;
@@ -17,21 +26,21 @@
     list-style: none;
   }
 
-  /* ===============================
-     TRIGGER (summary)
-  =============================== */
-
   &__trigger {
     display: block;
     position: relative;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     cursor: pointer;
     color: govuk-color("blue");
-    @include fcdo-font-size(19);
+    @include fcdo-font-size(19, 25px);
 
-    /* remove default marker */
-    &::-webkit-details-marker { display: none; }
-    &::marker { content: ""; }
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::marker {
+      content: "";
+    }
 
     /* arrow */
     &::after {
@@ -63,28 +72,25 @@
     }
   }
 
-  /* Open state */
-  &__details[open] > &__trigger {
-    background: fcdo-color("default", "1");
-    color: #fff;
+  &__details[open] {
+    .fcdo-page-navigation__trigger {
+      background: fcdo-color("default", "1");
+      color: #fff;
 
-    &::after {
-      transform: rotate(315deg);
-      border-color: #fff;
-      top: 20px;
+      &::after {
+        transform: rotate(315deg);
+        border-color: #fff;
+        top: 20px;
+      }
     }
   }
-
-  /* ===============================
-     LINKS
-  =============================== */
 
   &__link {
     display: block;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
     color: govuk-color("blue");
-    @include fcdo-font-size(19);
+    @include fcdo-font-size(19, 25px);
 
     &:hover {
       background: govuk-color("blue");
@@ -96,14 +102,15 @@
       background: fcdo-color("default", "2");
       color: #fff;
     }
+
+    &--active {
+      background: fcdo-color("default", "1");
+      color: #fff;
+    }
   }
 
-  /* ===============================
-     SUBLIST
-  =============================== */
-
   &__sublist {
-    margin: $fcdo-spacing-2 0 $fcdo-spacing-2 $fcdo-spacing-3;
+    margin: $fcdo-spacing-2 $fcdo-spacing-3;
     padding: 0;
     list-style: none;
   }
@@ -132,82 +139,62 @@
   }
 }
 
-// dark theme styles
+
 [data-theme="dark"] {
-    .fcdo-page-navigation {
-        background-color: fcdo-color("dark", "1");
+  .fcdo-page-navigation {
+    background-color: fcdo-color("dark", "1");
 
-         &__container {
-            border-top: 1px solid fcdo-color("dark", "1");
-        }
-
-        &__item {
-            list-style-type: none;
-            padding: 5px 0 5px 10px;
-            border-left: 5px solid transparent;
-
-        &:hover, &--active {
-            border-left: none;
-            border-left: 5px solid fcdo-color("dark", "2");
-            color: #005ea5;
-            background-color: fcdo-color("dark", "1");
-
-            a {
-                color: fcdo-color("dark", "2");
-            }
-        }
+    &__container {
+      border-top: 1px solid fcdo-color("dark", "2");
     }
 
-        &__link {
-            color: fcdo-color("dark", "2");
+    &__link {
+      color: fcdo-color("dark", "2");
 
-            &:hover {
-                color: fcdo-color("dark", "3");
-            }
+      &:hover {
+        color: fcdo-color("dark", "3");
+      }
 
-            &:focus-visible {
-                outline: 3px solid rgba(0, 0, 0, 0);
-                color: #fff;
-                background-color: fcdo-color("dark", "2");
-            }
-        }
+      &:focus-visible {
+        background-color: fcdo-color("dark", "2");
+        color: #fff;
+      }
     }
+
+    &__trigger {
+      color: fcdo-color("dark", "2");
+
+      &::after {
+        border-color: fcdo-color("dark", "2");
+      }
+    }
+  }
 }
 
-// high contrast theme styles
+
 [data-theme="highContrast"] {
-    .fcdo-page-navigation {
-        background-color: fcdo-color("high-contrast", "1");
+  .fcdo-page-navigation {
+    background-color: fcdo-color("high-contrast", "1");
 
-         &__container {
-            border-top: 1px solid fcdo-color("high-contrast", "4");
-        }
-
-        &__item {
-            list-style-type: none;
-            padding: 5px 0 5px 10px;
-            border-left: 5px solid transparent;
-
-        &:hover, &--active {
-            border-left: none;
-            border-left: 5px solid fcdo-color("high-contrast", "3");
-            color: fcdo-color("high-contrast", "3");
-            background-color: fcdo-color("high-contrast", "1");
-
-            a {
-                color: fcdo-color("high-contrast", "3");
-            }
-        }
+    &__container {
+      border-top: 1px solid fcdo-color("high-contrast", "4");
     }
 
-        &__link {
-            color: fcdo-color("high-contrast", "2");
+    &__link {
+      color: fcdo-color("high-contrast", "2");
 
-            &:focus-visible {
-                outline: 3px solid rgba(0, 0, 0, 0);
-                color: #fff;
-                background-color: fcdo-color("high-contrast", "4");
-            }
-        }
+      &:focus-visible {
+        background-color: fcdo-color("high-contrast", "4");
+        color: #000;
+      }
     }
+
+    &__trigger {
+      color: fcdo-color("high-contrast", "2");
+
+      &::after {
+        border-color: fcdo-color("high-contrast", "2");
+      }
+    }
+  }
 }

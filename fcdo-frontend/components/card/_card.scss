@@ -1,47 +1,53 @@
-
 .fcdo-card {
-    border: 1px solid fcdo-color("default", "2");
-    padding: $fcdo-spacing-3;
-    border-bottom: 5px solid fcdo-color("default", "3");
-    max-width: 400px;
+  border: 1px solid fcdo-color("default", "7");
+  padding: $fcdo-spacing-3;
+  border-bottom: 5px solid fcdo-color("default", "6");
+  max-width: 400px;
 
-    &__container {
-        display: flex;
-        flex-direction: column;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: $fcdo-spacing-2;
+  }
+
+  &__description {
+    @include fcdo-font-size(19);
+    margin-top: $fcdo-spacing-2;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: fcdo-color("default", "1");
+    color: #fff;
+
+    .fcdo-card__title,
+    .fcdo-card__description {
+      color: #fff;
     }
+  }
 
-    &__title {
-        margin-bottom: $fcdo-spacing-2;
-    }
-
-    &__description {
-        // @include govuk-font($size: 19);
-        margin-top: $fcdo-spacing-2;
-    }
-
-    &:hover {
-        cursor: pointer;
-        background-color: fcdo-color("default", "1");
-        color: #fff;
-
-        h2, p {
-            color: #fff;
-        }
-    }
+  &:focus-within {
+    outline: 3px solid govuk-color("yellow", "primary");
+  }
 }
 
 [data-theme="dark"] {
-    .fcdo-card {
-        background-color: fcdo-color("dark", "1");
-        border: none;
-        border-bottom: 5px solid fcdo-color("dark", "2");
-    }
+  .fcdo-card {
+    background-color: fcdo-color("dark", "1");
+    color: #fff;
+    border: none;
+    border-bottom: 5px solid fcdo-color("dark", "2");
+  }
 }
 
 [data-theme="highContrast"] {
-    .fcdo-card {
-        background-color: fcdo-color("high-contrast", "1");
-        border: 3px solid fcdo-color("high-contrast", "4");
-        border-bottom: 5px solid fcdo-color("high-contrast", "4");
-    }
+  .fcdo-card {
+    background-color: fcdo-color("high-contrast", "1");
+    border: 3px solid fcdo-color("high-contrast", "4");
+    border-bottom: 5px solid fcdo-color("high-contrast", "4");
+    color: #fff;
+  }
 }

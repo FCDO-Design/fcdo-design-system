@@ -30,26 +30,17 @@
             </ul>
 
             <div class="govuk-tabs__panel" id="example">
-                <div class="fcdo-card">
-                    <div class="fcdo-card__container">
-                        <h2 class="govuk-heading-m fcdo-card__title">Title</h2>
-                        <p class="fcdo-card__description">Intro text for the card.</p>
-                    </div>
-                </div>
+                {% include "includes/component-html/card.html" %}
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html">
-                    <code class="language-html" id="htmlCode">
-&lt;div class="fcdo-card"&gt;
+                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;div class="fcdo-card"&gt;
     &lt;div class="fcdo-card__container"&gt;
         &lt;h2 class="govuk-heading-m fcdo-card__title"&gt;Title&lt;/h2&gt;
         &lt;p class="fcdo-card__description"&gt;Intro text.&lt;/p&gt;
     &lt;/div&gt;
-&lt;/div&gt;
-                    </code>
-                </pre>
+&lt;/div&gt;</code></pre>
             </div>
         </div>
 

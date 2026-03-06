@@ -1,66 +1,66 @@
 .fcdo-button {
-    padding: $fcdo-spacing-2 $fcdo-spacing-3;
-    background-color: fcdo-color("default", "1");
-    // @include govuk-font($size: 19);
-    color: #fff;
-    border: 2px solid transparent;
-    box-shadow: 0 2px 0 fcdo-color("default", "7");
+  padding: 8px $fcdo-spacing-3;
+  background-color: fcdo-color("default", "1");
+  @include fcdo-font-size(19, 1);
+  line-height: 1;
+  color: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 0 fcdo-color("default", "7");
+
+  &:hover {
+    background-color: fcdo-color("default", "2");
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-color: govuk-color("yellow", "primary");
+    color: govuk-color("black", "primary");
+    background-color: govuk-color("yellow", "primary");
+    box-shadow: 0 2px 0 govuk-color("black", "primary");
+  }
+
+  &--outline {
+    padding: 3px $fcdo-spacing-3;
+    @include fcdo-font-size(16, 20px);
+    color: govuk-color("black", "primary");
+    border: 1px solid fcdo-color("default", "1");
+    background-color: #fff;
+    box-shadow: 0 2px 0 govuk-color("black", "primary");
 
     &:hover {
-        background-color: fcdo-color("default", "2");
-        cursor: pointer;
+      background-color: #fff;
     }
 
     &:focus {
-        border-color: govuk-color("yellow", "primary");
-        color: govuk-color("black", "primary");
-        background-color: govuk-color("yellow", "primary");
-        box-shadow: 0 2px 0 govuk-color("black", "primary");
+      background-color: govuk-color("yellow", "primary");
     }
-
-    &--outline {
-        padding: 3px $fcdo-spacing-3;
-        // @include govuk-font($size: 16);
-        color: govuk-color("black", "primary");
-        border: 1px solid fcdo-color("default", "1");
-        background-color: #fff;
-        box-shadow: 0 2px 0 govuk-color("black", "primary");
-
-        &:hover {
-            background-color: #fff;
-        }
-
-        &:focus {
-            background-color: govuk-color("yellow", "primary");
-        }
-    }
+  }
 }
 
 [data-theme="highContrast"] {
-    .fcdo-button {  
-        background-color: fcdo-color("high-contrast", "1");
-        border: 1px solid #fff;
-        border-bottom: 5px solid fcdo-color("high-contrast", "4");
+  .fcdo-button {
+    background-color: fcdo-color("high-contrast", "1");
+    border: 1px solid #fff;
+    border-bottom: 5px solid fcdo-color("high-contrast", "4");
 
-        &:focus {
-            border-color: fcdo-color("high-contrast", "3");
-            background-color: fcdo-color("high-contrast", "4");
-            box-shadow: none;
-        }
-
-        &--outline {
-        background-color: fcdo-color("high-contrast", "1");
-        border: 1px solid #fff;
-        border-bottom: 5px solid fcdo-color("high-contrast", "4");
-        color: #fff;
-
-        &:focus {
-            border-color: fcdo-color("high-contrast", "3");
-            background-color: fcdo-color("high-contrast", "4");
-            box-shadow: none;
-            color: govuk-color("black");
-        }
+    &:focus {
+      border-color: fcdo-color("high-contrast", "3");
+      background-color: fcdo-color("high-contrast", "4");
+      box-shadow: none;
     }
 
+    &--outline {
+      background-color: fcdo-color("high-contrast", "1");
+      border: 1px solid #fff;
+      border-bottom: 5px solid fcdo-color("high-contrast", "4");
+      color: #fff;
+
+      &:focus {
+        border-color: fcdo-color("high-contrast", "3");
+        background-color: fcdo-color("high-contrast", "4");
+        box-shadow: none;
+        color: govuk-color("black");
+      }
     }
+  }
 }

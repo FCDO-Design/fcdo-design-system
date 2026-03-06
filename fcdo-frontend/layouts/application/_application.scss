@@ -1,0 +1,98 @@
+.fcdo-application-layout {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @include fcdo-media-query('desktop') {
+        flex-direction: row;
+    }
+
+    &__sidebar {
+        display: none;
+        border-right: 1px solid govuk-color("black", "tint-80");
+        background-color: govuk-color("white");
+
+        @include fcdo-media-query('tablet') {
+            display: block;
+        }
+
+        &--open {
+            display: block;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: govuk-color("black", "tint-95");
+    }
+
+     &__title {
+        padding: $fcdo-spacing-3;
+        background-color: #fff;
+        border-bottom: 1px solid govuk-color("black", "tint-80");
+
+        @include fcdo-media-query('desktop') {
+            padding: $fcdo-spacing-3 $fcdo-spacing-6;
+        }
+    }
+
+    &__card {
+        margin: $fcdo-spacing-4;
+        padding: $fcdo-spacing-4;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border: 1px solid govuk-color("black", "tint-80");
+
+        &-title {
+            margin-bottom: 0;
+            color: govuk-color("black", "tint-25");
+            font-weight: 400;
+        }
+
+    }
+
+    &__footer {
+        padding: $fcdo-spacing-5;
+        background-color: fcdo-color("default", "1");
+        border-top: 5px solid fcdo-color("default", "2");
+
+        &-content {
+            display: flex;
+        }
+
+        &-logo {
+            margin-left: auto;
+            color: #fff;
+
+            &:before {
+                margin: 0 auto $fcdo-spacing-2 auto;
+                content: "";
+                display: block;
+                width: 100%;
+                background-image: url("/assets/images/govuk-crest.svg");
+                background-repeat: no-repeat;
+                background-position: 50% 0%;
+                background-size: 125px 102px;
+                text-align: center;
+                white-space: nowrap;
+                background: currentcolor;
+                -webkit-mask-image: url("/assets/images/govuk-crest.svg");
+                mask-image: url("/assets/images/govuk-crest.svg");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-position: 50% 0%;
+                mask-position: 50% 0%;
+                -webkit-mask-size: 125px 102px;
+                mask-size: 125px 102px;
+                width: 125px;
+                height: 102px;
+                color: #fff;    
+            }
+        }
+    }
+}

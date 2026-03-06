@@ -19,7 +19,12 @@
 </head>
 
 <body class="govuk-template__body">
-
+  <script>
+    if (window.location.hostname !== "localhost" &&
+      sessionStorage.getItem("auth") !== "true") {
+      window.location = "/login.html";
+    }
+  </script>
   <script type="module" src="/assets/javascript/govuk-frontend.min.js"></script>
   <script type="module">
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
@@ -33,10 +38,10 @@
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
   
   {% include "includes/app-header.html" %}
-  
+
   <div class="app-layout">
-    <div class="app-layout__sidebar" id="nav">
-  {% include "includes/navigation.html" %}
+    <div class="app-layout__sidebar" id="appPageNavigation">
+  {% include "includes/app-page-navigation.html" %}
     </div>
     <div class="app-layout__content" id="main-content">
       {% if currentPath == "/" %}

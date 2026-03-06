@@ -47,22 +47,34 @@ $typography-scale: (
     )
 );
 
-@mixin fcdo-font-size($size) {
+@mixin fcdo-font-size($size, $override-line-height: null) {
   $settings: map-get($typography-scale, $size);
 
   @if $settings {
 
-    // Mobile first (default)
     $mobile: map-get($settings, mobile);
 
     font-size: map-get($mobile, font-size);
-    line-height: map-get($mobile, line-height);
 
-    // Tablet override
+    // Use override if provided, otherwise fall back to map
+    @if $override-line-height != null {
+      line-height: $override-line-height;
+    } @else if map-has-key($mobile, line-height) {
+      line-height: map-get($mobile, line-height);
+    }
+
+    // Tablet
     @if map-has-key($settings, tablet) {
       @include fcdo-media-query(tablet) {
-        font-size: map-get(map-get($settings, tablet), font-size);
-        line-height: map-get(map-get($settings, tablet), line-height);
+        $tablet: map-get($settings, tablet);
+
+        font-size: map-get($tablet, font-size);
+
+        @if $override-line-height != null {
+          line-height: $override-line-height;
+        } @else if map-has-key($tablet, line-height) {
+          line-height: map-get($tablet, line-height);
+        }
       }
     }
   }

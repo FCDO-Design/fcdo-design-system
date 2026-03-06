@@ -1,6 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
+// login route
+router.get('/login.html', (req, res) => {
+    res.render('login.html');
+});
+
 // home route
 router.get('/', (req, res) => {
     res.render('index.html');
@@ -109,6 +114,11 @@ router.get('/design-system/styles/typography', (req, res) => {
 // components route
 router.get('/design-system/components', (req, res) => {
     res.render('design-system/components/index.html');
+});
+
+// application layout route
+router.get('/design-system/layouts/application', (req, res) => {
+    res.render('design-system/layouts/application.html');
 });
 
 module.exports = router;

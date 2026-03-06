@@ -29,30 +29,20 @@
                 </li>
             </ul>
             <div class="govuk-tabs__panel" id="example">
-<details class="govuk-details">
-        <summary class="govuk-details__summary fcdo-details__summary">
-        <span class="govuk-details__summary-text">Show more information</span>
-        </summary>
-        <div class="govuk-details__text">
-            The Details component provides a toggleable section that users can click to expand and view more information. This helps keep pages clean and focused, especially when dealing with complex or optional content.
-        </div>
-    </details>
+                {% include "includes/component-html/details.html" %}
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html">
-                    <code class="language-html" id="htmlCode">
-&lt;details class=&quot;govuk-details&quot;&gt;
+                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;details class=&quot;govuk-details&quot;&gt;
     &lt;summary class=&quot;govuk-details__summary fcdo-details__summary&quot;&gt;
         &lt;span class=&quot;govuk-details__summary-text&quot;&gt;Show more information&lt;/span&gt;
     &lt;/summary&gt;
     &lt;div class=&quot;govuk-details__text&quot;&gt;
-        The Details component provides a toggleable section that users can click to expand and view more information. This helps keep pages clean and focused, especially when dealing with complex or optional content.
+        The Details component provides a toggleable section that users can click to expand and view more information.
+        This helps keep pages clean and focused, especially when dealing with complex or optional content.
     &lt;/div&gt;
-&lt;/details&gt;
-                </code>
-                </pre>
+&lt;/details&gt;</code></pre>
             </div>
         </div>
     </div>

@@ -18,7 +18,7 @@ $breakpoint-desktop: 769px;
 		}
 	}
 
-	@else if $breakpoint=='large' {
+	@else if $breakpoint=='desktop' {
 		@media only screen and (min-width: $breakpoint-desktop) {
 			@content;
 		}
