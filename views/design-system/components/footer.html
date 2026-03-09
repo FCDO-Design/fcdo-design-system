@@ -1,12 +1,13 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Page Navigation
+Header
 {% endblock %}
 
 {% block pageTitle %}
 <span class="govuk-caption-xl">Components</span>
-<h1 class="govuk-heading-xl">Page Navigation</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Footer</h1>
+<strong class="govuk-tag govuk-tag--orange">To be reviewed</strong>
 {% endblock %}
 
 {% block content %}
@@ -26,12 +27,11 @@
                     <a class="govuk-tabs__tab" href="#html">
                         HTML
                     </a>
-                  </li>
+                </li>
             </ul>
-            <div class="govuk-tabs__panel">
-                <div id="example" style="max-width: 350px;">
-                  {% include "includes/component-html/page-navigation.html" %}
-                </div>
+
+            <div class="govuk-tabs__panel" id="example">
+                {% include "includes/component-html/footer.html" %}
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
@@ -41,7 +41,4 @@
         </div>
     </div>
 </div>
-
-<h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">The Page Navigation component helps users navigate around your service.</p>
 {% endblock %}

@@ -1,18 +1,13 @@
 <header class="fcdo-header">
-  <div class="fcdo-header__container">
+    <div class="{% if fcdoTemplate == 'application' %}fcdo-header__container{% else %}govuk-width-container fcdo-header__container{% endif %}">
     <div class="fcdo-header__logo"></div>
     <div class="fcdo-header__service-name">
       <a href="/" class="fcdo-header__link govuk-!-font-size-24">
-        <span class="govuk-!-font-weight-bold">FCDO</span>
-        {% if headerTitle %}
-          {{ headerTitle }}
-        {% else%} 
-          Design System
-        {% endif %}
+        <span class="govuk-!-font-weight-bold">FCDO</span>{% if headerTitle %} {{ headerTitle }}{% else%} Design System{% endif %}
       </a>
     </div>
-    <button class="fcdo-header__toggle-page-navigation" id="togglePageNavigation" aria-expanded="false" aria-controls="pageNavigation">
+    {% if fcdoTemplate == "application" %}<button class="fcdo-header__toggle-page-navigation" id="togglePageNavigation" aria-expanded="false" aria-controls="pageNavigation">
       <span>Menu</span>
-    </button>
+    </button>{%endif%}
   </div>
 </header>

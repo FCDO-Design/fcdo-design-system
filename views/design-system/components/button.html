@@ -34,7 +34,7 @@
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;button class="fcdo-button" type="button"&gt;Save and continue&lt;/button&gt;</code></pre>
+                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
             </div>
         </div>
     </div>
@@ -42,20 +42,4 @@
 
 <h1 class="govuk-heading-l">Component Information</h1>
 <p class="govuk-body">Use the button component to help users carry out an action like starting an application or saving their information.</p>
-
-<script>
-    function copyCode() {
-        const code = document.getElementById('htmlCode').innerText;
-        const button = document.getElementById('copyHTML');
-
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            //button.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-                button.disabled = false;
-            }, 2000);
-        });
-    }
-</script>
 {% endblock %}

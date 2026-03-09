@@ -3,6 +3,11 @@
     border: 1px solid $govuk-border-colour;
     background-color: #fff;
 
+    &__link {
+        padding: $fcdo-spacing-3 $fcdo-spacing-4;
+        border-bottom: 1px solid $govuk-border-colour;
+    }
+
     &__open {
         padding: $fcdo-spacing-3 $fcdo-spacing-4;
         border-bottom: 1px solid $govuk-border-colour;
@@ -60,9 +65,7 @@
         }
     }
 
-    .govuk-width-container {
-        margin: 0 $fcdo-spacing-3;
-    }
+
 }
 
 [data-theme="dark"] {

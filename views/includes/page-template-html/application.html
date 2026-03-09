@@ -1,15 +1,16 @@
+{% set fcdoTemplate = "application" %}
 {% set headerTitle = "Service Name" %}
 {% include "includes/component-html/header.html" %}
 <div class="fcdo-application-layout">
-  <div class="fcdo-application-layout__sidebar" id="pageNavigation">
-    <nav class="fcdo-page-navigation" style="min-width: 300px;">
+  <div class="fcdo-application-layout__sidebar fcdo-application-layout__sidebar--open" id="pageNavigation">
+    <nav class="fcdo-page-navigation">
       <div class="fcdo-page-navigation__container">
         <div class="fcdo-page-navigation__title">Programmes</div>
         <ul class="fcdo-page-navigation__list">
           <li class="fcdo-page-navigation__item fcdo-page-navigation__item--has-children">
             <details class="fcdo-page-navigation__details">
               <summary class="fcdo-page-navigation__trigger">
-                My programmes
+                My programmes</span>
               </summary>
               <ul class="fcdo-page-navigation__sublist">
                 <li class="fcdo-page-navigation__subitem">
@@ -27,12 +28,12 @@
           </li>
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-              Find programme
+             <span>Find programme</span>
             </a>
           </li>
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-              Create programme
+             <span>Create programme</span>
             </a>
           </li>
         </ul>
@@ -49,10 +50,4 @@
     </div>
   </div>
 </div>
-<footer class="fcdo-application-layout__footer">
-    <div class="fcdo-application-layout__footer-content">
-      <a class="fcdo-application-layout__footer-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
-        © Crown copyright
-      </a>
-    </div>
-</footer>
+{% include "includes/component-html/footer.html" %}

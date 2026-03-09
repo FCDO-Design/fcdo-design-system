@@ -1,0 +1,65 @@
+.fcdo-application-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 auto;
+
+  @include fcdo-media-query('desktop') {
+    flex-direction: row;
+  }
+
+  &__sidebar {
+    display: none;
+    position: absolute;
+    background-color: #ccc;
+    top: 80px;
+    left: 0;
+    right: 0;
+    padding-bottom: $fcdo-spacing-4;
+    border-right: 1px solid govuk-color("black", "tint-80");
+    background-color: govuk-color("white");
+    border-bottom: 1px solid govuk-color("black", "tint-80");
+
+    @include fcdo-media-query('desktop') {
+      position: relative;
+      min-width: 300px;
+      top: unset;
+    }
+
+    &--open {
+      display: block;
+    }
+  }
+
+  &__content {
+    min-height: 0;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: govuk-color("black", "tint-95");
+  }
+
+  &__title {
+    padding: $fcdo-spacing-3;
+    background-color: #fff;
+    border-bottom: 1px solid govuk-color("black", "tint-80");
+
+    @include fcdo-media-query('desktop') {
+      padding: $fcdo-spacing-3 $fcdo-spacing-4;
+    }
+  }
+
+  &__card {
+    margin: $fcdo-spacing-4;
+    padding: $fcdo-spacing-4;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border: 1px solid govuk-color("black", "tint-80");
+
+    &-title {
+      margin-bottom: 0;
+      color: govuk-color("black", "tint-25");
+      font-weight: 400;
+    }
+  }
+}

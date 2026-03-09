@@ -34,24 +34,7 @@
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;nav class=&quot;fcdo-navigation&quot; role=&quot;navigation&quot; aria-label=&quot;Navigation&quot;&gt;
-    &lt;div class=&quot;govuk-width-container fcdo-navigation__container&quot;&gt;
-        &lt;button class=&quot;fcdo-navigation__toggle&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;nav-menu&quot; aria-label=&quot;Toggle menu&quot; id=&quot;navigationToggle&quot;&gt;
-        Menu
-        &lt;/button&gt;
-        &lt;ul id=&quot;navigationMenu&quot; class=&quot;fcdo-navigation__list&quot; hidden&gt;
-            &lt;li class=&quot;fcdo-navigation__item fcdo-navigation__item--active&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 1&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;fcdo-navigation__item&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 2&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;fcdo-navigation__item&quot;&gt;
-                &lt;a href=&quot;#&quot; class=&quot;fcdo-navigation__link&quot;&gt;Navigation Item 3&lt;/a&gt;
-            &lt;/li&gt;
-        &lt;/ul&gt;
-    &lt;/div&gt;
-&lt;/nav&gt;</code></pre>
+                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
             </div>
         </div>
     </div>
@@ -59,20 +42,4 @@
 
 <h1 class="govuk-heading-l">Component Information</h1>
 <p class="govuk-body">The Navigation component helps users understand that they’re using your service and lets them navigate around your service.</p>
-
-<script>
-    function copyCode() {
-        const code = document.getElementById('htmlCode').innerText;
-        const button = document.getElementById('copyHTML');
-
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            //button.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-                button.disabled = false;
-            }, 2000);
-        });
-    }
-</script>
 {% endblock %}

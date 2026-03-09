@@ -1,0 +1,39 @@
+.fcdo-footer {
+    flex-shrink: 0; // keeps footer at bottom
+    padding: $fcdo-spacing-5;
+    background-color: fcdo-color("default", "1");
+    border-top: 5px solid fcdo-color("default", "2");
+
+    &__content {
+      display: flex;
+    }
+
+    &__logo {
+      margin-left: auto;
+      color: #fff;
+
+      &:before {
+        margin: 0 auto $fcdo-spacing-2 auto;
+        content: "";
+        display: block;
+        background-image: url("/assets/images/govuk-crest.svg");
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: 125px 102px;
+        text-align: center;
+        white-space: nowrap;
+        background: currentcolor;
+        -webkit-mask-image: url("/assets/images/govuk-crest.svg");
+        mask-image: url("/assets/images/govuk-crest.svg");
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: 50% 0%;
+        mask-position: 50% 0%;
+        -webkit-mask-size: 94px 77px;
+        mask-size: 94px 77px;
+        width: 94px;
+        height: 77px;
+        color: #fff;    
+      }
+    }
+  }

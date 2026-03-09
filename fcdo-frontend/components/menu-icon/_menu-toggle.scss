@@ -1,0 +1,60 @@
+$fcdo-menu-toggle-width: 30px;
+$fcdo-menu-toggle-height: 3px;
+$fcdo-menu-toggle-gap: 8px;
+$fcdo-menu-toggle-color: #fff;
+
+.fcdo-menu-toggle {
+  position: relative;
+  margin-left: auto;
+  width: $fcdo-menu-toggle-width;
+  height: ($fcdo-menu-toggle-gap * 2) + $fcdo-menu-toggle-height;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+
+  // middle line
+  span,
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: $fcdo-menu-toggle-height;
+    background-color: $fcdo-menu-toggle-color;
+    transition: transform 0.3s ease, top 0.3s ease, opacity 0.3s ease;
+  }
+
+  // middle bar
+  span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // top bar
+  &::before {
+    top: 0;
+  }
+
+  // bottom bar
+  &::after {
+    bottom: 0;
+  }
+
+  &--active {
+    span {
+      opacity: 0;
+    }
+
+    &::before {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &::after {
+      bottom: auto;
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+  }
+}

@@ -14,12 +14,17 @@
   }
 
   &__list {
-    margin: 0 $fcdo-spacing-3 0 0;
+    margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 5px;
+
+     @include fcdo-media-query('tablet') {
+      margin: 0 $fcdo-spacing-3 0 0;
+     }
+
   }
 
   &__item {

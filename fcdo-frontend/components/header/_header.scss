@@ -55,13 +55,19 @@
             content: "";
             width: 10px;
             height: 10px;
-            margin-top: 5px;
+            margin-top: 3px;
             transform: rotate(135deg);
             border: solid;
             border-width: 2px 2px 0 0;
             border-color: #fff;
             cursor: pointer;
+
+            
+            @include fcdo-media-query("tablet") {
+                margin-top: 6px;
+            }
         }
+        
 
         &:focus {
             background-color: #fd0;
@@ -72,8 +78,9 @@
 
             &::before {
                 border-color: #0b0c0c;
-            }
+              }
         }
+
 
          &[aria-expanded="true"] {
             background-color: fcdo-color("default", "2");
@@ -82,13 +89,17 @@
             &::before {
                 transform: rotate(-45deg); // rotate arrow for open state
                 border-color: #fff;
-                margin-top: 8px;
+                margin-top: 10px;
+
+                @include fcdo-media-query("tablet") {
+                  margin-top: 12px;
+                }
             }
         }
         
-         @include fcdo-media-query("desktop") {
-            display: none !important;
-        }        
+        //  @include fcdo-media-query("desktop") {
+        //     display: none !important;
+        // }        
            
   }
 }

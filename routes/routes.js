@@ -81,6 +81,11 @@ router.get('/design-system/components/page-navigation', (req, res) => {
     res.render('design-system/components/page-navigation.html');
 });
 
+// components footer route
+router.get('/design-system/components/footer', (req, res) => {
+    res.render('design-system/components/footer.html');
+});
+
 // details route
 router.get('/design-system/components/details', (req, res) => {
     res.render('design-system/components/details.html');
@@ -116,9 +121,25 @@ router.get('/design-system/components', (req, res) => {
     res.render('design-system/components/index.html');
 });
 
-// application layout route
-router.get('/design-system/layouts/application', (req, res) => {
-    res.render('design-system/layouts/application.html');
+// default page template route
+router.get('/design-system/page-templates/default', (req, res) => {
+    res.render('design-system/page-templates/default.html');
 });
+
+// application page template route
+router.get('/design-system/page-templates/application', (req, res) => {
+    res.render('design-system/page-templates/application.html');
+});
+
+// view default page template route
+router.get('/design-system/page-templates/view/default', (req, res) => {
+    res.render('design-system/page-templates/view-default.html');
+});
+
+// view application page template route
+router.get('/design-system/page-templates/view/application', (req, res) => {
+    res.render('design-system/page-templates/view-application.html');
+});
+
 
 module.exports = router;

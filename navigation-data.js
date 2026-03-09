@@ -10,6 +10,7 @@ module.exports = {
             { name: 'Header', slug: 'header', url: '/design-system/components/header' },
             { name: 'Navigation', slug: 'navigation', url: '/design-system/components/navigation' },
             { name: 'Page Navigation', slug: 'page-navigation', url: '/design-system/components/page-navigation' },
+            { name: 'Footer', slug: 'footer', url: '/design-system/components/footer' },
             { name: 'Card', slug: 'card', url: '/design-system/components/card' },
             { name: 'Button', slug: 'button', url: '/design-system/components/button' },
             { name: 'Details', slug: 'details', url: '/design-system/components/details' }
@@ -30,9 +31,10 @@ module.exports = {
           ]
         },
          { 
-          name: 'Layouts', slug: 'layouts', url: '/design-system/layouts',
+          name: 'Page Templates', slug: 'page-templates', url: '/design-system/page-templates',
           children: [
-            { name: 'Internal Application', slug: 'application', url: '/design-system/layouts/application' },
+            { name: 'Default Template', slug: 'default', url: '/design-system/page-templates/default' },
+            { name: 'Application Template', slug: 'application', url: '/design-system/page-templates/application' },
           ]
         }
       ]

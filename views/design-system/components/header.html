@@ -36,19 +36,7 @@ Header
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCode">&lt;header class="fcdo-header" data-module="fcdo-header"&gt;
-  &lt;div class="fcdo-header__container"&gt;
-    &lt;div class="fcdo-header__logo"&gt;&lt;/div&gt;
-    &lt;div class="fcdo-header__service-name"&gt;
-      &lt;a href="/" class="fcdo-header__link govuk-!-font-size-24"&gt;
-        &lt;span class="govuk-!-font-weight-bold"&gt;FCDO&lt;/span&gt; Design System
-      &lt;/a&gt;
-    &lt;/div&gt;
-    &lt;button class="fcdo-header__toggle-nav" id="toggleNav" aria-expanded="false" aria-controls="nav"&gt;
-      &lt;span&gt;Menu&lt;/span&gt;
-    &lt;/button&gt;
-  &lt;/div&gt;
-&lt;/header&gt;</code></pre>
+                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
             </div>
         </div>
 
@@ -59,22 +47,4 @@ Header
 <h1 class="govuk-heading-l">Component Information</h1>
 <p class="govuk-body">The Header component serves as the primary navigation and branding element across all digital products in the FCDO ecosystem.</p>
 <p class="govuk-body">It provides a consistent, accessible, and responsive framework for users to identify the FCDO brand, navigate key sections, and access essential actions such as search, language selection, and user account controls.</p>
-
-
-<script>
-    function copyCode() {
-        const code = document.getElementById('htmlCode').innerText;
-        const button = document.getElementById('copyHTML');
-
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            //button.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-                button.disabled = false;
-            }, 2000);
-        });
-    }
-</script>
-
 {% endblock %}
