@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template govuk-template--rebranded" data-theme="">
+<html lang="en" class="govuk-template fcdo-template" data-theme="">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 
-<body class="govuk-template__body">
+<body class="govuk-template__body fcdo-template__body">
   <script>
     if (window.location.hostname !== "localhost" &&
       sessionStorage.getItem("auth") !== "true") {
@@ -47,8 +47,8 @@
         <span>FCDO</span> Design System 
       </a>
     </div>
-    <ul id="fcdoThemeList" class="app-header__theme-list"></ul>
-    <button class="app-header__toggle-nav" id="toggleNav" aria-expanded="false" aria-controls="nav">
+    <ul id="fcdoThemeList" class="app-header__theme-list govuk-!-display-none"></ul>
+    <button class="app-header__toggle-nav" id="toggleAppPageNavigation" aria-expanded="false" aria-controls="pageNavigation">
       <span>Menu</span>
     </button>
   </div>
@@ -109,9 +109,9 @@
     renderList();
 });
 </script>
-  
+
   <div class="app-layout">
-    <div class="app-layout__sidebar" id="nav">
+    <div class="app-layout__sidebar" id="appPageNavigation">
   <nav class="app-nav">
   <ul class="app-nav__list">
     
@@ -126,6 +126,9 @@
     
     
 
+    
+    
+    
     
     
     
@@ -242,6 +245,26 @@
       
       <a href="/design-system/components/page-navigation" class="app-nav__link ">
         Page Navigation
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/footer" class="app-nav__link ">
+        Footer
       </a>
       
       
@@ -478,6 +501,9 @@
     
     
     
+    
+    
+    
 
     
 
@@ -488,7 +514,7 @@
 
       
       
-      <button class="app-nav__toggle ">Pages</button>
+      <button class="app-nav__toggle ">Page Templates</button>
       
 
       <ul class="app-nav__sublist ">
@@ -507,8 +533,28 @@
       
       
       
-      <a href="#" class="app-nav__link ">
-        Internal Application
+      <a href="/design-system/page-templates/default" class="app-nav__link ">
+        Default Template
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/page-templates/application" class="app-nav__link ">
+        Application Template
       </a>
       
       
@@ -751,49 +797,49 @@
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-1"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-1</div>
+    <div class="fcdo-colour__name">Colour 1 (Flag blue)</div>
     <div class="fcdo-colour__hex">#012069</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-2"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-2</div>
+    <div class="fcdo-colour__name">Colour 2 (Light blue)</div>
     <div class="fcdo-colour__hex">#407ec9</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-3"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-3</div>
+    <div class="fcdo-colour__name">Colour 3 (Flag red)</div>
     <div class="fcdo-colour__hex">#c8102e</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-4"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-4</div>
+    <div class="fcdo-colour__name">Colour 4 (Purple)</div>
     <div class="fcdo-colour__hex">#833177</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-5"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-5</div>
+    <div class="fcdo-colour__name">Colour 5 (Teal)</div>
     <div class="fcdo-colour__hex">#5cb8b2</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-6"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-6</div>
+    <div class="fcdo-colour__name">Colour 6 (Gold)</div>
     <div class="fcdo-colour__hex">#eaaa00</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-7"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-7</div>
+    <div class="fcdo-colour__name">Colour 7 (Silver)</div>
     <div class="fcdo-colour__hex">#c8c9c7</div>
 </div>
 
 <div class="fcdo-colour">
     <div class="fcdo-colour__swatch fcdo-brand-colour-8"></div>
-    <div class="fcdo-colour__name">$fcdo-colour-8</div>
+    <div class="fcdo-colour__name">Colour 8 (Emerald)</div>
     <div class="fcdo-colour__hex">#00b140</div>
 </div>
 
@@ -804,11 +850,6 @@
     </div>
     </div>
   </div>
-
-  
-
-
-     
     </main>
   </div>
   <footer class="govuk-footer app-footer">

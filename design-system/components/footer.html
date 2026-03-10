@@ -205,7 +205,7 @@ Header
       
       
       
-      <a href="/design-system/components/header" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/components/header" class="app-nav__link ">
         Header
       </a>
       
@@ -265,7 +265,7 @@ Header
       
       
       
-      <a href="/design-system/components/footer" class="app-nav__link ">
+      <a href="/design-system/components/footer" class="app-nav__link app-nav__link--active">
         Footer
       </a>
       
@@ -782,7 +782,7 @@ Header
           <div class="govuk-grid-column-two-thirds">
             
 <span class="govuk-caption-xl">Components</span>
-<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Header</h1>
+<h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Footer</h1>
 
           </div>
     </div>
@@ -792,9 +792,7 @@ Header
           <div class="govuk-grid-column-two-thirds">
             
 <h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">The Header component serves as the primary navigation and branding element across all digital products in the FCDO ecosystem.</p>
-<p class="govuk-body">It provides a consistent, accessible, and responsive framework for users to identify the FCDO brand, navigate key sections, and access essential actions such as search, language selection, and user account controls.</p>
-
+<p class="govuk-body">The FCDO footer provides copyright, licensing and other information about your service.</p>
 <div class="fcdo-component">
     <div class="fcdo-component__tabs">
         <div class="govuk-tabs" data-module="govuk-tabs">
@@ -815,17 +813,21 @@ Header
             </ul>
 
             <div class="govuk-tabs__panel" id="example">
-                <header class="fcdo-header">
-    <div class="govuk-width-container fcdo-header__container">
-    <div class="fcdo-header__logo"></div>
-    <div class="fcdo-header__service-name">
-      <a href="/" class="fcdo-header__link govuk-!-font-size-24">
-        <span class="govuk-!-font-weight-bold">FCDO</span> Design System
-      </a>
+                <footer class="fcdo-footer">
+  <div class="govuk-width-container fcdo-footer__content">
+    <div class="fcdo-footer__navigation">
+      <ul class="fcdo-footer__list">
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Accessibility</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Privacy</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Cookies</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Terms and conditions</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Contact</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Help</a></li>
+      </ul>
     </div>
-    
+    <a class="fcdo-footer__logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright </a>
   </div>
-</header>
+</footer>
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">

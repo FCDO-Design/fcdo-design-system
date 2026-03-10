@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template govuk-template--rebranded" data-theme="">
+<html lang="en" class="govuk-template fcdo-template" data-theme="">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 
-<body class="govuk-template__body">
+<body class="govuk-template__body fcdo-template__body">
   <script>
     if (window.location.hostname !== "localhost" &&
       sessionStorage.getItem("auth") !== "true") {
@@ -47,8 +47,8 @@
         <span>FCDO</span> Design System 
       </a>
     </div>
-    <ul id="fcdoThemeList" class="app-header__theme-list"></ul>
-    <button class="app-header__toggle-nav" id="toggleNav" aria-expanded="false" aria-controls="nav">
+    <ul id="fcdoThemeList" class="app-header__theme-list govuk-!-display-none"></ul>
+    <button class="app-header__toggle-nav" id="toggleAppPageNavigation" aria-expanded="false" aria-controls="pageNavigation">
       <span>Menu</span>
     </button>
   </div>
@@ -109,9 +109,9 @@
     renderList();
 });
 </script>
-  
+
   <div class="app-layout">
-    <div class="app-layout__sidebar" id="nav">
+    <div class="app-layout__sidebar" id="appPageNavigation">
   <nav class="app-nav">
   <ul class="app-nav__list">
     
@@ -126,6 +126,9 @@
     
     
 
+    
+    
+    
     
     
     
@@ -244,6 +247,26 @@
       
       <a href="/design-system/components/page-navigation" class="app-nav__link ">
         Page Navigation
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/footer" class="app-nav__link ">
+        Footer
       </a>
       
       
@@ -478,6 +501,9 @@
     
     
     
+    
+    
+    
 
     
 
@@ -488,7 +514,7 @@
 
       
       
-      <button class="app-nav__toggle ">Pages</button>
+      <button class="app-nav__toggle ">Page Templates</button>
       
 
       <ul class="app-nav__sublist ">
@@ -507,8 +533,28 @@
       
       
       
-      <a href="#" class="app-nav__link ">
-        Internal Application
+      <a href="/design-system/page-templates/default" class="app-nav__link ">
+        Default Template
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/page-templates/application" class="app-nav__link ">
+        Application Template
       </a>
       
       
@@ -745,6 +791,10 @@
        <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">The card component is a versatile user interface element used to display grouped information in a visually appealing and organised way.</p>
+<p class="govuk-body">They can enhance user interaction and content presentation across various applications and devices.</p>
+
 <div class="fcdo-component">
     <div class="fcdo-component__tabs">
         <div class="govuk-tabs" data-module="govuk-tabs">
@@ -766,25 +816,16 @@
 
             <div class="govuk-tabs__panel" id="example">
                 <div class="fcdo-card">
-                    <div class="fcdo-card__container">
-                        <h2 class="govuk-heading-m fcdo-card__title">Title</h2>
-                        <p class="fcdo-card__description">Intro text for the card.</p>
-                    </div>
-                </div>
+    <div class="fcdo-card__container">
+        <h2 class="govuk-heading-m fcdo-card__title">Title</h2>
+        <p class="fcdo-card__description">Intro text for the card.</p>
+    </div>
+</div>
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html">
-                    <code class="language-html" id="htmlCode">
-&lt;div class="fcdo-card"&gt;
-    &lt;div class="fcdo-card__container"&gt;
-        &lt;h2 class="govuk-heading-m fcdo-card__title"&gt;Title&lt;/h2&gt;
-        &lt;p class="fcdo-card__description"&gt;Intro text.&lt;/p&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-                    </code>
-                </pre>
+                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
             </div>
         </div>
 
@@ -792,37 +833,11 @@
 
 </div>
 
-<h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">The card component is a versatile user interface element used to display grouped information in a visually appealing and organised way.</p>
-<p class="govuk-body">They can enhance user interaction and content presentation across various applications and devices.</p>
-
-<script>
-    function copyCode() {
-        const code = document.getElementById('htmlCode').innerText;
-        const button = document.getElementById('copyHTML');
-
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            //button.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-                button.disabled = false;
-            }, 2000);
-        });
-    }
-</script>
-
-
           </div>
         </div>
     </div>
     </div>
   </div>
-
-  
-
-
-     
     </main>
   </div>
   <footer class="govuk-footer app-footer">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="govuk-template govuk-template--rebranded" data-theme="">
+<html lang="en" class="govuk-template fcdo-template" data-theme="">
 
 <head>
   <meta charset="utf-8">
@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 </head>
 
-<body class="govuk-template__body">
+<body class="govuk-template__body fcdo-template__body">
   <script>
     if (window.location.hostname !== "localhost" &&
       sessionStorage.getItem("auth") !== "true") {
@@ -47,8 +47,8 @@
         <span>FCDO</span> Design System 
       </a>
     </div>
-    <ul id="fcdoThemeList" class="app-header__theme-list"></ul>
-    <button class="app-header__toggle-nav" id="toggleNav" aria-expanded="false" aria-controls="nav">
+    <ul id="fcdoThemeList" class="app-header__theme-list govuk-!-display-none"></ul>
+    <button class="app-header__toggle-nav" id="toggleAppPageNavigation" aria-expanded="false" aria-controls="pageNavigation">
       <span>Menu</span>
     </button>
   </div>
@@ -109,9 +109,9 @@
     renderList();
 });
 </script>
-  
+
   <div class="app-layout">
-    <div class="app-layout__sidebar" id="nav">
+    <div class="app-layout__sidebar" id="appPageNavigation">
   <nav class="app-nav">
   <ul class="app-nav__list">
     
@@ -126,6 +126,9 @@
     
     
 
+    
+    
+    
     
     
     
@@ -242,6 +245,26 @@
       
       <a href="/design-system/components/page-navigation" class="app-nav__link ">
         Page Navigation
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/footer" class="app-nav__link ">
+        Footer
       </a>
       
       
@@ -476,6 +499,9 @@
     
     
     
+    
+    
+    
 
     
 
@@ -486,7 +512,7 @@
 
       
       
-      <button class="app-nav__toggle ">Pages</button>
+      <button class="app-nav__toggle ">Page Templates</button>
       
 
       <ul class="app-nav__sublist ">
@@ -505,8 +531,28 @@
       
       
       
-      <a href="#" class="app-nav__link ">
-        Internal Application
+      <a href="/design-system/page-templates/default" class="app-nav__link ">
+        Default Template
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/page-templates/application" class="app-nav__link ">
+        Application Template
       </a>
       
       
@@ -772,11 +818,6 @@
     </div>
     </div>
   </div>
-
-  
-
-
-     
     </main>
   </div>
   <footer class="govuk-footer app-footer">
