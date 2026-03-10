@@ -1,7 +1,8 @@
 {% extends "layout.html" %}
+{% set localEnv = "true" %}
 
 {% block title %}
-Internal Application Layout
+  FCDO Deault Page Template
 {% endblock %}
 
 {% block stylesheets %}
@@ -11,13 +12,15 @@ Internal Application Layout
 {% block pageTitle %}
 <span class="govuk-caption-xl">Page Templates</span>
 <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Default</h1>
-<strong class="govuk-tag govuk-tag--orange">To be reviewed</strong>
 {% endblock %}
 
 {% block content %}
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">The FCDO default page template provides a simple, bare-bones layout for FCDO pages, offering the essential structure and styling needed to build new pages quickly while maintaining consistency with the overall design system.</p>
+
 <div class="fcdo-component">
     <div class="fcdo-component__link">
-      <a href="/design-system/page-templates/view/default" class="govuk-link govuk-link--no-visited-state" target="_blank">Open this example in a new tab</a>
+      <a href="{% if localEnv %}/design-system/page-templates/view/default{% else %}/design-system/page-templates/view-default.html{% endif %}" class="govuk-link govuk-link--no-visited-state"  target="_blank">Open this example in a new tab</a>
     </div>
     <div class="fcdo-component__tabs">
         <div class="govuk-tabs" data-module="govuk-tabs">
@@ -142,10 +145,6 @@ Internal Application Layout
         </div>
     </div>
 </div>
-
-<h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">The Navigation component helps users understand that they’re using your service and lets them navigate around your service.</p>
-
 <script>
     function copyCode() {
         const code = document.getElementById('htmlCodeTemplate').innerText;

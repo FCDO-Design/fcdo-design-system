@@ -9,11 +9,7 @@
 
   &__sidebar {
     display: none;
-    position: absolute;
     background-color: #ccc;
-    top: 80px;
-    left: 0;
-    right: 0;
     padding-bottom: $fcdo-spacing-4;
     border-right: 1px solid govuk-color("black", "tint-80");
     background-color: govuk-color("white");

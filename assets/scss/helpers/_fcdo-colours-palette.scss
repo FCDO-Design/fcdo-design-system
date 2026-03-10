@@ -44,3 +44,12 @@ $fcdo-colours: (
 
   @return $color;
 }
+
+.fcdo-brand-colour-1 { background-color: fcdo-color("default", "1"); }
+.fcdo-brand-colour-2 { background-color: fcdo-color("default", "2"); }
+.fcdo-brand-colour-3 { background-color: fcdo-color("default", "3"); }
+.fcdo-brand-colour-4 { background-color: fcdo-color("default", "4"); }
+.fcdo-brand-colour-5 { background-color: fcdo-color("default", "5"); }
+.fcdo-brand-colour-6 { background-color: fcdo-color("default", "6"); }
+.fcdo-brand-colour-7 { background-color: fcdo-color("default", "7"); }
+.fcdo-brand-colour-8 { background-color: fcdo-color("default", "8"); }

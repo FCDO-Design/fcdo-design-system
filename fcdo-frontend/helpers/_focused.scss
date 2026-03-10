@@ -1,0 +1,11 @@
+@mixin fcdo-focused-text {
+  outline: 3px solid transparent;
+  color: govuk-color("black");
+  background-color: govuk-color("yellow");
+  box-shadow:
+    0 -2px govuk-color("yellow"),
+    0 4px govuk-color("black");
+  // When link is focussed, hide the default underline since the
+  // box shadow adds the "underline"
+  text-decoration: none;
+}
