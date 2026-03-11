@@ -31,7 +31,7 @@
 .app-page-content {
     min-height: 100vh;
     padding: $fcdo-spacing-7 $fcdo-spacing-6;
-    background-color: govuk-colour("light-grey");
+    background-color: fcdo-color("default", "9");
 }
 
 [data-theme="dark"] {

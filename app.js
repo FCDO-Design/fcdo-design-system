@@ -1,7 +1,7 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
-const { sections } = require('./navigation-data');
+const { sections } = require('./data/navigation-data');
 
 
 const app = express();

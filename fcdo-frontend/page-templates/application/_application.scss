@@ -31,13 +31,11 @@
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: govuk-color("black", "tint-95");
+    background-color: fcdo-color("default", "9");
   }
 
   &__title {
     padding: $fcdo-spacing-3;
-    background-color: #fff;
-    border-bottom: 1px solid govuk-color("black", "tint-80");
 
     @include fcdo-media-query('desktop') {
       padding: $fcdo-spacing-3 $fcdo-spacing-4;

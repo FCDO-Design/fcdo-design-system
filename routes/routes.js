@@ -28,7 +28,7 @@ router.get('/get-started', (req, res) => {
 
 // download route
 router.get('/get-started/download', (req, res) => {
-    res.render('get-started/download.html');
+    res.render('get-started/download/index.html');
 });
 
 // import css route

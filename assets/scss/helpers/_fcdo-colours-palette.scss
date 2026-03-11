@@ -7,7 +7,8 @@ $fcdo-colours: (
     "5": #5cb8b2,
     "6": #eaaa00,
     "7": #c8c9c7,
-    "8": #00b140
+    "8": #00b140,
+    "9": #f8f8fa
   ),
   "dark": (
     "1": #202124,
@@ -53,3 +54,4 @@ $fcdo-colours: (
 .fcdo-brand-colour-6 { background-color: fcdo-color("default", "6"); }
 .fcdo-brand-colour-7 { background-color: fcdo-color("default", "7"); }
 .fcdo-brand-colour-8 { background-color: fcdo-color("default", "8"); }
+.fcdo-brand-colour-9 { background-color: fcdo-color("default", "9"); }

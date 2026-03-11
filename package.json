@@ -8,11 +8,12 @@
     "build-js": "esbuild \"fcdo-frontend/all.js\" --bundle --minify --outfile=\"/assets/javascript/fcdo-frontend.min.js\" --log-level=debug",
     "watch-js": "esbuild fcdo-frontend/all.js --bundle --minify --outfile=assets/javascript/fcdo-frontend.min.js --watch",
     "dev": "concurrently \"nodemon .\" \"npm run scss\" \"npm run build-js\"",
-    "build": "node build.js",
+    "build": "node scripts/build.js",
     "scss": "sass --watch --load-path=node_modules assets/scss/fcdo-design-system.scss:assets/css/fcdo-design-system.min.css fcdo-frontend/fcdo-frontend.scss:assets/css/fcdo-frontend.min.css  --no-source-map --style=compressed",
     "deploy": "gh-pages -d dist --cname design.fcdo.gov.uk"
   },
   "dependencies": {
+    "archiver": "^7.0.1",
     "chokidar": "^3.6.0",
     "dotenv": "^17.3.1",
     "express": "^5.1.0",

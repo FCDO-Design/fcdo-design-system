@@ -5,8 +5,8 @@ body {
     font-family: $fcdo-font-family;
 }
 
-@import "layout/layout";
 @import "helpers/fcdo-colours-palette";
+@import "layout/layout";
 @import "components/header";
 @import "components/navigation";
 @import "components/page-title";

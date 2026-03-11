@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const fse = require('fs-extra');
 const crypto = require("crypto");
+const archiver = require("archiver");
 
 // login and password protection
 const password = process.env.SITE_PASSWORD;
@@ -23,7 +24,7 @@ const hash = crypto
 
 
 // import navigation data
-const navigationData = require('./navigation-data');
+const navigationData = require('../data/navigation-data');
 const navItemsArray = Array.isArray(navigationData)
   ? navigationData
   : navigationData && Array.isArray(navigationData.navItems)
@@ -39,9 +40,9 @@ if (!Array.isArray(navItemsArray)) {
 }
 
 // paths
-const TEMPLATE_DIR = path.join(__dirname, 'views');
-const OUTPUT_DIR = path.join(__dirname, 'dist');
-const ASSETS_SRC = path.join(__dirname, 'assets');
+const TEMPLATE_DIR = path.join(__dirname, "..", 'views');
+const OUTPUT_DIR = path.join(__dirname, "..", 'dist');
+const ASSETS_SRC = path.join(__dirname, "..", 'assets');
 const ASSETS_DEST = path.join(OUTPUT_DIR, 'assets');
 
 // clean output folder
@@ -73,7 +74,9 @@ function getAllHtmlFiles(dir, base = '') {
   return results;
 }
 
-const pages = getAllHtmlFiles(TEMPLATE_DIR);
+const pages = getAllHtmlFiles(TEMPLATE_DIR).filter(file =>
+  !['layout-page-template.html', 'layout.html'].includes(path.basename(file))
+);
 
 // render all pages
 pages.forEach(relPath => {
@@ -119,5 +122,33 @@ pages.forEach(relPath => {
 fse.copySync(ASSETS_SRC, ASSETS_DEST, {
   filter: src => !src.includes(path.join('assets', 'scss'))
 });
+
+const dist = path.join(__dirname, "..", "dist/get-started/download");
+fse.ensureDirSync(dist);
+
+const zipFile = path.join(dist, "fcdo-frontend.zip");
+const output = fs.createWriteStream(zipFile);
+const archive = archiver("zip", { zlib: { level: 9 } });
+
+archive.pipe(output);
+
+output.on("close", () => {
+  console.log(`Created ${zipFile} (${archive.pointer()} bytes)`);
+});
+
+archive.on("error", err => { throw err; });
+
+// Add files from project root
+archive.file(
+  path.join(__dirname, "..", "assets/css/fcdo-frontend.min.css"),
+  { name: "stylesheets/fcdo-frontend.min.css" }
+);
+
+archive.file(
+  path.join(__dirname, "..", "assets/javascript/fcdo-frontend.min.js"),
+  { name: "javascript/fcdo-frontend.min.js" }
+);
+
+archive.finalize();
 
 console.log('✅ Site built in /dist');

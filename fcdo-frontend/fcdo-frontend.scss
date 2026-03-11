@@ -3,6 +3,10 @@
 @import "components/all";
 @import "page-templates/all";
 
+body {
+    font-family: $fcdo-font-family;
+}
+
 .fcdo-template {
     height: 100%;
 

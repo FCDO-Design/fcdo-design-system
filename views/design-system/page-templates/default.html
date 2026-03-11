@@ -20,7 +20,13 @@
 
 <div class="fcdo-component">
     <div class="fcdo-component__link">
-      <a href="{% if localEnv %}/design-system/page-templates/view/default{% else %}/design-system/page-templates/view-default.html{% endif %}" class="govuk-link govuk-link--no-visited-state"  target="_blank">Open this example in a new tab</a>
+      <a id="openTemplate" class="govuk-link govuk-link--no-visited-state" target="_blank">Open this example in a new tab</a>
+      <script>
+        document.getElementById("openTemplate").href =
+          window.location.hostname !== "localhost"
+            ? "/design-system/page-templates/view-default.html"
+            : "/design-system/page-templates/view/default";
+      </script>
     </div>
     <div class="fcdo-component__tabs">
         <div class="govuk-tabs" data-module="govuk-tabs">
@@ -45,119 +51,75 @@
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
                 <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCodeTemplate">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot; data-theme=&quot;&quot;&gt;
-&lt;head&gt;
-  &lt;meta charset=&quot;utf-8&quot;&gt;
-  &lt;title&gt;
-    FCDO Application Template
-  &lt;/title&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;
-  &lt;meta name=&quot;theme-color&quot; content=&quot;#1d70b8&quot;&gt;
-  &lt;link rel=&quot;icon&quot; sizes=&quot;48x48&quot; href=&quot;/assets/rebrand/images/favicon.ico&quot;&gt;
-  &lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; href=&quot;/assets/rebrand/images/favicon.svg&quot; type=&quot;image/svg+xml&quot;&gt;
-  &lt;link rel=&quot;mask-icon&quot; href=&quot;/assets/rebrand/images/govuk-icon-mask.svg&quot; color=&quot;#1d70b8&quot;&gt;
-  &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/rebrand/images/govuk-icon-180.png&quot;&gt;
-  &lt;link rel=&quot;manifest&quot; href=&quot;/assets/rebrand/manifest.json&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/fcdo-design-system.min.css&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/fcdo-frontend.min.css&quot;&gt;
-&lt;/head&gt;
-&lt;body class=&quot;govuk-template__body fcdo-template__body&quot;&gt;
-  &lt;script type=&quot;module&quot; src=&quot;/assets/javascript/govuk-frontend.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;module&quot;&gt;
-    import { initAll } from '/assets/javascript/govuk-frontend.min.js'
-    initAll()
-  &lt;/script&gt;
-  &lt;script&gt;
-    document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
-  &lt;/script&gt;
-  &lt;script type=&quot;module&quot; src=&quot;/assets/javascript/fcdo-frontend.min.js&quot;&gt;&lt;/script&gt;
-  &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;
-  &lt;header class=&quot;fcdo-header&quot;&gt;
-    &lt;div class=&quot;fcdo-header__container&quot;&gt;
-      &lt;div class=&quot;fcdo-header__logo&quot;&gt;&lt;/div&gt;
-      &lt;div class=&quot;fcdo-header__service-name&quot;&gt;
-        &lt;a href=&quot;/&quot; class=&quot;fcdo-header__link govuk-!-font-size-24&quot;&gt;
-          &lt;span class=&quot;govuk-!-font-weight-bold&quot;&gt;FCDO&lt;/span&gt; Service Name
-        &lt;/a&gt;
-      &lt;/div&gt;
-      &lt;button class=&quot;fcdo-header__toggle-page-navigation&quot; id=&quot;togglePageNavigation&quot; aria-expanded=&quot;false&quot; aria-controls=&quot;pageNavigation&quot;&gt;
-        &lt;span&gt;Menu&lt;/span&gt;
-      &lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/header&gt;
-  &lt;div class=&quot;fcdo-application-layout&quot;&gt;
-    &lt;div class=&quot;fcdo-application-layout__sidebar fcdo-application-layout__sidebar--open&quot; id=&quot;pageNavigation&quot;&gt;
-      &lt;nav class=&quot;fcdo-page-navigation&quot;&gt;
-        &lt;div class=&quot;fcdo-page-navigation__container&quot;&gt;
-          &lt;div class=&quot;fcdo-page-navigation__title&quot;&gt;Programmes&lt;/div&gt;
-          &lt;ul class=&quot;fcdo-page-navigation__list&quot;&gt;
-            &lt;li class=&quot;fcdo-page-navigation__item fcdo-page-navigation__item--has-children&quot;&gt;
-              &lt;details class=&quot;fcdo-page-navigation__details&quot;&gt;
-                &lt;summary class=&quot;fcdo-page-navigation__trigger&quot;&gt;
-                  My programmes
-                &lt;/summary&gt;
-                &lt;ul class=&quot;fcdo-page-navigation__sublist&quot;&gt;
-                  &lt;li class=&quot;fcdo-page-navigation__subitem&quot;&gt;
-                    &lt;a href=&quot;#&quot; class=&quot;fcdo-page-navigation__sublink&quot;&gt;
-                      Page Navigation Sub Item
-                    &lt;/a&gt;
-                  &lt;/li&gt;
-                  &lt;li class=&quot;fcdo-page-navigation__subitem&quot;&gt;
-                    &lt;a href=&quot;#&quot; class=&quot;fcdo-page-navigation__sublink&quot;&gt;
-                      Page Navigation Sub Item
-                    &lt;/a&gt;
-                  &lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/details&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;fcdo-page-navigation__item&quot;&gt;
-              &lt;a href=&quot;#&quot; class=&quot;fcdo-page-navigation__link&quot;&gt;&lt;span&gt;Find programme&lt;/span&gt;&lt;/a&gt;
-            &lt;/li&gt;
-            &lt;li class=&quot;fcdo-page-navigation__item&quot;&gt;
-              &lt;a href=&quot;#&quot; class=&quot;fcdo-page-navigation__link&quot;&gt;&lt;span&gt;Create programme&lt;/span&gt;&lt;/a&gt;
-            &lt;/li&gt;
-          &lt;/ul&gt;
-        &lt;/div&gt;
-      &lt;/nav&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;fcdo-application-layout__content&quot; id=&quot;main-content&quot;&gt;
-      &lt;div class=&quot;fcdo-application-layout__title&quot;&gt;
-        &lt;span class=&quot;govuk-caption-m&quot;&gt;Caption&lt;/span&gt;
-        &lt;h1 class=&quot;govuk-heading-l govuk-!-margin-0&quot;&gt;Page title&lt;/h1&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;fcdo-application-layout__card&quot;&gt;
-        &lt;h2 class=&quot;govuk-heading-m fcdo-application-layout__card-title&quot;&gt;Application Card&lt;/h2&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;footer class=&quot;fcdo-footer&quot;&gt;
-    &lt;div class=&quot;govuk-width-container fcdo-footer__content&quot;&gt;
-      &lt;a class=&quot;fcdo-footer__logo&quot; href=&quot;https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/&quot;&gt;
-        © Crown copyright
-      &lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/footer&gt;
-  &lt;script src=&quot;/assets/javascript/fcdo-design-system.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                <pre class="language-html"><code class="language-html" id="htmlCodeTemplate"></code></pre>
             </div>
         </div>
     </div>
 </div>
 <script>
-    function copyCode() {
-        const code = document.getElementById('htmlCodeTemplate').innerText;
-        const button = document.getElementById('copyHTML');
+     // Escape HTML special characters
+  function escapeHTML(str) {
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
 
-        navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            //button.disabled = true;
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-                button.disabled = false;
-            }, 2000);
-        });
-    }
+  // Grab the content of #example
+  const exampleElem = document.getElementById('example');
+  const htmlCodeElem = document.getElementById('htmlCodeTemplate');
+
+  if (exampleElem && htmlCodeElem) {
+    // Prepend DOCTYPE and opening tags
+    const firstLines = `&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;FCDO Page Title&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#1d70b8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; sizes=&quot;48x48&quot; href=&quot;/assets/images/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; href=&quot;/assets/images/favicon.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+    &lt;link rel=&quot;mask-icon&quot; href=&quot;/assets/images/govuk-icon-mask.svg&quot; color=&quot;#1d70b8&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/images/govuk-icon-180.png&quot;&gt;
+    &lt;link rel=&quot;manifest&quot; href=&quot;/assets/rebrand/manifest.json&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/fcdo-frontend.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;govuk-template__body fcdo-template__body&quot;&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/javascript/govuk-frontend.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;module&quot;&gt;
+        import { initAll } from '/javascript/govuk-frontend.min.js'
+        initAll()
+    &lt;/script&gt;
+    &lt;script&gt;
+        document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+    &lt;/script&gt;
+    &lt;script type=&quot;module&quot; src=&quot;/javascript/fcdo-frontend.min.js&quot;&gt;&lt;/script&gt;
+    &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
+
+    // Escape the content of #example
+    const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
+
+    // Append closing tags
+    const closingLines = `\n&lt;/body&gt;\n&lt;/html&gt;`;
+
+    // Combine everything
+    htmlCodeElem.innerHTML = firstLines + escapedContent + closingLines;
+  }
+
+  // Copy function
+  function copyCode() {
+    const code = document.getElementById('htmlCodeTemplate').innerText;
+    const button = document.getElementById('copyHTML');
+
+    navigator.clipboard.writeText(code).then(() => {
+      button.textContent = 'Code copied';
+      setTimeout(() => {
+        button.textContent = 'Copy code';
+      }, 2000);
+    }).catch(err => console.error(err));
+  }
 </script>
 {% endblock %}
