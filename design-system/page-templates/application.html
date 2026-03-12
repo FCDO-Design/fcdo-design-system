@@ -925,10 +925,10 @@
   }
 
   // Grab the content of #example
-  const exampleElem = document.getElementById('example');
-  const htmlCodeElem = document.getElementById('htmlCodeTemplate');
+  const exampleElement = document.getElementById('example');
+  const htmlCodeElement = document.getElementById('htmlCodeTemplate');
 
-  if (exampleElem && htmlCodeElem) {
+  if (exampleElement && htmlCodeElement) {
     // Prepend DOCTYPE and opening tags
     const firstLines = `&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot;&gt;
@@ -957,13 +957,13 @@
     &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
 
     // Escape the content of #example
-    const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
+    const escapedContent = escapeHTML(exampleElement.innerHTML.trim());
 
     // Append closing tags
     const closingLines = `\n&lt;/body&gt;\n&lt;/html&gt;`;
 
     // Combine everything
-    htmlCodeElem.innerHTML = firstLines + escapedContent + closingLines;
+    htmlCodeElement.innerHTML = firstLines + escapedContent + closingLines;
   }
 
   // Copy function
