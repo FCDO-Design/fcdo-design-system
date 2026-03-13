@@ -155,6 +155,24 @@
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     
 
@@ -264,6 +282,26 @@
       
       
       
+      <a href="/design-system/components/details" class="app-nav__link ">
+        Details
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
       <a href="/design-system/components/footer" class="app-nav__link ">
         Footer
       </a>
@@ -324,8 +362,108 @@
       
       
       
-      <a href="/design-system/components/details" class="app-nav__link ">
-        Details
+      <a href="/design-system/components/text-input" class="app-nav__link ">
+        Text Input
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/textarea" class="app-nav__link ">
+        Textarea
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/date-input" class="app-nav__link ">
+        Date Input
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/radios" class="app-nav__link ">
+        Radios
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/select" class="app-nav__link ">
+        Select
+      </a>
+      
+      
+    </li>
+    
+    
+    
+    
+
+    
+    
+
+    
+
+    <li class="app-nav__item app-nav__item--no-children">
+      
+      
+      
+      <a href="/design-system/components/checkboxes" class="app-nav__link ">
+        Checkboxes
       </a>
       
       
@@ -823,7 +961,7 @@
                     </a>
                 </li>
             </ul>
-            <div class="govuk-tabs__panel example" id="example">
+            <div class="govuk-tabs__panel" id="example">
               
 
 <header class="fcdo-header">
@@ -907,8 +1045,8 @@
 
             </div>
 
-            <div class="govuk-tabs__panel govuk-tabs__panel--hidden html" id="html">
-                <button class="fcdo-button fcdo-button--outline copyHTML" type="button" id="copyHTML" >Copy code</button>
+            <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="html">
+                <button class="fcdo-button fcdo-button--outline" type="button" onclick="copyCode()" id="copyHTML">Copy code</button>
                 <pre class="language-html"><code class="language-html" id="htmlCodeTemplate"></code></pre>
             </div>
         </div>
@@ -926,10 +1064,10 @@
   }
 
   // Grab the content of #example
-  const exampleElement = document.getElementById('example');
-  const htmlCodeElement = document.getElementById('htmlCodeTemplate');
+  const exampleElem = document.getElementById('example');
+  const htmlCodeElem = document.getElementById('htmlCodeTemplate');
 
-  if (exampleElement && htmlCodeElement) {
+  if (exampleElem && htmlCodeElem) {
     // Prepend DOCTYPE and opening tags
     const firstLines = `&lt;!DOCTYPE html&gt;
 &lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot;&gt;
@@ -958,13 +1096,13 @@
     &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
 
     // Escape the content of #example
-    const escapedContent = escapeHTML(exampleElement.innerHTML.trim());
+    const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
 
     // Append closing tags
     const closingLines = `\n&lt;/body&gt;\n&lt;/html&gt;`;
 
     // Combine everything
-    htmlCodeElement.innerHTML = firstLines + escapedContent + closingLines;
+    htmlCodeElem.innerHTML = firstLines + escapedContent + closingLines;
   }
 
   // Copy function
