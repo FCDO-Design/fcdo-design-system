@@ -10,10 +10,16 @@ module.exports = {
             { name: 'Header', slug: 'header', url: '/design-system/components/header' },
             { name: 'Navigation', slug: 'navigation', url: '/design-system/components/navigation' },
             { name: 'Page Navigation', slug: 'page-navigation', url: '/design-system/components/page-navigation' },
+            { name: 'Details', slug: 'details', url: '/design-system/components/details' },
             { name: 'Footer', slug: 'footer', url: '/design-system/components/footer' },
             { name: 'Card', slug: 'card', url: '/design-system/components/card' },
             { name: 'Button', slug: 'button', url: '/design-system/components/button' },
-            { name: 'Details', slug: 'details', url: '/design-system/components/details' }
+            { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },
+            { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' },
+            { name: 'Date Input', slug: 'date-input', url: '/design-system/components/date-input' },
+            { name: 'Radios', slug: 'radios', url: '/design-system/components/radios' },
+            { name: 'Select', slug: 'select', url: '/design-system/components/select' },
+            { name: 'Checkboxes', slug: 'checkboxes', url: '/design-system/components/checkboxes' }
           ]
         },
         { 

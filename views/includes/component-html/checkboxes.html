@@ -1,0 +1,29 @@
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h1 class="govuk-fieldset__heading">
+        Select organisation
+      </h1>
+    </legend>
+    <div class="{% if checkboxesSmall %}govuk-checkboxes govuk-checkboxes--small fcdo-checkboxes{% else %}govuk-checkboxes fcdo-checkboxes{% endif %}" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item fcdo-checkboxes__item">
+        <input class="govuk-checkboxes__input fcdo-checkboxes__input" id="organisation{% if checkboxesSmall %}-small{%endif%}" name="organisation" type="checkbox" value="fcdo">
+        <label class="govuk-label govuk-checkboxes__label fcdo-checkboxes__label" for="organisation{% if checkboxesSmall %}-small{%endif%}">
+          Foreign Commonwelath and Development Office
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item fcdo-checkboxes__item">
+        <input class="govuk-checkboxes__input fcdo-checkboxes__input" id="organisation-2{% if checkboxesSmall %}-small{%endif%}" name="organisation" type="checkbox" value="dot">
+        <label class="govuk-label govuk-checkboxes__label fcdo-checkboxes__label" for="organisation-2{% if checkboxesSmall %}-small{%endif%}">
+          Department for Transport
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item fcdo-checkboxes__item">
+        <input class="govuk-checkboxes__input fcdo-checkboxes__input" id="organisation-3{% if checkboxesSmall %}-small{%endif%}" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label fcdo-checkboxes__label" for="organisation-3{% if checkboxesSmall %}-small{%endif%}">
+          HM Revenue and Customs (HMRC)
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>

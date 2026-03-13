@@ -6,11 +6,18 @@
 
   &__title {
     display: block;
-    padding: $fcdo-spacing-5 $fcdo-spacing-3 $fcdo-spacing-3 $fcdo-spacing-3;
+    margin: $fcdo-spacing-2 $fcdo-spacing-3 $fcdo-spacing-3 $fcdo-spacing-3;
+    padding: $fcdo-spacing-5 0 0 0;
     color: #555;
     text-transform: uppercase;
     @include fcdo-font-size(16);
     font-weight: 700;
+    border-top: 1px solid govuk-color("black", "tint-80");
+
+    &:first-of-type {
+      padding: $fcdo-spacing-3 0 0 0;
+      border-top: none;
+    }
   }
 
   &__list {
@@ -24,15 +31,25 @@
      @include fcdo-media-query('tablet') {
       margin: 0 $fcdo-spacing-3 0 0;
      }
-
   }
 
   &__item {
+    display: flex;
+    width: 100%;
     list-style: none;
+
+    &-icon {
+      margin-top: 1px;
+      margin-right: $fcdo-spacing-2;
+    }
+  }
+
+  &__details {
+    width: 100%;
   }
 
   &__trigger {
-    display: block;
+    display: flex;
     position: relative;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     cursor: pointer;
@@ -91,7 +108,8 @@
   }
 
   &__link {
-    display: block;
+    display: flex;
+    width: 100%;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
     color: govuk-color("blue");

@@ -1,6 +1,4 @@
 .fcdo-button {
-  display: inline-block;
-  width: auto;
   padding: 8px $fcdo-spacing-3;
   background-color: fcdo-color("default", "1");
   @include fcdo-font-size(19, 1);

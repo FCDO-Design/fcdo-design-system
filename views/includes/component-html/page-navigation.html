@@ -5,7 +5,7 @@
       <li class="fcdo-page-navigation__item fcdo-page-navigation__item--has-children">
         <details class="fcdo-page-navigation__details">
           <summary class="fcdo-page-navigation__trigger">
-            Page Navigation Menu
+            {% if showIcons %}<i class="fcdo-page-navigation__item-icon bi bi-folder"></i>{% endif %}Page Navigation Menu
           </summary>
           <ul class="fcdo-page-navigation__sublist">
             <li class="fcdo-page-navigation__subitem">
@@ -22,13 +22,15 @@
         </details>
       </li>
       <li class="fcdo-page-navigation__item">
-        <a href="#" class="fcdo-page-navigation__link fcdo-page-navigation__link--active">
+        <a href="#" class="fcdo-page-navigation__link fcdo-page-navigation__link--active">{% if showIcons %}
+          <i class="fcdo-page-navigation__item-icon bi bi-search"></i>{% endif %}
           Page Navigation Item
         </a>
       </li>
       <li class="fcdo-page-navigation__item">
-        <a href="#" class="fcdo-page-navigation__link">
-          Page Navigation Item
+        <a href="#" class="fcdo-page-navigation__link">{% if showIcons %}
+          <i class="fcdo-page-navigation__item-icon bi bi-folder-plus"></i>{% endif %}
+           Page Navigation Item
         </a>
       </li>
     </ul>

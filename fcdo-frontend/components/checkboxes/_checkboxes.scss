@@ -1,0 +1,9 @@
+.fcdo-checkboxes__label::before {
+  @include fcdo-input;
+}
+
+// when the checkbox input is focused, style the label's ::before
+.fcdo-checkboxes__input:focus + .fcdo-checkboxes__label::before {
+  border-width: 2px;
+  box-shadow: 0 0 0 2px govuk-color("yellow");
+}

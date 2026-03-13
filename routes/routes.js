@@ -141,5 +141,37 @@ router.get('/design-system/page-templates/view/application', (req, res) => {
     res.render('design-system/page-templates/view-application.html');
 });
 
+// text-input route
+router.get('/design-system/components/text-input', (req, res) => {
+    res.render('design-system/components/text-input.html');
+});
+
+
+// textarea route
+router.get('/design-system/components/textarea', (req, res) => {
+    res.render('design-system/components/textarea.html');
+});
+
+// checkboxes route
+router.get('/design-system/components/checkboxes', (req, res) => {
+    res.render('design-system/components/checkboxes.html');
+});
+
+// radio buttons router
+router.get('/design-system/components/radios', (req, res) => {
+    res.render('design-system/components/radios.html');
+});
+
+// select menu router
+router.get('/design-system/components/select', (req, res) => {
+    res.render('design-system/components/select.html');
+});
+
+// date input
+router.get('/design-system/components/date-input', (req, res) => {
+    res.render('design-system/components/date-input.html');
+});
+
+
 
 module.exports = router;

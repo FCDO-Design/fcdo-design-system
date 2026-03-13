@@ -1,18 +1,17 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Card
+    Select
 {% endblock %}
 
 {% block pageTitle %}
 <span class="govuk-caption-xl">Components</span>
-<h1 class="govuk-heading-xl">Card</h1>
+<h1 class="govuk-heading-xl">Select</h1>
 {% endblock %}
 
 {% block content %}
 <h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">The card component is a versatile user interface element used to display grouped information in a visually appealing and organised way.</p>
-<p class="govuk-body">They can enhance user interaction and content presentation across various applications and devices.</p>
+<p class="govuk-body">The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.</p>
 
 <div class="fcdo-component">
     <div class="fcdo-component__tabs">
@@ -32,9 +31,8 @@
                     </a>
                 </li>
             </ul>
-
             <div class="govuk-tabs__panel example" id="example">
-                {% include "includes/component-html/card.html" %}
+                {% include "includes/component-html/select.html" %}
             </div>
 
             <div class="govuk-tabs__panel govuk-tabs__panel--hidden html" id="html">
@@ -42,8 +40,6 @@
                 <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
             </div>
         </div>
-
     </div>
-
 </div>
 {% endblock %}
