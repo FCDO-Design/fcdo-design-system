@@ -172,6 +172,4 @@ router.get('/design-system/components/date-input', (req, res) => {
     res.render('design-system/components/date-input.html');
 });
 
-
-
 module.exports = router;
