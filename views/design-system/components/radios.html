@@ -5,75 +5,28 @@
 {% endblock %}
 
 {% block pageTitle %}
-<span class="govuk-caption-xl">Components</span>
-<h1 class="govuk-heading-xl">Radios</h1>
+    <span class="govuk-caption-xl">Components</span>
+    <h1 class="govuk-heading-xl">Radios</h1>
 {% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-l">Component Information</h1>
-<p class="govuk-body">Use the radios component when users can only select one option from a list.</p>
-
-<div class="fcdo-component">
-    <div class="fcdo-component__tabs">
-        <div class="govuk-tabs" data-module="govuk-tabs">
-            <h2 class="govuk-tabs__title">
-                Contents
-            </h2>
-            <ul class="govuk-tabs__list">
-                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                    <a class="govuk-tabs__tab" href="#example">
-                        Example
-                    </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="#html">
-                        HTML
-                    </a>
-                </li>
-            </ul>
-            <div class="govuk-tabs__panel example" id="example">
-                {% include "includes/component-html/radios.html" %}
-            </div>
-
-            <div class="govuk-tabs__panel govuk-tabs__panel--hidden html" id="html">
-                <button class="fcdo-button fcdo-button--outline copyHTML" type="button" id="copyHTML" >Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
-            </div>
+    <h1 class="govuk-heading-l">Component Information</h1>
+    <p class="govuk-body">Use the radios component when users can only select one option from a list.</p>
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set radiosSmall = true %}
+            {% include "includes/component-html/radios.html" %}
         </div>
+        {% include "includes/app-view-component-code.html" %}
     </div>
-</div>
-
-<h2 class="govuk-heading-m">Small Radios</h2>
-<p class="govuk-body">Use standard-sized checkboxes in most cases. However, smaller checkboxes work well on pages where it's helpful to make them less visually prominent.</p>
-<p class="govuk-body">For example, on a page of search results, the main user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content.</p>
-<div class="fcdo-component">
-    <div class="fcdo-component__tabs">
-        <div class="govuk-tabs" data-module="govuk-tabs">
-            <h2 class="govuk-tabs__title">
-                Contents
-            </h2>
-            <ul class="govuk-tabs__list">
-                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                    <a class="govuk-tabs__tab" href="#example2">
-                        Example
-                    </a>
-                </li>
-                <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="#html2">
-                        HTML
-                    </a>
-                </li>
-            </ul>
-            <div class="govuk-tabs__panel example" id="example2">
-                {% set radiosSmall = true %}
-                {% include "includes/component-html/radios.html" %}
-            </div>
-
-            <div class="govuk-tabs__panel govuk-tabs__panel--hidden html" id="html2">
-                <button class="fcdo-button fcdo-button--outline copyHTML" type="button" id="copyHTML" >Copy code</button>
-                <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
-            </div>
+    <h2 class="govuk-heading-m">Small Radios</h2>
+    <p class="govuk-body">Use standard-sized checkboxes in most cases. However, smaller checkboxes work well on pages where it's helpful to make them less visually prominent.</p>
+    <p class="govuk-body">For example, on a page of search results, the main user need is to see the results. Using smaller checkboxes lets users see and change search filters without distracting them from the main content.</p>
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set radiosSmall = true %}
+            {% include "includes/component-html/radios.html" %}
         </div>
+        {% include "includes/app-view-component-code.html" %}
     </div>
-</div>
 {% endblock %}

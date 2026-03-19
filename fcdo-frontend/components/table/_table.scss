@@ -1,0 +1,20 @@
+.fcdo-table {
+    @include fcdo-font-size(19, 25px);
+    border-collapse: collapse;
+    width: 100%;
+
+    &__caption {
+      padding: 0 0 $fcdo-spacing-2 0;
+      text-align: left; 
+    }
+
+    &__header {
+        background-color: govuk-color("black", "tint-95");
+    }
+
+    &__header, &__cell {
+        padding: $fcdo-spacing-2;
+        border: 1px solid govuk-color("black", "tint-80");
+        text-align: left;
+    }
+}

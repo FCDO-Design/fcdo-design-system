@@ -1,20 +1,21 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Tabs
+    Sortable and Searchable Table
 {% endblock %}
 
 {% block pageTitle %}
     <span class="govuk-caption-xl">Components</span>
-    <h1 class="govuk-heading-xl">Tabs</h1>
+    <h1 class="govuk-heading-xl">Sortable and Searchable Table</h1>
 {% endblock %}
 
 {% block content %}
     <h1 class="govuk-heading-l">Component Information</h1>
-    <p class="govuk-body">The tabs component lets users navigate between related sections of content, displaying one section at a time.</p>
+    <p class="govuk-body">Use the table component to make information easier to compare and scan for users.</p>
+
     <div class="fcdo-component">
         <div class="fcdo-component__example">
-            {% include "includes/component-html/tabs.html" %}
+            {% include "includes/component-html/table.html" %}
         </div>
         {% include "includes/app-view-component-code.html" %}
     </div>

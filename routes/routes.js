@@ -177,4 +177,14 @@ router.get('/design-system/components/tabs', (req, res) => {
     res.render('design-system/components/tabs.html');
 });
 
+// table route
+router.get('/design-system/components/table', (req, res) => {
+    res.render('design-system/components/table.html');
+});
+
+// sortable table route
+router.get('/design-system/components/sortable-table', (req, res) => {
+    res.render('design-system/components/sortable-table.html');
+});
+
 module.exports = router;

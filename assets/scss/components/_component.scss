@@ -1,17 +1,48 @@
 .fcdo-component {
     margin-top: $fcdo-spacing-7;
     margin-bottom: $fcdo-spacing-5;
+    @include govuk-font($size: 19);
     border: 1px solid $govuk-border-colour;
     background-color: #fff;
 
     &__example {
-        padding: $fcdo-spacing-8 $fcdo-spacing-5;
+        padding: $fcdo-spacing-5;
         border-bottom: 1px solid $govuk-border-colour;
     }
 
     &__link {
+        display: inline-block;
+        padding: $fcdo-spacing-3 $fcdo-spacing-4;
+        color: $govuk-link-colour;
+        border-right: 1px solid $govuk-border-colour;
+        position: relative;
+
+        &--active:after {
+            content: "";
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__new-window {
         padding: $fcdo-spacing-3 $fcdo-spacing-4;
         border-bottom: 1px solid $govuk-border-colour;
+    }
+
+    &__html {
+        display: none;
+        padding: $fcdo-spacing-5;
+        border-top: 1px solid $govuk-border-colour;
+
+        &--open {
+            display: block;
+        }
+
     }
 
     &__open {
@@ -124,4 +155,8 @@
             }
         }
     }
+}
+
+pre code.hljs {
+    padding-left: 0 !important;
 }

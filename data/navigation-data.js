@@ -7,20 +7,22 @@ module.exports = {
           name: 'Components', slug: 'components', url: '/design-system/components',
           children: [
             { name: 'About Components', slug: 'components', url: '/design-system/components' },
+            { name: 'Button', slug: 'button', url: '/design-system/components/button' },
+            { name: 'Card', slug: 'card', url: '/design-system/components/card' },
+            { name: 'Checkboxes', slug: 'checkboxes', url: '/design-system/components/checkboxes' },
+            { name: 'Date Input', slug: 'date-input', url: '/design-system/components/date-input' },
+            { name: 'Details', slug: 'details', url: '/design-system/components/details' },
+            { name: 'Footer', slug: 'footer', url: '/design-system/components/footer' },
             { name: 'Header', slug: 'header', url: '/design-system/components/header' },
             { name: 'Navigation', slug: 'navigation', url: '/design-system/components/navigation' },
             { name: 'Page Navigation', slug: 'page-navigation', url: '/design-system/components/page-navigation' },
-            { name: 'Details', slug: 'details', url: '/design-system/components/details' },
-            { name: 'Footer', slug: 'footer', url: '/design-system/components/footer' },
-            { name: 'Card', slug: 'card', url: '/design-system/components/card' },
-            { name: 'Button', slug: 'button', url: '/design-system/components/button' },
-            { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },
-            { name: 'Tabs', slug: 'tabs', url: '/design-system/components/tabs' },
-            { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' },
-            { name: 'Date Input', slug: 'date-input', url: '/design-system/components/date-input' },
             { name: 'Radios', slug: 'radios', url: '/design-system/components/radios' },
             { name: 'Select', slug: 'select', url: '/design-system/components/select' },
-            { name: 'Checkboxes', slug: 'checkboxes', url: '/design-system/components/checkboxes' }
+            { name: 'Sortable Table', slug: 'sortable-table', url: '/design-system/components/sortable-table' },
+            { name: 'Table', slug: 'table', url: '/design-system/components/table' },
+            { name: 'Tabs', slug: 'tabs', url: '/design-system/components/tabs' },
+            { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },
+            { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' }
           ]
         },
         {
