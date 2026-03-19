@@ -1,20 +1,73 @@
 .fcdo-table {
-    @include fcdo-font-size(19, 25px);
-    border-collapse: collapse;
-    width: 100%;
+  @include fcdo-font-size(19, 25px);
+  border-collapse: collapse;
+  width: 100%;
 
-    &__caption {
-      padding: 0 0 $fcdo-spacing-2 0;
-      text-align: left; 
-    }
+  &__caption {
+    padding: 0 0 $fcdo-spacing-2 0;
+    text-align: left; 
+    color: govuk-color("black", "tint-50");
+  }
 
-    &__header {
-        background-color: govuk-color("black", "tint-95");
-    }
+  &__header {
+    background-color: govuk-color("black", "tint-95");
+  }
 
-    &__header, &__cell {
-        padding: $fcdo-spacing-2;
-        border: 1px solid govuk-color("black", "tint-80");
-        text-align: left;
+  &__header,
+  &__cell {
+    padding: $fcdo-spacing-2;
+    border: 1px solid govuk-color("black", "tint-80");
+    text-align: left;
+  }
+
+  &--sortable {
+    table-layout: fixed;
+
+    .fcdo-table__header {
+      position: relative;
+      cursor: pointer;
+
+      /* Display chevrons */
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 15px;
+        bottom: 0;
+        width: 9px;
+        height: 9px;
+        margin: auto 0;
+        border: solid;
+        border-width: 2px 2px 0 0 !important;
+        border-color: var(--govuk-link-colour, #1a65a6) !important;
+        clip-path: none !important;
+      }
+
+      &::before {
+        transform: rotate(135deg);
+        bottom: -2px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: -3px;
+      }
+
+      &[aria-sort="descending"]::after {
+        top: 5px;
+        bottom: -3px;
+      }
+
+      &[aria-sort="ascending"]::before {
+        bottom: 4px;
+      }
+
+      &[aria-sort="ascending"]::after,
+      &[aria-sort="descending"]::before {
+        opacity: 0;
+      }
     }
+  }
 }
