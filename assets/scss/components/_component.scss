@@ -4,6 +4,11 @@
     border: 1px solid $govuk-border-colour;
     background-color: #fff;
 
+    &__example {
+        padding: $fcdo-spacing-8 $fcdo-spacing-5;
+        border-bottom: 1px solid $govuk-border-colour;
+    }
+
     &__link {
         padding: $fcdo-spacing-3 $fcdo-spacing-4;
         border-bottom: 1px solid $govuk-border-colour;
@@ -76,7 +81,7 @@
         &__tabs {
             li {
                 &.govuk-tabs__list-item {
-                    background-color:$fcdo-dark-colour-1;
+                    background-color: $fcdo-dark-colour-1;
 
                     .govuk-tabs__tab {
                         color: #fff !important;

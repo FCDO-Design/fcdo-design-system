@@ -183,7 +183,8 @@
 @media only screen and (min-width: 641px) {
   .fcdo-footer__list {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
   }
 }
 .fcdo-footer__item {
@@ -248,10 +249,14 @@
   height: 40px;
   margin-right: 5px;
   background: #fff;
-  mask-image: url("/assets/images/govuk-crest.svg");
-  mask-repeat: no-repeat;
-  mask-position: 50% 0%;
-  mask-size: 36px 36px;
+  -webkit-mask-image: url("/assets/images/govuk-crest.svg");
+          mask-image: url("/assets/images/govuk-crest.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: 50% 0%;
+          mask-position: 50% 0%;
+  -webkit-mask-size: 36px 36px;
+          mask-size: 36px 36px;
 }
 .fcdo-header__service-name a {
   color: #fff;

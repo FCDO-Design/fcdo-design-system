@@ -167,9 +167,14 @@ router.get('/design-system/components/select', (req, res) => {
     res.render('design-system/components/select.html');
 });
 
-// date input
+// date input route
 router.get('/design-system/components/date-input', (req, res) => {
     res.render('design-system/components/date-input.html');
+});
+
+// tabs route
+router.get('/design-system/components/tabs', (req, res) => {
+    res.render('design-system/components/tabs.html');
 });
 
 module.exports = router;
