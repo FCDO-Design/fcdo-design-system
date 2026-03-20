@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    Text Input
+    Sortable and Searchable Table
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -453,7 +453,7 @@
       
       
       
-      <a href="/design-system/components/sortable-table" class="app-nav__link ">
+      <a href="/design-system/components/sortable-table" class="app-nav__link app-nav__link--active">
         Sortable Table
       </a>
       
@@ -513,7 +513,7 @@
       
       
       
-      <a href="/design-system/components/text-input" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/components/text-input" class="app-nav__link ">
         Text Input
       </a>
       
@@ -990,7 +990,7 @@
           <div class="govuk-grid-column-two-thirds">
             
     <span class="govuk-caption-xl">Components</span>
-    <h1 class="govuk-heading-xl">Text Input</h1>
+    <h1 class="govuk-heading-xl">Sortable and Searchable Table</h1>
 
           </div>
     </div>
@@ -1000,15 +1000,55 @@
           <div class="govuk-grid-column-two-thirds">
             
     <h1 class="govuk-heading-l">Component Information</h1>
-    <p class="govuk-body">Use the text input component to allow users to input text.</p>
+    <p class="govuk-body">Use the sortable table component to let users sort columns in ascending or descending order.</p>
 
-   <div class="fcdo-component">
+    <div class="fcdo-component">
         <div class="fcdo-component__example">
-            <div class="govuk-form-group">
-    <label class="govuk-label" for="textInput">
-        FCDO Text Input
-    </label>
-    <input class="govuk-input fcdo-input" id="textInput" name="textInput" type="text">
+            <div class="fcdo-table-module" data-module="fcdo-sortable-table">
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="textInput">
+            Search
+        </label>
+        <input class="govuk-input govuk-input--width-20 fcdo-input fcdo-table-search" id="textInput" name="textInput" type="text" placeholder="Search table">
+    </div>
+
+    <table class="fcdo-table fcdo-table--sortable">
+        <caption class="fcdo-table__caption">Example dataset of people, ages, and countries</caption>
+        <thead class="fcdo-table__head">
+            <tr class="fcdo-table__row">
+                <th scope="col" tabindex="0" role="button" aria-sort="none" class="fcdo-table__header">Name</th>
+                <th scope="col" tabindex="0" role="button" aria-sort="none" class="fcdo-table__header">Age</th>
+                <th scope="col" tabindex="0" role="button" aria-sort="none" class="fcdo-table__header">Country</th>
+            </tr>
+        </thead>
+        <tbody class="fcdo-table__body">
+            <tr class="fcdo-table__row">
+                <td class="fcdo-table__cell">Alice</td>
+                <td class="fcdo-table__cell">25</td>
+                <td class="fcdo-table__cell">UK</td>
+            </tr>
+            <tr class="fcdo-table__row">
+                <td class="fcdo-table__cell">Bob</td>
+                <td class="fcdo-table__cell">30</td>
+                <td class="fcdo-table__cell">USA</td>
+            </tr>
+            <tr class="fcdo-table__row">
+                <td class="fcdo-table__cell">Charlie</td>
+                <td class="fcdo-table__cell">22</td>
+                <td class="fcdo-table__cell">Canada</td>
+            </tr>
+            <tr class="fcdo-table__row">
+                <td class="fcdo-table__cell">David</td>
+                <td class="fcdo-table__cell">35</td>
+                <td class="fcdo-table__cell">Australia</td>
+            </tr>
+            <tr class="fcdo-table__row">
+                <td class="fcdo-table__cell">Eva</td>
+                <td class="fcdo-table__cell">28</td>
+                <td class="fcdo-table__cell">Germany</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
         </div>
         <a class="fcdo-component__link" href="#">HTML</a>
