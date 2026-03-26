@@ -54,7 +54,7 @@
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     cursor: pointer;
     color: govuk-color("blue");
-    @include fcdo-font-size(19, 25px);
+    @include fcdo-font-size(17, 25px);
 
     &::-webkit-details-marker {
       display: none;
@@ -113,7 +113,7 @@
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
     color: govuk-color("blue");
-    @include fcdo-font-size(19, 25px);
+    @include fcdo-font-size(17, 25px);
 
     &:hover {
       background: govuk-color("blue");

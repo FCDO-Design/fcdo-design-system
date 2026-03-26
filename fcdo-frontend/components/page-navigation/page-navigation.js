@@ -6,21 +6,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mediaQuery = window.matchMedia('(min-width: 768px)');
 
+  function setMenuState(isOpen) {
+    togglePageNavigation.setAttribute('aria-expanded', String(isOpen));
+    togglePageNavigation.setAttribute(
+      'aria-label',
+      isOpen ? 'Close menu' : 'Open menu'
+    );
+
+    pageNavigation.classList.toggle(
+      'fcdo-application-layout__sidebar--open',
+      isOpen
+    );
+  }
+
   function updateSidebarState(e) {
     const isDesktop = e.matches;
 
-    if (isDesktop) {
-      // Open on desktop
-      togglePageNavigation.setAttribute('aria-expanded', 'true');
-      pageNavigation.classList.add('fcdo-application-layout__sidebar--open');
-    } else {
-      // Closed on mobile
-      togglePageNavigation.setAttribute('aria-expanded', 'false');
-      pageNavigation.classList.remove('fcdo-application-layout__sidebar--open');
-    }
+    setMenuState(isDesktop); // open on desktop, closed on mobile
   }
 
-  // Set initial state
+  // Initial state
   updateSidebarState(mediaQuery);
 
   // Listen for viewport changes
@@ -31,14 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isExpanded =
       togglePageNavigation.getAttribute('aria-expanded') === 'true';
 
-    togglePageNavigation.setAttribute(
-      'aria-expanded',
-      String(!isExpanded)
-    );
-
-    pageNavigation.classList.toggle(
-      'fcdo-application-layout__sidebar--open',
-      !isExpanded
-    );
+    setMenuState(!isExpanded);
   });
 });
