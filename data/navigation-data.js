@@ -7,6 +7,7 @@ module.exports = {
           name: 'Components', slug: 'components', url: '/design-system/components',
           children: [
             { name: 'About Components', slug: 'components', url: '/design-system/components' },
+            { name: 'Alert', slug: 'alert', url: '/design-system/components/alert' },
             { name: 'Button', slug: 'button', url: '/design-system/components/button' },
             { name: 'Card', slug: 'card', url: '/design-system/components/card' },
             { name: 'Checkboxes', slug: 'checkboxes', url: '/design-system/components/checkboxes' },

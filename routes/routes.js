@@ -187,4 +187,9 @@ router.get('/design-system/components/sortable-table', (req, res) => {
     res.render('design-system/components/sortable-table.html');
 });
 
+// alert route
+router.get('/design-system/components/alert', (req, res) => {
+    res.render('design-system/components/alert.html');
+});
+
 module.exports = router;
