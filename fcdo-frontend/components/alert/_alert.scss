@@ -1,22 +1,35 @@
 .fcdo-alert {
-    border: 1px solid;
+    border-left: 5px solid;
+    padding: $fcdo-spacing-3;
+    margin-bottom: $fcdo-spacing-4;
 
-    &--grey {}
+    &--primary {
+        background-color: govuk-color("blue", "tint-80");
+        color: govuk-color("blue", "shade-50");
+        border-color: govuk-color("blue", "shade-50")
+    }
 
-    &--green {}
+    &--secondary {
+        background-color: govuk-color("black", "tint-95");
+        color: govuk-color("black", "tint-25");
+        border-color: govuk-color("black", "tint-25");
+    }
 
-    &--teal {}
+    &--success {
+        background-color: govuk-color("green", "tint-80");
+        color: govuk-color("green", "shade-50");
+        border-color: govuk-color("green", "shade-50")
+    }
 
-    &--blue {}
+    &--error {
+        background-color: govuk-color("red", "tint-80");
+        color: govuk-color("red", "shade-50"); 
+        border-color: govuk-color("red", "shade-50")               
+    }
 
-    &--purple {}
-
-    &--magenta {}
-
-    &--red {}
-
-    &--orange {}
-
-    &--yellow {}
-
+    &--warning {
+        background-color: govuk-color("yellow", "tint-80");
+        color: govuk-color("yellow", "shade-50");
+        border-color: govuk-color("yellow", "shade-50");
+    }
 }
