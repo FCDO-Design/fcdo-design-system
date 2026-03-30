@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    FCDO Design System - Download FCDO Frontend
+Alert
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -185,6 +185,8 @@
     
     
     
+    
+    
 
     
 
@@ -195,10 +197,10 @@
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -234,7 +236,7 @@
       
       
       
-      <a href="/design-system/components/alert" class="app-nav__link ">
+      <a href="/design-system/components/alert" class="app-nav__link app-nav__link--active">
         Alert
       </a>
       
@@ -817,7 +819,7 @@
       
       
       
-      <a href="/get-started/download" class="app-nav__link-no-children app-nav__link-no-children--active">
+      <a href="/get-started/download" class="app-nav__link-no-children ">
         Download
       </a>
       
@@ -1010,8 +1012,8 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <span class="govuk-caption-xl">Get Started</span>
-    <h1 class="govuk-heading-xl">Download FCDO Frontend</h1>
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Alert</h1>
 
           </div>
     </div>
@@ -1020,9 +1022,27 @@
        <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-  <h1 class="govuk-heading-l">Download FCDO Frontend</h1>
-  <p class="govuk-body">If you want to try out FCDO Frontend in your project you can download and include compiled stylesheets, JavaScript and the asset files.</p>
-  <p class="govuk-body"><a href="/get-started/download/fcdo-frontend.zip" class="govuk-link govuk-link--no-visited-state" target="_blank">Download FCDO Frontend</a></p>
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Use the alert component to provide contextual feedback messages for typical user actions and tasks.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        <div class="fcdo-alert fcdo-alert--primary" role="alert">Primary alert</div>
+
+<div class="fcdo-alert fcdo-alert--secondary" role="alert">Secondary alert</div>
+
+<div class="fcdo-alert fcdo-alert--success" role="alert">Success alert</div>
+
+<div class="fcdo-alert fcdo-alert--error" role="alert">Error alert</div>
+
+<div class="fcdo-alert fcdo-alert--warning" role="alert">Warning alert</div>
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+</div>
 
           </div>
         </div>
