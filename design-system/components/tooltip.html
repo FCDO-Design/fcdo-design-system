@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    Tabs
+Tooltip
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -519,7 +519,7 @@
       
       
       
-      <a href="/design-system/components/tabs" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/components/tabs" class="app-nav__link ">
         Tabs
       </a>
       
@@ -579,7 +579,7 @@
       
       
       
-      <a href="/design-system/components/tooltip" class="app-nav__link ">
+      <a href="/design-system/components/tooltip" class="app-nav__link app-nav__link--active">
         Tooltip
       </a>
       
@@ -1035,8 +1035,8 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <span class="govuk-caption-xl">Components</span>
-    <h1 class="govuk-heading-xl">Tabs</h1>
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Tooltip</h1>
 
           </div>
     </div>
@@ -1045,92 +1045,24 @@
        <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <h1 class="govuk-heading-l">Component Information</h1>
-    <p class="govuk-body">The tabs component lets users navigate between related sections of content, displaying one section at a time.</p>
-    <div class="fcdo-component">
-        <div class="fcdo-component__example">
-            <div class="govuk-tabs fcdo-tabs" data-module="govuk-tabs">
-    <h2 class="govuk-tabs__title">
-        Contents
-    </h2>
-    <ul class="govuk-tabs__list">
-        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-            <a class="govuk-tabs__tab" href="#past-day">
-                Past day
-            </a>
-        </li>
-        <li class="govuk-tabs__list-item">
-            <a class="govuk-tabs__tab" href="#past-week">
-                Past week
-            </a>
-        </li>
-    </ul>
-    <div class="govuk-tabs__panel" id="past-day">
-        <h2 class="govuk-heading-l">Past day</h2>
-        <table class="govuk-table">
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Case manager</th>
-                    <th scope="col" class="govuk-table__header">Cases opened</th>
-                    <th scope="col" class="govuk-table__header">Cases closed</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">David Francis</td>
-                    <td class="govuk-table__cell">3</td>
-                    <td class="govuk-table__cell">0</td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Paul Farmer</td>
-                    <td class="govuk-table__cell">1</td>
-                    <td class="govuk-table__cell">0</td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Rita Patel</td>
-                    <td class="govuk-table__cell">2</td>
-                    <td class="govuk-table__cell">0</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="govuk-tabs__panel govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
-        <h2 class="govuk-heading-l">Past week</h2>
-        <table class="govuk-table">
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                    <th scope="col" class="govuk-table__header">Case manager</th>
-                    <th scope="col" class="govuk-table__header">Cases opened</th>
-                    <th scope="col" class="govuk-table__header">Cases closed</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">David Francis</td>
-                    <td class="govuk-table__cell">24</td>
-                    <td class="govuk-table__cell">18</td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Paul Farmer</td>
-                    <td class="govuk-table__cell">16</td>
-                    <td class="govuk-table__cell">20</td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <td class="govuk-table__cell">Rita Patel</td>
-                    <td class="govuk-table__cell">24</td>
-                    <td class="govuk-table__cell">27</td>
-                </tr>
-            </tbody>
-        </table>
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Use the alert component to provide contextual feedback messages for typical user actions and tasks.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        <div class="fcdo-tooltip">
+    <span class="fcdo-tooltip__trigger" aria-describedby="tooltip">Hover</span>
+    <div id="tooltip" role="tooltip" class="fcdo-tooltip__content">
+        This is a FCDO tooltip
     </div>
 </div>
-        </div>
-        <a class="fcdo-component__link" href="#">HTML</a>
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
     <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
     <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
 </div>
-    </div>
+</div>
 
           </div>
         </div>
