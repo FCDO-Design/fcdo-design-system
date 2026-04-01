@@ -192,4 +192,9 @@ router.get('/design-system/components/alert', (req, res) => {
     res.render('design-system/components/alert.html');
 });
 
+// tooltip route
+router.get('/design-system/components/tooltip', (req, res) => {
+    res.render('design-system/components/tooltip.html');
+});
+
 module.exports = router;

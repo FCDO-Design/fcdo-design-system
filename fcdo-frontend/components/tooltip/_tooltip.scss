@@ -1,0 +1,71 @@
+.fcdo-tooltip {
+    position: relative;
+    display: inline-block;
+
+    &__trigger {
+        cursor: help;
+        padding: 6px 12px;
+        text-decoration-line: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 2px;
+        text-decoration-thickness: 1px;
+
+        &:focus {
+            outline: 2px solid #005fcc;
+            outline-offset: 2px;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        top: 100%; // default: below trigger
+        left: 0;
+        margin-top: 8px;
+
+        min-width: max-content;
+        background: #333;
+        color: #fff;
+        padding: 6px 10px;
+        font-size: 15px;
+        z-index: 1000;
+        display: inline-block;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease;
+
+        &[data-visible="true"] {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        // 🔻 Arrow base
+        &::after {
+            content: "";
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+        }
+
+        // 🔻 Default (bottom tooltip → arrow on top)
+        &::after {
+            top: -10px;
+            left: 10px;
+            border-color: transparent transparent #333 transparent;
+        }
+
+        // 🔺 Top modifier (tooltip above trigger)
+        &--top {
+            top: auto;
+            bottom: 100%;
+            margin-top: 0;
+            margin-bottom: 8px;
+
+            &::after {
+                top: auto;
+                bottom: -10px;
+                border-color: #333 transparent transparent transparent;
+            }
+        }
+    }
+}

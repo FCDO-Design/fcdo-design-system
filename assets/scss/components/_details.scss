@@ -40,11 +40,11 @@
         }
 
         &.fcdo-details__summary:focus {
-            
+
             &:hover {
                 color: $fcdo-dark-colour-1 !important;
             }
-            
+
             &:before {
                 border-color: $fcdo-dark-colour-1 !important;
             }
@@ -53,7 +53,7 @@
         }
 
         &:hover:before {
-                border-color: #fff !important;
+            border-color: #fff !important;
         }
     }
 }
@@ -71,11 +71,11 @@
         }
 
         &.fcdo-details__summary:focus {
-            
+
             &:hover {
                 color: #000 !important;
             }
-            
+
             &:before {
                 border-color: #000 !important;
             }
@@ -84,7 +84,7 @@
         }
 
         &:hover:before {
-                border-color: $fcdo-high-contrast-colour-3 !important;
+            border-color: $fcdo-high-contrast-colour-3 !important;
         }
     }
 

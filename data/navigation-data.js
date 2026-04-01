@@ -23,7 +23,8 @@ module.exports = {
             { name: 'Table', slug: 'table', url: '/design-system/components/table' },
             { name: 'Tabs', slug: 'tabs', url: '/design-system/components/tabs' },
             { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },
-            { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' }
+            { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' },
+            { name: 'Tooltip', slug: 'tooltip', url: '/design-system/components/tooltip' }
           ]
         },
         {

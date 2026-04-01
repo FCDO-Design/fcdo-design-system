@@ -22,7 +22,7 @@
 
 /* Open state */
 .fcdo-details[open] .fcdo-details__summary:before {
-  transform: rotate(135deg);
+  transform: rotate(135deg) !important;
 }
 
 /* Dark theme */

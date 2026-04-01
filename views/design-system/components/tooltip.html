@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tooltip
+{% endblock %}
+
+{% block pageTitle %}
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Tooltip</h1>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Use the alert component to provide contextual feedback messages for typical user actions and tasks.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% include "includes/component-html/tooltip.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+{% endblock %}
