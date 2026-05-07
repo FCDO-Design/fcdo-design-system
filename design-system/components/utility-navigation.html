@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-  FCDO Default Page Template
+Alert
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -191,6 +191,8 @@
     
     
     
+    
+    
 
     
 
@@ -201,10 +203,10 @@
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -600,7 +602,7 @@
       
       
       
-      <a href="/design-system/components/utility-navigation" class="app-nav__link ">
+      <a href="/design-system/components/utility-navigation" class="app-nav__link app-nav__link--active">
         Utility Navigation
       </a>
       
@@ -779,8 +781,6 @@
     
     
     
-    
-    
 
     
 
@@ -791,10 +791,10 @@
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Page Templates</button>
+      <button class="app-nav__toggle ">Page Templates</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -810,7 +810,7 @@
       
       
       
-      <a href="/design-system/page-templates/default" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/page-templates/default" class="app-nav__link ">
         Default Template
       </a>
       
@@ -1058,8 +1058,8 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <span class="govuk-caption-xl">Page Templates</span>
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-2">Default</h1>
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Utility Navigation</h1>
 
           </div>
     </div>
@@ -1068,127 +1068,26 @@
        <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <h1 class="govuk-heading-l">Component Information</h1>
-    <p class="govuk-body">The FCDO default page template provides a simple, bare-bones layout for FCDO pages, offering the essential structure and styling needed to build new pages quickly while maintaining consistency with the overall design system.</p>
-    <div class="fcdo-component">
-       <div class="fcdo-component__new-window">
-      <a id="openTemplate" class="govuk-link govuk-link--no-visited-state" target="_blank">Open this example in a new tab</a>
-     <script>
-        document.getElementById("openTemplate").href =
-          window.location.hostname !== "localhost"
-            ? "/design-system/page-templates/view-default.html"
-            : "/design-system/page-templates/view/default";
-      </script>
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Use the utility navigation component to provide quick access to important link and services.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        <div class="fcdo-utility-navigation">
+    <ul class="fcdo-utility-navigation__list">
+        <li class="fcdo-utility-navigation__item"><a href="#" class="fcdo-utility-navigation__link"><i class="fcdo-utility-navigation__icon bi bi-search" aria-hidden="true"></i>Search Programmes</a></li>
+        <li class="fcdo-utility-navigation__item"><a href="#" class="fcdo-utility-navigation__link"><i class="fcdo-utility-navigation__icon bi bi-folder" aria-hidden="true"></i>My Programmes</a></li>
+        <li class="fcdo-utility-navigation__item"><a href="#" class="fcdo-utility-navigation__link"><i class="fcdo-utility-navigation__icon bi bi-bell" aria-hidden="true"></i>Notifications</a></li>
+    </ul>
+</div>
+
     </div>
-        <div class="fcdo-component__example" id="example">
-            
-<header class="fcdo-header">
-    <div class="govuk-width-container fcdo-header__container">
-    <div class="fcdo-header__logo"></div>
-    <div class="fcdo-header__service-name">
-      <a href="/" class="fcdo-header__link govuk-!-font-size-24">
-        <span class="govuk-!-font-weight-bold">FCDO</span> Service Name
-      </a>
-    </div>
-    
-  </div>
-</header>
-  <main class="govuk-width-container govuk-main-wrapper fcdo-main-wrapper" id="main-content" role="main">
-    <h1 class="govuk-heading-xl">Default page template</h1>
-    <p class="govuk-body">This is the default page template which includes the FCDO header and main content area. It does not include a sidebar or navigation.</p>
-  </main>
-<footer class="fcdo-footer">
-  <div class="govuk-width-container fcdo-footer__content">
-    <div class="fcdo-footer__navigation">
-      <ul class="fcdo-footer__list">
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Accessibility</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Privacy</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Cookies</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Terms and conditions</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Contact</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Help</a></li>
-      </ul>
-    </div>
-    <a class="fcdo-footer__logo" href="#">© Crown copyright </a>
-  </div>
-</footer>
-        </div>
-        
-        <a class="fcdo-component__link" href="#">HTML</a>
+    <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
     <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
-    <pre class="language-html"><code class="language-html" id="htmlCodeTemplate"></code></pre>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
 </div>
-    </div>
-
-    <script>
-        // escape HTML special characters
-        function escapeHTML(str) {
-            return str
-            .replace(/&/g, "&amp;")
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/"/g, "&quot;")
-            .replace(/'/g, "&#39;");
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            // grab the content of #example
-            const exampleElem = document.getElementById('example');
-            const htmlCodeElem = document.getElementById('htmlCodeTemplate');
-
-            if (exampleElem && htmlCodeElem) {
-                // prepend DOCTYPE and opening tags
-                const firstLines = `&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot;&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;FCDO Page Title&lt;/title&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;
-    &lt;meta name=&quot;theme-color&quot; content=&quot;#1d70b8&quot;&gt;
-    &lt;link rel=&quot;icon&quot; sizes=&quot;48x48&quot; href=&quot;/assets/images/favicon.ico&quot;&gt;
-    &lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; href=&quot;/assets/images/favicon.svg&quot; type=&quot;image/svg+xml&quot;&gt;
-    &lt;link rel=&quot;mask-icon&quot; href=&quot;/assets/images/govuk-icon-mask.svg&quot; color=&quot;#1d70b8&quot;&gt;
-    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/images/govuk-icon-180.png&quot;&gt;
-    &lt;link rel=&quot;manifest&quot; href=&quot;/assets/rebrand/manifest.json&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/fcdo-frontend.min.css&quot;&gt;
-&lt;/head&gt;
-&lt;body class=&quot;govuk-template__body fcdo-template__body&quot;&gt;
-    &lt;script type=&quot;module&quot; src=&quot;/javascript/govuk-frontend.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script type=&quot;module&quot;&gt;
-        import { initAll } from '/javascript/govuk-frontend.min.js'
-        initAll()
-    &lt;/script&gt;
-    &lt;script&gt;
-        document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
-    &lt;/script&gt;
-    &lt;script type=&quot;module&quot; src=&quot;/javascript/fcdo-frontend.min.js&quot;&gt;&lt;/script&gt;
-    &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
-
-                // escape the content of #example
-                const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
-
-                // append closing tags
-                const closingLines = `\n&lt;/body&gt;\n&lt;/html&gt;`;
-
-                // combine everything
-                htmlCodeElem.innerHTML = firstLines + escapedContent + closingLines;
-            }
-        });
-
-        // copy function
-        function copyCode() {
-            const code = document.getElementById('htmlCodeTemplate').innerText;
-            const button = document.getElementById('copyHTML');
-
-            navigator.clipboard.writeText(code).then(() => {
-            button.textContent = 'Code copied';
-            setTimeout(() => {
-                button.textContent = 'Copy code';
-            }, 2000);
-            }).catch(err => console.error(err));
-        }
-    </script>
+</div>
 
           </div>
         </div>
