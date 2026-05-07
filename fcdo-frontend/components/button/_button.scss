@@ -1,5 +1,6 @@
 .fcdo-button {
   padding: 8px $fcdo-spacing-3;
+  border-radius: $fcdo-border-radius;
   background-color: fcdo-color("default", "1");
   @include fcdo-font-size(19, 1);
   line-height: 1;
@@ -21,6 +22,7 @@
 
   &--outline {
     padding: 3px $fcdo-spacing-3;
+    border-radius: 0;
     @include fcdo-font-size(16, 20px);
     color: govuk-color("black", "primary");
     border: 1px solid fcdo-color("default", "1");
