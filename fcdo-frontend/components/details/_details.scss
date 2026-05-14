@@ -1,68 +1,27 @@
+.fcdo-details[open] .fcdo-details__summary,
 .fcdo-details__summary {
-  margin-top: 10px;
-  padding-left: 16px;
-  position: relative;
+    margin-top: 10px;
+    padding-left: 16px;
 
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -3px;
-    width: 0.4375em;
-    height: 0.4375em;
-    margin: auto 0;
-    transform: rotate(45deg);
-    border: solid;
-    border-width: 2px 2px 0 0;
-    border-color: $govuk-link-colour;
-  }
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: -3px;
+        width: 0.4375em !important;
+        height: 0.4375em !important;
+        margin: auto 0;
+        transform: rotate(45deg);
+        border: solid;
+        border-width: 2px 2px 0 0 !important;
+        border-color: govuk-color("blue", "primary");
+        clip-path: none !important;
+    }
 }
 
-/* Open state */
 .fcdo-details[open] .fcdo-details__summary:before {
-  transform: rotate(135deg) !important;
-}
-
-/* Dark theme */
-[data-theme="dark"] {
-  .fcdo-details__summary {
-    color: #fff;
-
-    &:before {
-      border-color: #fff;
-    }
-
-    &:hover {
-      color: #fff;
-    }
-
-    &:focus {
-      color: $fcdo-dark-colour-1;
-
-      &:before {
-        border-color: $fcdo-dark-colour-1;
-      }
-    }
-  }
-}
-
-/* High contrast theme */
-[data-theme="highContrast"] {
-  .fcdo-details__summary {
-    color: $fcdo-high-contrast-colour-2;
-
-    &:before {
-      border-color: $fcdo-high-contrast-colour-2;
-    }
-
-    &:focus {
-      color: $fcdo-high-contrast-colour-1;
-
-      &:before {
-        border-color: $fcdo-high-contrast-colour-3;
-      }
-    }
-  }
+    top: -3px;
+    transform: rotate(135deg) !important;
 }

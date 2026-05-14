@@ -1,0 +1,44 @@
+.fcdo-utility-navigation {
+    background-color: #fff;
+    padding: $fcdo-spacing-2 0;
+    border-bottom: 1px solid govuk-color("black", "tint-80");
+
+  @include fcdo-media-query('tablet') {
+    &__icon {
+        margin-right: $fcdo-spacing-1;
+    }
+}
+
+
+    &__list {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        border-right: 1px solid govuk-color("black", "tint-80");
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+        color: govuk-color("blue", "primary");
+        text-decoration: none;
+        @include fcdo-font-size(16, 1);
+        padding: 0 $fcdo-spacing-3;
+    }
+
+    &__text {
+        display: none;
+
+        @include fcdo-media-query('tablet') {
+            display: inline;
+        }
+    }
+}

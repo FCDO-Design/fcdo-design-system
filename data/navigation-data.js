@@ -24,7 +24,8 @@ module.exports = {
             { name: 'Tabs', slug: 'tabs', url: '/design-system/components/tabs' },
             { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },
             { name: 'Textarea', slug: 'textarea', url: '/design-system/components/textarea' },
-            { name: 'Tooltip', slug: 'tooltip', url: '/design-system/components/tooltip' }
+            { name: 'Tooltip', slug: 'tooltip', url: '/design-system/components/tooltip' },
+            { name: 'Utility Navigation', slug: 'utility-navigation', url: '/design-system/components/utility-navigation' },
           ]
         },
         {

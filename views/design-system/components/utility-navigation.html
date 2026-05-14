@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Alert
+{% endblock %}
+
+{% block pageTitle %}
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-xl">Utility Navigation</h1>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">Component Information</h1>
+<p class="govuk-body">Use the utility navigation component to provide quick access to important link and services.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% include "includes/component-html/utility-navigation.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+{% endblock %}

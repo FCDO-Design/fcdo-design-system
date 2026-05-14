@@ -197,4 +197,9 @@ router.get('/design-system/components/tooltip', (req, res) => {
     res.render('design-system/components/tooltip.html');
 });
 
+// utility navigation route
+router.get('/design-system/components/utility-navigation', (req, res) => {
+    res.render('design-system/components/utility-navigation.html');
+});
+
 module.exports = router;
