@@ -16,13 +16,32 @@
     border-bottom: 1px solid govuk-color("black", "tint-80");
 
     @include fcdo-media-query('desktop') {
+      display: block;
       position: relative;
-      min-width: 300px;
+      width: 50px;
       top: unset;
     }
 
     &--open {
       display: block;
+      width: 100%;
+      padding-right: $fcdo-spacing-2;
+
+      @include fcdo-media-query('desktop') {
+        width: 300px;
+      }
+      
+      .fcdo-page-navigation__logo-text {
+        display: inline;
+      }
+
+      .fcdo-page-navigation__trigger:after {
+        display: block;
+      }
+      
+      .fcdo-page-navigation__item-text {
+        display: inline;
+      }
     }
   }
 

@@ -6,8 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const mediaQuery = window.matchMedia('(min-width: 768px)');
 
+  function closeAllDetails() {
+    const detailMenus = pageNavigation.querySelectorAll(
+      '.fcdo-page-navigation__details'
+    );
+
+    detailMenus.forEach((details) => {
+      details.open = false;
+    });
+  }
+
   function setMenuState(isOpen) {
     togglePageNavigation.setAttribute('aria-expanded', String(isOpen));
+
     togglePageNavigation.setAttribute(
       'aria-label',
       isOpen ? 'Close menu' : 'Open menu'
@@ -17,12 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
       'fcdo-application-layout__sidebar--open',
       isOpen
     );
+
+    /*
+     * When sidebar collapses,
+     * close all open submenus
+     */
+    if (!isOpen) {
+      closeAllDetails();
+    }
   }
 
   function updateSidebarState(e) {
     const isDesktop = e.matches;
 
-    setMenuState(isDesktop); // open on desktop, closed on mobile
+    // open on desktop, closed on mobile
+    setMenuState(isDesktop);
   }
 
   // Initial state
@@ -31,11 +51,31 @@ document.addEventListener('DOMContentLoaded', () => {
   // Listen for viewport changes
   mediaQuery.addEventListener('change', updateSidebarState);
 
-  // Toggle on click
+  // Toggle sidebar button
   togglePageNavigation.addEventListener('click', () => {
     const isExpanded =
       togglePageNavigation.getAttribute('aria-expanded') === 'true';
 
     setMenuState(!isExpanded);
+  });
+
+  /*
+   * Auto-open sidebar when submenu opens
+   */
+  const detailMenus = pageNavigation.querySelectorAll(
+    '.fcdo-page-navigation__details'
+  );
+
+  detailMenus.forEach((details) => {
+    details.addEventListener('toggle', () => {
+      const isSidebarOpen = pageNavigation.classList.contains(
+        'fcdo-application-layout__sidebar--open'
+      );
+
+      // Open sidebar if submenu opens while collapsed
+      if (details.open && !isSidebarOpen) {
+        setMenuState(true);
+      }
+    });
   });
 });

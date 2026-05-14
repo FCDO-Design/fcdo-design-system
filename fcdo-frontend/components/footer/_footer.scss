@@ -1,7 +1,7 @@
 .fcdo-footer {
   flex-shrink: 0; // keeps footer at bottom
   padding: $fcdo-spacing-5;
-  background-color: fcdo-color("default", "1");
+  background-color: govuk-color("blue", "tint-95");
   border-top: 5px solid fcdo-color("default", "2");
 
   &__content {
@@ -38,7 +38,7 @@
 
   &__link {
     @include fcdo-font-size(16);
-    color: #fff;
+    color: govuk-color("blue");
 
     &:hover,
     &:focus {

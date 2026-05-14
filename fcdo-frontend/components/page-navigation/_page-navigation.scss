@@ -2,6 +2,7 @@
   
   &__container {
     border-top: 1px solid rgba(255, 255, 255, .2);
+    padding-top: $fcdo-spacing-3;
   }
 
   &__title {
@@ -27,10 +28,6 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-
-     @include fcdo-media-query('tablet') {
-      margin: 0 $fcdo-spacing-3 0 0;
-     }
   }
 
   &__item {
@@ -41,6 +38,15 @@
     &-icon {
       margin-top: 1px;
       margin-right: $fcdo-spacing-2;
+      @include fcdo-font-size(19);
+    }
+
+    &-text {
+      display: inline;
+
+      @include fcdo-media-query('desktop') {
+        display: none;
+      }
     }
   }
 
@@ -50,10 +56,11 @@
 
   &__trigger {
     display: flex;
+    align-items: center;
     position: relative;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     cursor: pointer;
-    color: govuk-color("blue");
+    color: govuk-color("black", "tint-25");
     @include fcdo-font-size(17, 25px);
 
     &::-webkit-details-marker {
@@ -66,6 +73,7 @@
 
     /* arrow */
     &::after {
+      display: none;
       content: "";
       position: absolute;
       top: 16px;
@@ -75,16 +83,11 @@
       transform: rotate(135deg);
       border: solid;
       border-width: 2px 2px 0 0;
-      border-color: govuk-color("blue");
     }
 
     &:hover {
-      background: govuk-color("blue");
+      background: fcdo-color("default", "2");
       color: #fff;
-
-      &::after {
-        border-color: #fff;
-      }
     }
 
     &:focus-visible {
@@ -96,12 +99,11 @@
 
   &__details[open] {
     .fcdo-page-navigation__trigger {
-      background: fcdo-color("default", "1");
+      position: relative;
+      background: fcdo-color("default", "2");
       color: #fff;
-
-      &::after {
+    &::after {
         transform: rotate(315deg);
-        border-color: #fff;
         top: 20px;
       }
     }
@@ -109,14 +111,15 @@
 
   &__link {
     display: flex;
-    width: 100%;
+    align-items: center;
+    width: calc(100% - 30px);
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
-    color: govuk-color("blue");
+    color: govuk-color("black", "tint-25");
     @include fcdo-font-size(17, 25px);
 
     &:hover {
-      background: govuk-color("blue");
+      background: fcdo-color("default", "2");
       color: #fff;
     }
 
@@ -146,7 +149,7 @@
     display: block;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
-    color: govuk-color("blue");
+    color: govuk-color("black", "tint-25");
     @include fcdo-font-size(16);
 
     &:hover {
