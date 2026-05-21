@@ -149,11 +149,6 @@ archive.file(
   { name: "javascript/fcdo-frontend.min.js" }
 );
 
-archive.file(
-  path.join(__dirname, "..", "assets/fonts/material-icons-regular.woff2"),
-  { name: "fonts/material-icons-regular.woff2" }
-);
-
 archive.finalize();
 
 console.log('✅ Site built in /dist');
