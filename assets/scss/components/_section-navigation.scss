@@ -33,7 +33,7 @@
     &__link {
         display: inline-block;
         text-decoration: none;
-        @include govuk-font($size: 19);
+        // @include govuk-font($size: 19);
 
         &:hover {
             text-decoration: none;
@@ -60,7 +60,7 @@
        &__link {
         display: inline-block;
         text-decoration: none;
-        @include govuk-font($size: 19);
+        // @include govuk-font($size: 19);
 
         &:hover {
             text-decoration: none;

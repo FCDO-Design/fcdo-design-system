@@ -4,8 +4,9 @@
 @import "page-templates/all";
 @import "icons/all";
 
-body {
-    font-family: $fcdo-font-family;
+body, h1, h2, h3, h4, ul, span:not(.material-symbols-outlined), p, a, label, select,  input, button {
+    font-family: $fcdo-font-family !important;
+    @include fcdo-font-size(17);
 }
 
 .fcdo-template {

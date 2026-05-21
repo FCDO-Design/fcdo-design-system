@@ -2,10 +2,11 @@
 @import "variables/variables";
 
 body {
-    font-family: $fcdo-font-family;
+    font-family: $fcdo-font-family !important;
 }
 
 @import "helpers/fcdo-colours-palette";
+@import "helpers/typography-scale";
 @import "layout/layout";
 @import "components/header";
 @import "components/navigation";

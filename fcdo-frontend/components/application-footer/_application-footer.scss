@@ -1,0 +1,23 @@
+.fcdo-application-layout__footer {
+  padding: $fcdo-spacing-3;
+  border-top: 1px solid govuk-color("black", "tint-80");
+
+  &-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $fcdo-spacing-3;
+  }
+
+  &-link {
+      color: govuk-color("blue");
+      @include fcdo-font-size(16);
+
+      &:hover,
+      &:focus {
+        @include fcdo-focused-text;
+      }
+    }
+}

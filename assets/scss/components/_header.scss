@@ -41,7 +41,7 @@
     &__toggle-nav {
         display: inline-flex;
         position: relative;
-        @include govuk-font($size: 19, $weight: "bold");
+        // @include govuk-font($size: 19, $weight: "bold");
         color: #fff;
         background: none;
         border: 0;

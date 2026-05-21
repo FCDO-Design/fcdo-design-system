@@ -6,6 +6,11 @@
 //     }
 // }
 
+
+.govuk-body {
+    @include fcdo-font-size(17);
+}
+
 [data-theme="dark"] {
     h1, h2, h3, h4, ul {
         color: #fff;

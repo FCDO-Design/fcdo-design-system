@@ -1,0 +1,91 @@
+$typography-scale: (
+    48: (
+        mobile: (
+            font-size: 32px,
+            line-height: 35px
+        ),
+        tablet: (
+            font-size: 48px,
+            line-height: 50px
+        )
+    ),
+    36: (
+        mobile: (
+            font-size: 27px,
+            line-height: 30px
+        ),
+        tablet: (
+            font-size: 36px,
+            line-height: 40px
+        )
+    ),
+    24: (
+        mobile: (
+            font-size: 21px,
+            line-height: 25px
+        ),
+        tablet: (
+            font-size: 24px,
+            line-height: 30px
+        )
+    ),
+    19: (
+        mobile: (
+            font-size: 16px,
+            line-height: 25px
+        ),
+        tablet: (
+            font-size: 19px,
+            line-height: 30px
+        )
+    ),
+    17: (
+        mobile: (
+            font-size: 17px,
+            line-height: 25px
+        ),
+        tablet: (
+            font-size: 17px,
+            line-height: 25px
+        )
+    ),
+    16: (
+        mobile: (
+            font-size: 16px,
+            line-height: 20px
+        )
+    )
+);
+
+@mixin fcdo-font-size($size, $override-line-height: null) {
+  $settings: map-get($typography-scale, $size);
+
+  @if $settings {
+
+    $mobile: map-get($settings, mobile);
+
+    font-size: map-get($mobile, font-size);
+
+    // Use override if provided, otherwise fall back to map
+    @if $override-line-height != null {
+      line-height: $override-line-height;
+    } @else if map-has-key($mobile, line-height) {
+      line-height: map-get($mobile, line-height);
+    }
+
+    // Tablet
+    @if map-has-key($settings, tablet) {
+      @include fcdo-media-query(tablet) {
+        $tablet: map-get($settings, tablet);
+
+        font-size: map-get($tablet, font-size);
+
+        @if $override-line-height != null {
+          line-height: $override-line-height;
+        } @else if map-has-key($tablet, line-height) {
+          line-height: map-get($tablet, line-height);
+        }
+      }
+    }
+  }
+}

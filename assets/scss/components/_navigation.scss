@@ -22,7 +22,6 @@
     border: none;
     cursor: pointer;
     text-decoration: none;
-    @include govuk-font($size: 19);
     color: $govuk-link-colour;
 
     &:hover {
@@ -42,7 +41,7 @@
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     cursor: pointer;
     text-decoration: none;
-    @include govuk-font($size: 16);
+    // @include govuk-font($size: 16);
     color: $govuk-link-colour;
     margin:0 $fcdo-spacing-3;
 
@@ -99,8 +98,9 @@
       display: block;
       padding: $fcdo-spacing-5 $fcdo-spacing-3 $fcdo-spacing-1;
       color: #555;
+      font-weight: 700;
       text-transform: uppercase;
-       @include govuk-font($size: 16, $weight: "bold");
+      //  @include govuk-font($size: 16, $weight: "bold");
     }
   }
 
@@ -112,7 +112,7 @@
   &__link-no-children {
     display: block;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
-    @include govuk-font($size: 19);
+    // @include govuk-font($size: 19);
     color: $govuk-link-colour;
     text-decoration: none;
 

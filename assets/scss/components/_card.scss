@@ -15,7 +15,7 @@
     }
 
     &__description {
-        @include govuk-font($size: 19);
+        // @include govuk-font($size: 19);
         margin-top: $fcdo-spacing-2;
     }
 }

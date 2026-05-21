@@ -37,8 +37,8 @@
 
     &-icon {
       margin-top: 1px;
-      margin-right: $fcdo-spacing-2;
-      @include fcdo-font-size(19);
+      margin-right: $fcdo-spacing-1;
+      font-size: 28px !important;
     }
 
     &-text {
@@ -58,9 +58,9 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    padding: $fcdo-spacing-2;
     cursor: pointer;
-    color: govuk-color("black", "tint-25");
+    color: govuk-color("blue");
     @include fcdo-font-size(17, 25px);
 
     &::-webkit-details-marker {
@@ -76,7 +76,7 @@
       display: none;
       content: "";
       position: absolute;
-      top: 16px;
+      top: 17px;
       right: 20px;
       width: .4375em;
       height: .4375em;
@@ -100,11 +100,11 @@
   &__details[open] {
     .fcdo-page-navigation__trigger {
       position: relative;
-      background: fcdo-color("default", "2");
+      background: fcdo-color("default", "1");
       color: #fff;
     &::after {
         transform: rotate(315deg);
-        top: 20px;
+        top: 23px;
       }
     }
   }
@@ -112,10 +112,10 @@
   &__link {
     display: flex;
     align-items: center;
-    width: calc(100% - 30px);
-    padding: $fcdo-spacing-2 $fcdo-spacing-3;
+    width: calc(100% - 20px);
+    padding: $fcdo-spacing-2;
     text-decoration: none;
-    color: govuk-color("black", "tint-25");
+    color: govuk-color("blue");
     @include fcdo-font-size(17, 25px);
 
     &:hover {
@@ -149,12 +149,13 @@
     display: block;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
-    color: govuk-color("black", "tint-25");
-    @include fcdo-font-size(16);
+    color: govuk-color("blue");
+    @include fcdo-font-size(17);
 
     &:hover {
-      background: govuk-color("blue");
-      color: #fff;
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: 5px;
     }
 
     &:focus-visible {
