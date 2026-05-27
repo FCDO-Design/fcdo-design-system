@@ -19,7 +19,7 @@ module.exports = {
             { name: 'Page Navigation', slug: 'page-navigation', url: '/design-system/components/page-navigation' },
             { name: 'Radios', slug: 'radios', url: '/design-system/components/radios' },
             { name: 'Select', slug: 'select', url: '/design-system/components/select' },
-            { name: 'Sortable Table', slug: 'sortable-table', url: '/design-system/components/sortable-table' },
+            { name: 'Searchable Table', slug: 'searchable-table', url: '/design-system/components/searchable-table' },
             { name: 'Table', slug: 'table', url: '/design-system/components/table' },
             { name: 'Tabs', slug: 'tabs', url: '/design-system/components/tabs' },
             { name: 'Text Input', slug: 'text-input', url: '/design-system/components/text-input' },

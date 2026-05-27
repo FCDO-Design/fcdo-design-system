@@ -1,0 +1,14 @@
+.app-featured-components {
+    display: flex;
+    flex-direction: column;
+    gap: $fcdo-spacing-6;
+
+    @include govuk-media-query('tablet') {
+        flex-direction: row;
+    }
+
+    &__item {
+        flex: 1;
+        max-width: 300px;
+    }
+}

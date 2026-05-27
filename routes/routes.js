@@ -182,9 +182,9 @@ router.get('/design-system/components/table', (req, res) => {
     res.render('design-system/components/table.html');
 });
 
-// sortable table route
-router.get('/design-system/components/sortable-table', (req, res) => {
-    res.render('design-system/components/sortable-table.html');
+// searchable table route
+router.get('/design-system/components/searchable-table', (req, res) => {
+    res.render('design-system/components/searchable-table.html');
 });
 
 // alert route

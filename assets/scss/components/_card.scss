@@ -2,12 +2,18 @@
 .app-card {
     border: 1px solid $fcdo-colour-7;
     padding: $fcdo-spacing-3;
-    border-bottom: 5px solid $fcdo-colour-6;
     background-color: #fff;
 
     &__container {
         display: flex;
         flex-direction: column;
+
+        &--flex-row {
+            flex-direction: row;
+            gap: $fcdo-spacing-5;
+            align-items: center;
+        }
+
     }
 
     &__title {
@@ -15,8 +21,15 @@
     }
 
     &__description {
-        // @include govuk-font($size: 19);
+        @include govuk-font($size: 16);
         margin-top: $fcdo-spacing-2;
+    }
+
+    &__icon {
+        color: fcdo-color("default", "2");
+        font-size:125px !important;
+        padding-right: $fcdo-spacing-2;
+        border-right: 1px solid $fcdo-colour-7;
     }
 }
 
