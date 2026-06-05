@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    Colours
+    Dashboard KPI card
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -198,6 +198,8 @@
     
     
     
+    
+    
 
     
 
@@ -208,10 +210,10 @@
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -407,7 +409,7 @@
       
       
       
-      <a href="/design-system/components/dashboard-kpi-card" class="app-nav__link ">
+      <a href="/design-system/components/dashboard-kpi-card" class="app-nav__link app-nav__link--active">
         Dashboard KPI Card
       </a>
       
@@ -654,8 +656,6 @@
     
     
     
-    
-    
 
     
 
@@ -666,10 +666,10 @@
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Styles</button>
+      <button class="app-nav__toggle ">Styles</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -685,7 +685,7 @@
       
       
       
-      <a href="/design-system/styles/colours" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/styles/colours" class="app-nav__link ">
         Colours
       </a>
       
@@ -1085,8 +1085,8 @@
         <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
-    <span class="govuk-caption-xl">Styles</span>
-    <h1 class="govuk-heading-l">Colours</h1>
+    <span class="govuk-caption-xl">Components</span>
+    <h1 class="govuk-heading-l">Dashboard KPI card</h1>
 
           </div>
     </div>
@@ -1095,66 +1095,27 @@
        <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             
+    <h1 class="govuk-heading-l">Component information</h1>
+    <p class="govuk-body">The KPI Card is a simple component used to display a single key performance indicator clearly and prominently.</p>
+    <p class="govuk-body">It helps users quickly understand key metrics and track performance at a glance, typically within dashboards and reporting views.</p>
 
-<h2 class="govuk-heading-l">FCDO colour palette</h2>
-<p class="govuk-body">Always use the FCDO and GOV.UK colour palette.</p>
-
-<div class="fcdo-component">
-    <div class="fcdo-component__example">
-        <h2 class="govuk-heading-l">Colours</h2>
-        <h2 class="govuk-heading-m">Main Colours</h2>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-1"></div>
-            <div class="fcdo-colour__name">Colour 1 (Flag blue)</div>
-            <div class="fcdo-colour__hex">#012069</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-2"></div>
-            <div class="fcdo-colour__name">Colour 2 (Light blue)</div>
-            <div class="fcdo-colour__hex">#407ec9</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-3"></div>
-            <div class="fcdo-colour__name">Colour 3 (Flag red)</div>
-            <div class="fcdo-colour__hex">#c8102e</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-4"></div>
-            <div class="fcdo-colour__name">Colour 4 (Purple)</div>
-            <div class="fcdo-colour__hex">#833177</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-5"></div>
-            <div class="fcdo-colour__name">Colour 5 (Teal)</div>
-            <div class="fcdo-colour__hex">#5cb8b2</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-6"></div>
-            <div class="fcdo-colour__name">Colour 6 (Gold)</div>
-            <div class="fcdo-colour__hex">#eaaa00</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-7"></div>
-            <div class="fcdo-colour__name">Colour 7 (Silver)</div>
-            <div class="fcdo-colour__hex">#c8c9c7</div>
-        </div>
-
-        <div class="fcdo-colour">
-            <div class="fcdo-colour__swatch fcdo-brand-colour-8"></div>
-            <div class="fcdo-colour__name">Colour 8 (Emerald)</div>
-            <div class="fcdo-colour__hex">#00b140</div>
-        </div>
-    </div>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            <div class="fcdo-kpi-card">
+    <h2 class="govuk-heading-s fcdo-kpi-card__title">KPI card</h2>
+    <strong class="govuk-tag govuk-tag--green fcdo-kpi-card__tag">New</strong>
+    <span class="govuk-!-font-size-48 fcdo-kpi-card__value">209</span>
+    <p class="govuk-body fcdo-kpi-card__text">Up 12% on previous period.</p>
+    <a href="#" class="govuk-link fcdo-kpi-card__link">View details</a>
+    <span class="fcdo-kpi-card__icon material-symbols-outlined">article_shortcut</span>
 </div>
-
-
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
 
           </div>
         </div>
