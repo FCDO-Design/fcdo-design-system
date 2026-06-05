@@ -14,6 +14,14 @@
     border-right: 1px solid govuk-color("black", "tint-80");
     background-color: govuk-color("white");
 
+    .fcdo-page-navigation__details[open] .fcdo-page-navigation__trigger::after {
+      top: 23px;
+    }
+
+    .fcdo-page-navigation__trigger:after {
+        display: none;
+    }
+
     @include fcdo-media-query('desktop') {
       display: block;
       position: relative;
@@ -36,6 +44,7 @@
 
       .fcdo-page-navigation__trigger:after {
         display: block;
+        top: 17px;
       }
       
       .fcdo-page-navigation__item-text {
