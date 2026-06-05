@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Dashboard KPI card
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-xl">Components</span>
+    <h1 class="govuk-heading-l">Dashboard KPI card</h1>
+{% endblock %}
+
+{% block content %}
+    <h1 class="govuk-heading-l">Component information</h1>
+    <p class="govuk-body">The KPI Card is a simple component used to display a single key performance indicator clearly and prominently.</p>
+    <p class="govuk-body">It helps users quickly understand key metrics and track performance at a glance, typically within dashboards and reporting views.</p>
+
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/dashboard-kpi-card.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

@@ -1,8 +1,6 @@
 .fcdo-card {
   border: 1px solid fcdo-color("default", "7");
   padding: $fcdo-spacing-3;
-  border-left: 5px solid fcdo-color("default", "7");
-  max-width: 400px;
 
   &__container {
     display: flex;
@@ -15,38 +13,5 @@
 
   &__description {
     margin-top: $fcdo-spacing-2;
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: fcdo-color("default", "1");
-    color: #fff;
-
-    .fcdo-card__title,
-    .fcdo-card__description {
-      color: #fff;
-    }
-  }
-
-  &:focus-within {
-    outline: 3px solid govuk-color("yellow", "primary");
-  }
-}
-
-[data-theme="dark"] {
-  .fcdo-card {
-    background-color: fcdo-color("dark", "1");
-    color: #fff;
-    border: none;
-    border-bottom: 5px solid fcdo-color("dark", "2");
-  }
-}
-
-[data-theme="highContrast"] {
-  .fcdo-card {
-    background-color: fcdo-color("high-contrast", "1");
-    border: 3px solid fcdo-color("high-contrast", "4");
-    border-bottom: 5px solid fcdo-color("high-contrast", "4");
-    color: #fff;
   }
 }

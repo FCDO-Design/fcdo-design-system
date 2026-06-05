@@ -29,6 +29,16 @@ $typography-scale: (
             line-height: 30px
         )
     ),
+    20: (
+        mobile: (
+            font-size: 17px,
+            line-height: 25px
+        ),
+        tablet: (
+            font-size: 20px,
+            line-height: 20px
+        )
+    ),
     19: (
         mobile: (
             font-size: 16px,

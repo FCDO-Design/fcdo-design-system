@@ -15,6 +15,7 @@ module.exports = {
             { name: 'Details', slug: 'details', url: '/design-system/components/details' },
             { name: 'Footer', slug: 'footer', url: '/design-system/components/footer' },
             { name: 'Header', slug: 'header', url: '/design-system/components/header' },
+            { name: 'Dashboard KPI Card', slug: 'dashboard-kpi-card', url: '/design-system/components/dashboard-kpi-card' },
             { name: 'Navigation', slug: 'navigation', url: '/design-system/components/navigation' },
             { name: 'Page Navigation', slug: 'page-navigation', url: '/design-system/components/page-navigation' },
             { name: 'Radios', slug: 'radios', url: '/design-system/components/radios' },
