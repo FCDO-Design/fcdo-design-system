@@ -20,10 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body class="govuk-template__body fcdo-template__body">
@@ -1077,8 +1076,8 @@
     <p class="govuk-body">The Page Navigation component helps users navigate around your service.</p>
 
     <div class="fcdo-component">
-        <div class="fcdo-component__example">
-            <nav class="fcdo-page-navigation">
+        <div class="fcdo-component__example govuk-!-padding-top-0 govuk-!-padding-bottom-8">
+            <nav class="fcdo-page-navigation ">
   <div class="fcdo-page-navigation__container">
     <div class="fcdo-page-navigation__title">Navigation Title</div>
     <ul class="fcdo-page-navigation__list">
@@ -1108,12 +1107,13 @@
       </li>
       <li class="fcdo-page-navigation__item">
         <a href="#" class="fcdo-page-navigation__link">
-           Page Navigation Item
+          Page Navigation Item
         </a>
       </li>
     </ul>
   </div>
 </nav>
+
         </div>
         <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
@@ -1127,16 +1127,16 @@
     <p class="govuk-body">Icons can help users quickly identify the purpose of different sections, particularly on content-heavy pages, and can improve scannability and accessibility when used consistently.Where icons are included, they should support the meaning of the label rather than replace it, remain simple and recognisable</p>
 
     <div class="fcdo-component">
-        <div class="fcdo-component__example">
+        <div class="fcdo-component__example govuk-!-padding-top-0 govuk-!-padding-bottom-8">
             
-            <nav class="fcdo-page-navigation">
+            <nav class="fcdo-page-navigation fcdo-page-navigation--has-icons">
   <div class="fcdo-page-navigation__container">
     <div class="fcdo-page-navigation__title">Navigation Title</div>
     <ul class="fcdo-page-navigation__list">
       <li class="fcdo-page-navigation__item fcdo-page-navigation__item--has-children">
         <details class="fcdo-page-navigation__details">
-          <summary class="fcdo-page-navigation__trigger">
-            <i class="fcdo-page-navigation__item-icon bi bi-folder"></i>Page Navigation Menu
+          <summary class="fcdo-page-navigation__trigger"><span class="fcdo-page-navigation__item-icon material-symbols-outlined">add_circle</span>
+            Page Navigation Menu
           </summary>
           <ul class="fcdo-page-navigation__sublist">
             <li class="fcdo-page-navigation__subitem">
@@ -1153,20 +1153,19 @@
         </details>
       </li>
       <li class="fcdo-page-navigation__item">
-        <a href="#" class="fcdo-page-navigation__link fcdo-page-navigation__link--active">
-          <i class="fcdo-page-navigation__item-icon bi bi-search"></i>
+        <a href="#" class="fcdo-page-navigation__link fcdo-page-navigation__link--active"><span class="fcdo-page-navigation__item-icon material-symbols-outlined">article_shortcut</span>
           Page Navigation Item
         </a>
       </li>
       <li class="fcdo-page-navigation__item">
-        <a href="#" class="fcdo-page-navigation__link">
-          <i class="fcdo-page-navigation__item-icon bi bi-folder-plus"></i>
-           Page Navigation Item
+        <a href="#" class="fcdo-page-navigation__link"><span class="fcdo-page-navigation__item-icon material-symbols-outlined">drafts</span>
+          Page Navigation Item
         </a>
       </li>
     </ul>
   </div>
 </nav>
+
         </div>
         <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
