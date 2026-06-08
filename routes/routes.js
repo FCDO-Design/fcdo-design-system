@@ -202,9 +202,9 @@ router.get('/design-system/components/utility-navigation', (req, res) => {
     res.render('design-system/components/utility-navigation.html');
 });
 
-// dashboard kpi card route
-router.get('/design-system/components/dashboard-kpi-card', (req, res) => {
-    res.render('design-system/components/dashboard-kpi-card.html');
+// dashboard card route
+router.get('/design-system/components/dashboard-card', (req, res) => {
+    res.render('design-system/components/dashboard-card.html');
 });
 
 module.exports = router;

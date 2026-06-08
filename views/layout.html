@@ -55,17 +55,17 @@
         <div class="app-page-title">
       {% endif %}
         <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
+          <div class="govuk-grid-column-full">
             {% block pageTitle %}{% endblock %}
           </div>
     </div>
   </div>
     <div class="app-page-content">
-       <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-            {% block content %}{% endblock %}
-          </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          {% block content %}{% endblock %}
         </div>
+      </div>
     </div>
     </div>
   </div>

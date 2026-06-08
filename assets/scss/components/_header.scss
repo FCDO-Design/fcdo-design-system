@@ -62,9 +62,9 @@
             cursor: pointer;
         }
 
-        @include govuk-media-query('desktop') {
+         @media (min-width: 992px) {
             display: none;
-        }
+         }
 
         &:focus {
             background-color: #fd0;

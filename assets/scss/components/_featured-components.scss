@@ -3,12 +3,27 @@
     flex-direction: column;
     gap: $fcdo-spacing-6;
 
-    @include govuk-media-query('tablet') {
+    @media (min-width: 1500px) {
         flex-direction: row;
+    }
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        gap: $fcdo-spacing-6;
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+        }
+
     }
 
     &__item {
         flex: 1;
-        max-width: 300px;
+
+        img {
+            width: 100%;
+        }
+
     }
 }
