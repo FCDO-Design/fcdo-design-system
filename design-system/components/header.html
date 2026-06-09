@@ -1075,17 +1075,59 @@ Header
     <p class="govuk-body">The Header component serves as the primary navigation and branding element across all digital products in the FCDO ecosystem.</p>
     <p class="govuk-body">It provides a consistent, accessible, and responsive framework for users to identify the FCDO brand, navigate key sections, and access essential actions such as search, language selection, and user account controls.</p>
 
+    <h2 class="govuk-heading-m">Default template header</h2>
+    <p class="govuk-body">The default template header is the standard top section used across FCDO digital services to ensure users immediately recognise they are interacting with an official government service and can navigate consistently.</p>   
     <div class="fcdo-component">
         <div class="fcdo-component__example">
             <header class="fcdo-header">
     <div class="govuk-width-container fcdo-header__container">
-      
+      <div class="fcdo-header__logo"></div>
+      <div class="fcdo-header__service-name">
+        <a href="/" class="fcdo-header__link govuk-!-font-size-24">
+          <strong>FCDO</strong> Design System
+        </a>
+      </div>
+    </div>
+  </header>
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
+
+    <h2 class="govuk-heading-m">Application template header</h2>
+    <p class="govuk-body">The Application template header in the FCDO Design System is designed specifically for staff-facing or internal digital services, where users need fast access to tools, navigation, and workspace layout control rather than public-facing branding.</p>   
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            
+            <header class="fcdo-header">
+    <div class="fcdo-header__container">
+      <button class="fcdo-header__toggle-page-navigation" id="togglePageNavigation" aria-expanded="false" aria-controls="pageNavigation">
+          <span class="fcdo-header__menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
         <div class="fcdo-header__logo"></div>
       <div class="fcdo-header__service-name">
         <a href="/" class="fcdo-header__link govuk-!-font-size-24">
           <strong>FCDO</strong> Design System
         </a>
       </div>
+        <div class="fcdo-actions">
+          <a href="/account" class="fcdo-actions__item">
+            <span class="material-symbols-outlined fcdo-actions__icon">account_circle</span>
+            <span class="fcdo-actions__text">Account</span>
+          </a>
+          <a href="/account" class="fcdo-actions__item fcdo-actions__item--border">
+            <span class="material-symbols-outlined fcdo-actions__icon">settings</span>
+            <span class="fcdo-actions__text">Setttings</span>
+          </a>
+        </div>
+      
     </div>
   </header>
         </div>
