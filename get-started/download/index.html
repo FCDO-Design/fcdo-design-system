@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    FCDO Design System - Download FCDO Frontend
+FCDO Design System - Download FCDO Frontend
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,8 +17,7 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -914,9 +913,6 @@
     
     
     
-    
-    
-    
 
     
 
@@ -946,7 +942,7 @@
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link ">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -966,28 +962,8 @@
       
       
       
-      <a href="/get-started/css" class="app-nav__link ">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1079,29 +1055,92 @@
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
-    <span class="govuk-caption-xl">Get Started</span>
-    <h1 class="govuk-heading-l">Download FCDO Frontend</h1>
-
-          </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
           
-  <h1 class="govuk-heading-l">Download FCDO Frontend</h1>
-  <p class="govuk-body">If you want to try out FCDO Frontend in your project you can download and include compiled stylesheets, JavaScript and the asset files.</p>
-  <p class="govuk-body"><a href="/get-started/download/fcdo-frontend.zip" class="govuk-link govuk-link--no-visited-state" target="_blank">Download FCDO Frontend</a></p>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<span class="govuk-caption-xl">Get Started</span>
+<h1 class="govuk-heading-l">Download FCDO Frontend</h1>
 
+            </div>
+          </div>
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+
+
+
+<h1 class="govuk-heading-l">FCDO Front End v1.0</h1>
+<p class="govuk-body">Download the latest version of the FCDO Design System to use in your projects. The package includes all compiled CSS and JavaScript.</p>
+<div class="fcdo-card govuk-!-margin-top-5">
+    <h2 class="govuk-heading-m">Latest release version 1.0</h2>
+
+
+    <div class="fcdo-alert fcdo-alert--warning" role="alert">
+        <span class="fcdo-alert__text">
+            You must have GOVUK Frontend installed to use the FCDO Frontend
+        </span>
+        <a href="https://frontend.design-system.service.gov.uk/install-using-precompiled-files/" class="fcdo-alert__link" target="_blank">GOVUK Frontend instructions</a>
+    </div>
+
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+        </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+        <p class="govuk-body govuk-!-font-weight-bold">
+            You must have GOVUK Frontend installed to use the FCDO Frontend
+        </p>
+        
+    </div>
+</div>
+
+    <p class="govuk-body">
+        Download the most recent stable version of the design system.
+    </p>
+
+    <dl class="govuk-summary-list govuk-!-margin-bottom-4">
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Version</dt>
+            <dd class="govuk-summary-list__value">v1.0</dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">Released</dt>
+            <dd class="govuk-summary-list__value">9 June 2026</dd>
+        </div>
+
+        <div class="govuk-summary-list__row govuk-summary-list__row--no-border">
+            <dt class="govuk-summary-list__key">Format</dt>
+            <dd class="govuk-summary-list__value">
+                ZIP package (includes all assets)
+            </dd>
+        </div>
+
+    </dl>
+
+    <p class="govuk-body govuk-!-margin-bottom-7">
+        <a href="/downloads/fcdo-design-system-latest.zip" class="fcdo-button govuk-!-margin-top-4" role="button" data-module="govuk-button">
+            Download latest version
+        </a>
+    </p>
+
+    <p class="govuk-body">
+        <a href="/get-started/copying-files" class="govuk-link">Copying the files</a>
+    </p>
+</div>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1140,7 +1179,7 @@
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>

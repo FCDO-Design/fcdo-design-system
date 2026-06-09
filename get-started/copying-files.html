@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    FCDO Design System
+FCDO Design System
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,8 +17,7 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -916,9 +915,6 @@
     
     
     
-    
-    
-    
 
     
 
@@ -948,7 +944,7 @@
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link app-nav__link--active">
+      <a href="/get-started/copying-files" class="app-nav__link app-nav__link--active">
         Copying Files
       </a>
       
@@ -968,28 +964,8 @@
       
       
       
-      <a href="/get-started/css" class="app-nav__link ">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1081,33 +1057,55 @@
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
-    <span class="govuk-caption-xl">Get Started</span>
-    <h1 class="govuk-heading-l">Import Assets</h1>
-
-          </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
           
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<span class="govuk-caption-xl">Get Started</span>
 <h1 class="govuk-heading-l">Import Assets</h1>
 
-<ol class="govuk-list govuk-list--number">
-<li>Unzip the <a href="/get-started/download/fcdo-frontend.zip" class="govuk-link govuk-link--no-visited-state" target="_blank">fcdo-frontend.zip</a> file</li>
-</ol>
+            </div>
+          </div>
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<h1 class="govuk-heading-l">Copy and install the precompiled files</h1>
 
-<strong class="govuk-tag govuk-tag--orange">Awaiting content</strong>
+<p class="govuk-body">After downloading, you need to extract the files and copy them into your project directory.</p>
 
+<div class="fcdo-card govuk-!-margin-top-6">
+
+    <h2 class="govuk-heading-m">CSS</h2>
+    <p class="govuk-body">Copy the <code>.css</code> file to a <code>stylesheets</code> folder in the root of your project's public folder.</p>
+    <p class="govuk-body">For example:</p>
+
+    <div class="govuk-!-margin-bottom-3">
+        &lt;YOUR-SITE-URL&gt;/stylesheets/fcdo-frontend.min.css
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">JavaScript</h2>
+    <p class="govuk-body">Copy the <code>.js</code> file to a <code>javascripts</code> folder in the root of your project's public folder.</p>
+    <p class="govuk-body">For example:</p>
+
+    <div class="govuk-!-margin-bottom-7">
+        &lt;YOUR-SITE-URL&gt;/javascripts/fcdo-frontend.min.js
+    </div>
+
+    <p class="govuk-body">
+        <a href="/get-started/css-and-javascript" class="govuk-link">Using the CSS and JavaScript</a>
+    </p>
+</div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1146,7 +1144,7 @@
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>

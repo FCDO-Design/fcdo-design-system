@@ -17,8 +17,7 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -916,9 +915,6 @@
     
     
     
-    
-    
-    
 
     
 
@@ -948,7 +944,7 @@
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link ">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -968,28 +964,8 @@
       
       
       
-      <a href="/get-started/css" class="app-nav__link ">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1081,20 +1057,20 @@
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
+          
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
     <span class="govuk-caption-xl">Components</span>
     <h1 class="govuk-heading-l">Dashboard card</h1>
 
+            </div>
           </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
     <h1 class="govuk-heading-l">Component information</h1>
     <p class="govuk-body">The Dashboard card is a simple component used to display a single key performance indicator clearly and prominently.</p>
     <p class="govuk-body">It helps users quickly understand key metrics and track performance at a glance, typically within dashboards and reporting views.</p>
@@ -1112,16 +1088,16 @@
         </div>
         <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
-    <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
     <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
 </div>
     </div>
 
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1160,7 +1136,7 @@
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>

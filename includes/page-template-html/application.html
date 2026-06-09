@@ -1,30 +1,26 @@
 
 
-    <header class="fcdo-header">
-  <div class="fcdo-header__container">
-    
+<header class="fcdo-header">
+    <div class="fcdo-header__container">
       <button class="fcdo-header__toggle-page-navigation" id="togglePageNavigation" aria-expanded="false" aria-controls="pageNavigation">
-        <span class="fcdo-header__menu-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </span>
-        <!-- <span class="fcdo-header__menu-text">Menu</span> -->
-      </button>
-      <div class="fcdo-header__logo"></div>
-    
-    <div class="fcdo-header__service-name">
-      <a href="/" class="fcdo-header__link govuk-!-font-size-24">
-        <strong>FCDO</strong> Service Name
-      </a>
+          <span class="fcdo-header__menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+        <div class="fcdo-header__logo"></div>
+      <div class="fcdo-header__service-name">
+        <a href="/" class="fcdo-header__link govuk-!-font-size-24">
+          <strong>FCDO</strong> Service Name
+        </a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 <div class="fcdo-application-layout">
   <div class="fcdo-application-layout__sidebar fcdo-application-layout__sidebar--open" id="pageNavigation">
     <nav class="fcdo-page-navigation">
       <div class="fcdo-page-navigation__container">
-        <!-- <div class="fcdo-page-navigation__title">Navigation Title</div> -->
         <ul class="fcdo-page-navigation__list">
           <li class="fcdo-page-navigation__item fcdo-page-navigation__item--has-children">
             <details class="fcdo-page-navigation__details">
@@ -46,15 +42,14 @@
               </ul>
             </details>
           </li>
-          <!-- <li class="fcdo-page-navigation__title">Navigaton Title</li> -->
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-             <span class="fcdo-page-navigation__item-icon material-symbols-outlined">article_shortcut</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
+              <span class="fcdo-page-navigation__item-icon material-symbols-outlined">article_shortcut</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
             </a>
           </li>
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-             <span class="fcdo-page-navigation__item-icon material-symbols-outlined">drafts</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
+              <span class="fcdo-page-navigation__item-icon material-symbols-outlined">drafts</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
             </a>
           </li>
         </ul>
@@ -75,6 +70,12 @@
   <ul class="fcdo-application-layout__footer-list">
     <li><a href="#" class="fcdo-application-layout__footer-link">Accessibility</a></li>
     <li><a href="#" class="fcdo-application-layout__footer-link">Cookies</a></li>
-    <li><a href="#" class="fcdo-application-layout__footer-link">Privacy Policy</a></li> 
+    <li><a href="#" class="fcdo-application-layout__footer-link">Privacy Policy</a></li>
   </ul>
 </footer>
+<script type="module" src="/javascript/govuk-frontend.min.js"></script>
+<script type="module">
+  import { initAll } from '/javascript/govuk-frontend.min.js'
+  initAll()
+</script>
+<script type="module" src="/javascript/fcdo-frontend.min.js"></script>

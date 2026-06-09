@@ -17,8 +17,7 @@ Button
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@ Button
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@ Button
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -916,9 +915,6 @@ Button
     
     
     
-    
-    
-    
 
     
 
@@ -948,7 +944,7 @@ Button
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link ">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -968,28 +964,8 @@ Button
       
       
       
-      <a href="/get-started/css" class="app-nav__link ">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1081,39 +1057,129 @@ Button
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
-    <span class="govuk-caption-xl">Components</span>
-    <h1 class="govuk-heading-l">Button</h1>
-
-          </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
           
-    <h1 class="govuk-heading-l">Component information</h1>
-    <p class="govuk-body">Use the button component to help users carry out an action like starting an application or saving their information.</p>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-l">Button</h1>
 
-    <div class="fcdo-component">
-        <div class="fcdo-component__example">
-            <button class="fcdo-button" type="button">Save and continue</button>
+            </div>
+          </div>
         </div>
-        <a class="fcdo-component__link" href="#">HTML</a>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+
+<h1 class="govuk-heading-l">Component information</h1>
+<p class="govuk-body">
+    Use the button component to help users carry out an action like starting an application or saving their information.
+</p>
+
+<h2 class="govuk-heading-m">Primary button</h2>
+<p class="govuk-body">
+    The FCDO primary button is used to draw attention to the most important action on a page. It should be reserved for the key task a user needs to complete, such as downloading a release, continuing a journey, or submitting a form.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        
+        
+
+<button class="fcdo-button" type="button">
+    Save and continue
+</button>
+
+
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
-    <button class="fcdo-button fcdo-button--outline copyHTML" type="button">Copy code</button>
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
     <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
 </div>
-    </div>
+</div>
 
+<h2 class="govuk-heading-m">Disabled button</h2>
+<p class="govuk-body">
+    The disabled button is used when an action is temporarily unavailable or cannot be completed.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        
+        
+
+<button class="fcdo-button" type="button" aria-disabled="true" disabled="disabled">
+    Save and continue
+</button>
+
+
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+</div>
+
+<h2 class="govuk-heading-m">Outline button</h2>
+<p class="govuk-body">
+    The FCDO outline button is used for alternative or supporting actions that are less important than the primary action on a page.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        
+        
+
+<button class="fcdo-button fcdo-button--outline" type="button">
+    Back
+</button>
+
+
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+</div>
+
+<h2 class="govuk-heading-m">Button group</h2>
+<p class="govuk-body">
+    Button groups are used when users need to choose between multiple actions, with a clear primary and secondary option.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        
+        
+
+<div class="fcdo-button-group">
+    <button type="submit" class="fcdo-button">
+        Save and continue
+    </button>
+    <button type="submit" class="fcdo-button fcdo-button--outline">
+        Save as draft
+    </button>
+</div>
+
+
+    </div>
+    <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+</div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1152,7 +1218,7 @@ Button
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>

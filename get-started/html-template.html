@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    FCDO Design System - FCDO Frontend HTML Template
+FCDO Default Page Template
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,8 +17,7 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -916,9 +915,6 @@
     
     
     
-    
-    
-    
 
     
 
@@ -948,7 +944,7 @@
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link ">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -968,28 +964,8 @@
       
       
       
-      <a href="/get-started/css" class="app-nav__link ">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1081,50 +1057,139 @@
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
-    <span class="govuk-caption-xl">Get Started</span>
-    <h1 class="govuk-heading-l">FCDO Frontend HTML Template</h1>
-
-          </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
           
-  <h1 class="govuk-heading-l">FCDO Frontend HTML Template</h1>
-  <p class="govuk-body">Use this simple template to get started with FCDO Design System</p>
-  <!-- <pre class="govuk-!-font-size-16"><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="en" class="govuk-template"&gt;
-  &lt;head&gt;
-    &lt;title&gt;FCDO and GOV.UK&lt;/title&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"&gt;
-    &lt;link rel="stylesheet" href="/assets/css/govuk-frontend-5.13.0.min.css"&gt;
-    &lt;link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css"&gt;
-  &lt;/head&gt;
-  &lt;body class="govuk-template__body"&gt;
-    &lt;script&gt;document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');&lt;/script&gt;
-    &lt;script type="module" src="/assets/javascript/govuk-frontend-5.13.0.min.js"&gt;&lt;/script&gt;
-    &lt;script type="module"&gt;
-      import { initAll } from '/assets/javascript/govuk-frontend-5.13.0.min.js'
-      initAll()
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<span class="govuk-caption-xl">Get Started</span>
+<h1 class="govuk-heading-l">Importing Assets</h1>
+
+            </div>
+          </div>
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<h1 class="govuk-heading-l">FCDO Frontend HTML Template</h1>
+<p class="govuk-body">Use this simple template to get started with FCDO Design System.</p>
+<div class="fcdo-component">
+    <div class="fcdo-component__example govuk-!-display-none " id="example">
+        
+<header class="fcdo-header">
+    <div class="govuk-width-container fcdo-header__container">
+      
+        <div class="fcdo-header__logo"></div>
+      <div class="fcdo-header__service-name">
+        <a href="/" class="fcdo-header__link govuk-!-font-size-24">
+          <strong>FCDO</strong> Service Name
+        </a>
+      </div>
+    </div>
+  </header>
+<main class="govuk-width-container govuk-main-wrapper fcdo-main-wrapper" id="main-content" role="main">
+  <h1 class="govuk-heading-l">Default page template</h1>
+  <p class="govuk-body">This is the default page template which includes the FCDO header and main content area. It does not include a sidebar or navigation.</p>
+</main>
+<footer class="fcdo-footer">
+  <div class="govuk-width-container fcdo-footer__content">
+    <div class="fcdo-footer__navigation">
+      <ul class="fcdo-footer__list">
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Accessibility</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Privacy</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Cookies</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Terms and conditions</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Contact</a></li>
+        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Help</a></li>
+      </ul>
+    </div>
+    <a class="fcdo-footer__logo" href="#">© Crown copyright </a>
+  </div>
+</footer>
+<script type="module" src="/javascript/govuk-frontend.min.js"></script>
+<script type="module">
+  import { initAll } from '/javascript/govuk-frontend.min.js'
+  initAll()
+</script>
+<script type="module" src="/javascript/fcdo-frontend.min.js"></script>
+    </div>
+    
+    <div class="fcdo-component__html html govuk-!-display-block" style="border-top: none;">
+      <button class="fcdo-component__button copyHTML" type="button">Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCodeTemplate"></code></pre>
+</div>
+</div>
+
+<script>
+    // escape HTML special characters
+    function escapeHTML(str) {
+        return str
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#39;");
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // grab the content of #example
+        const exampleElem = document.getElementById('example');
+        const htmlCodeElem = document.getElementById('htmlCodeTemplate');
+
+        if (exampleElem && htmlCodeElem) {
+            // prepend DOCTYPE and opening tags
+            const firstLines = `&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; class=&quot;govuk-template fcdo-template&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;FCDO Page Title&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, viewport-fit=cover&quot;&gt;
+    &lt;meta name=&quot;theme-color&quot; content=&quot;#1d70b8&quot;&gt;
+    &lt;link rel=&quot;icon&quot; sizes=&quot;48x48&quot; href=&quot;/assets/images/favicon.ico&quot;&gt;
+    &lt;link rel=&quot;icon&quot; sizes=&quot;any&quot; href=&quot;/assets/images/favicon.svg&quot; type=&quot;image/svg+xml&quot;&gt;
+    &lt;link rel=&quot;mask-icon&quot; href=&quot;/assets/images/govuk-icon-mask.svg&quot; color=&quot;#1d70b8&quot;&gt;
+    &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/images/govuk-icon-180.png&quot;&gt;
+    &lt;link rel=&quot;manifest&quot; href=&quot;/assets/rebrand/manifest.json&quot;&gt;
+    &lt;!-- do not forget to include the GovUK CSS file --&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/govuk-frontend.min.css&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/fcdo-frontend.min.css&quot;&gt;
+&lt;/head&gt;
+&lt;body class=&quot;govuk-template__body fcdo-template__body&quot;&gt;
+    &lt;script&gt;
+        document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
     &lt;/script&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-  </code></pre> -->
+    &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
 
-  <strong class="govuk-tag govuk-tag--orange">Awaiting content</strong>
+            // escape the content of #example
+            const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
 
+            // append closing tags
+            const closingLines = `\n&lt;/body&gt;\n&lt;/html&gt;`;
 
+            // combine everything
+            htmlCodeElem.innerHTML = firstLines + escapedContent + closingLines;
+        }
+    });
 
+    // copy function
+    function copyCode() {
+        const code = document.getElementById('htmlCodeTemplate').innerText;
+        const button = document.getElementById('copyHTML');
+
+        navigator.clipboard.writeText(code).then(() => {
+            button.textContent = 'Code copied';
+            setTimeout(() => {
+                button.textContent = 'Copy code';
+            }, 2000);
+        }).catch(err => console.error(err));
+    }
+</script>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1163,7 +1228,7 @@
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>

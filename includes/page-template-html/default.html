@@ -1,20 +1,19 @@
 
 <header class="fcdo-header">
-  <div class="govuk-width-container fcdo-header__container">
-    
-      <div class="fcdo-header__logo"></div>
-    
-    <div class="fcdo-header__service-name">
-      <a href="/" class="fcdo-header__link govuk-!-font-size-24">
-        <strong>FCDO</strong> Service Name
-      </a>
+    <div class="govuk-width-container fcdo-header__container">
+      
+        <div class="fcdo-header__logo"></div>
+      <div class="fcdo-header__service-name">
+        <a href="/" class="fcdo-header__link govuk-!-font-size-24">
+          <strong>FCDO</strong> Service Name
+        </a>
+      </div>
     </div>
-  </div>
-</header>
-  <main class="govuk-width-container govuk-main-wrapper fcdo-main-wrapper" id="main-content" role="main">
-    <h1 class="govuk-heading-l">Default page template</h1>
-    <p class="govuk-body">This is the default page template which includes the FCDO header and main content area. It does not include a sidebar or navigation.</p>
-  </main>
+  </header>
+<main class="govuk-width-container govuk-main-wrapper fcdo-main-wrapper" id="main-content" role="main">
+  <h1 class="govuk-heading-l">Default page template</h1>
+  <p class="govuk-body">This is the default page template which includes the FCDO header and main content area. It does not include a sidebar or navigation.</p>
+</main>
 <footer class="fcdo-footer">
   <div class="govuk-width-container fcdo-footer__content">
     <div class="fcdo-footer__navigation">
@@ -30,3 +29,9 @@
     <a class="fcdo-footer__logo" href="#">© Crown copyright </a>
   </div>
 </footer>
+<script type="module" src="/javascript/govuk-frontend.min.js"></script>
+<script type="module">
+  import { initAll } from '/javascript/govuk-frontend.min.js'
+  initAll()
+</script>
+<script type="module" src="/javascript/fcdo-frontend.min.js"></script>

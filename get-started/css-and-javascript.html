@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    FCDO Design System - FCDO Frontend CSS
+FCDO Design System - FCDO Frontend CSS
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -17,8 +17,7 @@
   <link rel="manifest" href="/assets/manifest.json">
   <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
   <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/base16/google-light.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,13 +36,13 @@
     import { initAll } from '/assets/javascript/govuk-frontend.min.js'
     initAll()
   </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
   <script>
     document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
   </script>
-  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
 
   <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
-  
+
   <header class="app-header" data-module="fcdo-header">
   <div class="app-header__container">
     <div class="app-header__logo"></div>
@@ -117,7 +116,7 @@
 
   <div class="app-layout">
     <div class="app-layout__sidebar" id="appPageNavigation">
-  <nav class="app-nav">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -916,9 +915,6 @@
     
     
     
-    
-    
-    
 
     
 
@@ -948,7 +944,7 @@
       
       
       
-      <a href="/get-started/import-assets" class="app-nav__link ">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -968,28 +964,8 @@
       
       
       
-      <a href="/get-started/css" class="app-nav__link app-nav__link--active">
-        Using CSS
-      </a>
-      
-      
-    </li>
-    
-    
-    
-    
-
-    
-    
-
-    
-
-    <li class="app-nav__item app-nav__item--no-children">
-      
-      
-      
-      <a href="/get-started/javascript" class="app-nav__link ">
-        Using JavaScript
+      <a href="/get-started/css-and-javascript" class="app-nav__link app-nav__link--active">
+        Using CSS and JavaScript
       </a>
       
       
@@ -1081,37 +1057,49 @@
     <div class="app-layout__content" id="main-content">
       
         <div class="app-page-title">
-      
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-full">
-            
-    <span class="govuk-caption-xl">Get Started</span>
-    <h1 class="govuk-heading-l">FCDO Frontend CSS</h1>
-
-          </div>
-    </div>
-  </div>
-    <div class="app-page-content">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
           
-  <h1 class="govuk-heading-l">FCDO Frontend CSS</h1>
-  <p class="govuk-body">To use the CSS from FCDO Frontend include the compiled CSS file directly in your HTML:</p>
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<span class="govuk-caption-xl">Get Started</span>
+<h1 class="govuk-heading-l">Importing Assets</h1>
 
-  <!-- <pre class="govuk-!-font-size-16"><code>&lt;link rel="stylesheet" href="/assets/css/govuk-frontend-5.13.0.min.css"&gt;</code></pre>
-  <pre class="govuk-!-font-size-16"><code>&lt;link rel="stylesheet" href="/assets/css/fcdo-frontend.css"&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+<h1 class="govuk-heading-l">Using CSS and JavaScript</h1>
+<p class="govuk-body">To use the CSS and JavaScript from FCDO Frontend include the compiled CSS file directly in your HTML:</p>
 
-  <h2 class="govuk-heading-m">Use components</h2>
-        <p class="govuk-body">Once installed, add components into your HTML. For example:</p>
-        <pre class="govuk-!-font-size-16"><code>&lt;button class="fcdo-button"&gt;Start now&lt;/button&gt;</code></pre> -->
+<div class="fcdo-card">
+    <h2 class="govuk-heading-m">Set up and extend GOV.UK Frontend</h2>
 
-        <strong class="govuk-tag govuk-tag--orange">Awaiting content</strong>
+    <p class="govuk-body">Next, follow <a href="https://frontend.design-system.service.gov.uk/install-using-precompiled-files/" class="govuk-link">the instructions for installing GOV.UK Frontend</a> and continue to:</p>
 
+    <p class="govuk-body">1. Add another link tag for FCDO Frontend styles following GOV.UK Frontend styles in the <code>head</code> tag:</p>
+
+    <pre><code class="language-html">&lt;link rel="stylesheet" href="/stylesheets/govuk-frontend.min.css" /&gt;
+&lt;link rel="stylesheet" href="/stylesheets/fcdo-frontend.min.css"&gt;</code></pre>
+
+    <p class="govuk-body">
+        2. Add script tags for FCDO Frontend JavaScript alongside GOV.UK Frontend scripts at the bottom of the <code>body</code> tag.
+    </p>
+
+    <pre><code class="language-html">&lt;script type="module" src="/javascript/govuk-frontend.min.js"&gt;&lt;/script&gt;
+&lt;script type="module"&gt;
+    import { initAll } from '/javascript/govuk-frontend.min.js'
+    initAll()
+&lt;/script&gt;
+&lt;script type="module" src="/javascript/fcdo-frontend.min.js"&gt;&lt;/script&gt;</code></pre>
+    
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  </div>
     </main>
   </div>
   <footer class="govuk-footer app-footer">
@@ -1150,7 +1138,7 @@
   <script src="/assets/javascript/fcdo-design-system.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
-  
+
 </body>
 
 </html>
