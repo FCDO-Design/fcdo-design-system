@@ -2,8 +2,9 @@
     margin: 0;
     padding: $fcdo-spacing-3 $fcdo-spacing-6;
     border-bottom: 1px solid govuk-colour("mid-grey");
+    background-color: #fff;
 
-    .govuk-caption-xl, .govuk-heading-l {
+    .govuk-caption-s, .govuk-heading-l {
         margin-bottom: 0;
     }
 

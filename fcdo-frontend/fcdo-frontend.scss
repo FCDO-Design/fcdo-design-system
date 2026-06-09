@@ -10,14 +10,16 @@ h2,
 h3,
 h4,
 ul,
-span:not(.material-symbols-outlined),
 p,
 a,
+dt,
+dd,
 label,
 select,
 input,
 button {
     font-family: $fcdo-font-family !important;
+    @include fcdo-font-size(17);
 }
 
 body {
