@@ -19,4 +19,13 @@ Alert
     </div>
     {% include "includes/app-view-component-code.html" %}
 </div>
+
+ <h2 class="govuk-heading-m">Optional link and icon</h2>
+ <p class="govuk-body">Alerts can include an optional link to provide more information or actions.</p>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set alertLink = true %}
+            {% include "includes/component-html/alert.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
 {% endblock %}

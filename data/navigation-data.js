@@ -62,7 +62,7 @@ module.exports = {
           name: 'Importing Assets',
           children: [
             { name: 'Copying Files', slug: 'assets', url: '/get-started/copying-files' },
-            { name: 'Usning CSS and JavaScript', slug: 'css', url: '/get-started/css-and-javascript' },
+            { name: 'Using CSS and JavaScript', slug: 'css', url: '/get-started/css-and-javascript' },
             { name: 'Use Template', slug: 'html-template', url: '/get-started/html-template' },
           ]
         },

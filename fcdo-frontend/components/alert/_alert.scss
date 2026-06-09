@@ -1,35 +1,72 @@
 .fcdo-alert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $fcdo-spacing-2;
     border-left: 5px solid;
     padding: $fcdo-spacing-3;
     margin-bottom: $fcdo-spacing-4;
 
+    &__text {
+        display: flex;
+        align-items: center;
+        gap: $fcdo-spacing-1;
+    }
+
+    &__icon {
+        font-size: 32px !important;
+    }
+
     &--primary {
         background-color: govuk-color("blue", "tint-80");
         color: govuk-color("blue", "shade-50");
-        border-color: govuk-color("blue", "shade-50")
+        border-color: govuk-color("blue", "shade-50");
+
+        .fcdo-alert__link {
+            color: govuk-color("blue", "shade-50");
+        }
+
     }
 
     &--secondary {
         background-color: govuk-color("black", "tint-95");
         color: govuk-color("black", "tint-25");
         border-color: govuk-color("black", "tint-25");
+
+        .fcdo-alert__link {
+            color: govuk-color("black", "tint-25");
+        }
+
     }
 
     &--success {
         background-color: govuk-color("green", "tint-80");
         color: govuk-color("green", "shade-50");
-        border-color: govuk-color("green", "shade-50")
+        border-color: govuk-color("green", "shade-50");
+
+        .fcdo-alert__link {
+            color: govuk-color("green", "shade-50");
+        }
+
     }
 
     &--error {
         background-color: govuk-color("red", "tint-80");
         color: govuk-color("red", "shade-50"); 
-        border-color: govuk-color("red", "shade-50")               
+        border-color: govuk-color("red", "shade-50");
+        
+        .fcdo-alert__link {
+            color: govuk-color("red", "shade-50");
+        }
     }
 
     &--warning {
         background-color: govuk-color("yellow", "tint-80");
         color: govuk-color("yellow", "shade-50");
         border-color: govuk-color("yellow", "shade-50");
+
+        .fcdo-alert__link {
+            color: govuk-color("yellow", "shade-50");
+        }
     }
 }

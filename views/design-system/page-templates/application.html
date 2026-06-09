@@ -64,6 +64,8 @@ FCDO Application Template
         &lt;link rel=&quot;mask-icon&quot; href=&quot;/assets/images/govuk-icon-mask.svg&quot; color=&quot;#1d70b8&quot;&gt;
         &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;/assets/images/govuk-icon-180.png&quot;&gt;
         &lt;link rel=&quot;manifest&quot; href=&quot;/assets/rebrand/manifest.json&quot;&gt;
+        &lt;!-- do not forget to include the GovUK CSS file --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/govuk-frontend.min.css&quot;&gt;
         &lt;link rel=&quot;stylesheet&quot; href=&quot;/stylesheets/fcdo-frontend.min.css&quot;&gt;
         &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200&quot; rel=&quot;stylesheet&quot;&gt;
         &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;
@@ -71,11 +73,12 @@ FCDO Application Template
         &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
     &lt;/head&gt;
     &lt;body class=&quot;govuk-template__body fcdo-template__body&quot;&gt;
-        &lt;script&gt;
-            document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
-        &lt;/script&gt;
-        &lt;script type=&quot;module&quot; src=&quot;/javascript/fcdo-frontend.min.js&quot;&gt;&lt;/script&gt;
-        &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;`;
+    &lt;script&gt;
+        document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+    &lt;/script&gt;
+    &lt;a href=&quot;#main-content&quot; class=&quot;govuk-skip-link&quot; data-module=&quot;govuk-skip-link&quot;&gt;Skip to main content&lt;/a&gt;
+    `;
+        
 
       // escape the content of #example
       const escapedContent = escapeHTML(exampleElem.innerHTML.trim());
