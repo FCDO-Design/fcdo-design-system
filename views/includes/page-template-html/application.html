@@ -1,6 +1,6 @@
 {% set fcdoTemplate = "application" %}
 {% set headerTitle = "Service Name" %}
-    {% include "includes/component-html/header.html" %}
+{% include "includes/component-html/header.html" %}
 <div class="fcdo-application-layout">
   <div class="fcdo-application-layout__sidebar fcdo-application-layout__sidebar--open" id="pageNavigation">
     <nav class="fcdo-page-navigation">
@@ -30,12 +30,12 @@
           <!-- <li class="fcdo-page-navigation__title">Navigaton Title</li> -->
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-             <span class="fcdo-page-navigation__item-icon material-symbols-outlined">article_shortcut</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
+              <span class="fcdo-page-navigation__item-icon material-symbols-outlined">article_shortcut</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
             </a>
           </li>
           <li class="fcdo-page-navigation__item">
             <a href="#" class="fcdo-page-navigation__link">
-             <span class="fcdo-page-navigation__item-icon material-symbols-outlined">drafts</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
+              <span class="fcdo-page-navigation__item-icon material-symbols-outlined">drafts</span> <span class="fcdo-page-navigation__item-text">Page Navigation Item</span>
             </a>
           </li>
         </ul>
@@ -56,6 +56,12 @@
   <ul class="fcdo-application-layout__footer-list">
     <li><a href="#" class="fcdo-application-layout__footer-link">Accessibility</a></li>
     <li><a href="#" class="fcdo-application-layout__footer-link">Cookies</a></li>
-    <li><a href="#" class="fcdo-application-layout__footer-link">Privacy Policy</a></li> 
+    <li><a href="#" class="fcdo-application-layout__footer-link">Privacy Policy</a></li>
   </ul>
 </footer>
+<script type="module" src="/assets/javascript/govuk-frontend.min.js"></script>
+<script type="module">
+  import { initAll } from '/assets/javascript/govuk-frontend.min.js'
+  initAll()
+</script>
+<script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>

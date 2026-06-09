@@ -4,7 +4,19 @@
 @import "page-templates/all";
 @import "icons/all";
 
-body, h1, h2, h3, h4, ul, span:not(.material-symbols-outlined), p, a, label, select,  input, button {
+body,
+h1,
+h2,
+h3,
+h4,
+ul,
+span:not(.material-symbols-outlined),
+p,
+a,
+label,
+select,
+input,
+button {
     font-family: $fcdo-font-family !important;
     @include fcdo-font-size(17);
 }
@@ -25,7 +37,11 @@ body, h1, h2, h3, h4, ul, span:not(.material-symbols-outlined), p, a, label, sel
         color: #fff;
     }
 
-    h1, h2, h3, h4, ul {
+    h1,
+    h2,
+    h3,
+    h4,
+    ul {
         color: #fff;
     }
 
@@ -37,8 +53,11 @@ body, h1, h2, h3, h4, ul, span:not(.material-symbols-outlined), p, a, label, sel
         color: fcdo-color("high-contrast", "2");
     }
 
-    h1, h2, h3, h4, ul {
+    h1,
+    h2,
+    h3,
+    h4,
+    ul {
         color: fcdo-color("high-contrast", "2");
     }
 }
-

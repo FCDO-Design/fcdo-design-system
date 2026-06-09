@@ -1,1 +1,30 @@
-<button class="fcdo-button" type="button">Save and continue</button>
+{% if buttonVariant == "group" %}
+
+<div class="fcdo-button-group">
+    <button type="submit" class="fcdo-button">
+        Save and continue
+    </button>
+    <button type="submit" class="fcdo-button fcdo-button--outline">
+        Save as draft
+    </button>
+</div>
+
+{% elif buttonVariant == "outline" %}
+
+<button class="fcdo-button fcdo-button--outline" type="button">
+    Back
+</button>
+
+{% elif buttonVariant == "disabled" %}
+
+<button class="fcdo-button" type="button" aria-disabled="true" disabled="disabled">
+    Save and continue
+</button>
+
+{% else %}
+
+<button class="fcdo-button" type="button">
+    Save and continue
+</button>
+
+{% endif %}

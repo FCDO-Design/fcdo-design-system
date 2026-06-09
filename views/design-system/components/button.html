@@ -5,18 +5,67 @@ Button
 {% endblock %}
 
 {% block pageTitle %}
-    <span class="govuk-caption-xl">Components</span>
-    <h1 class="govuk-heading-l">Button</h1>
+<span class="govuk-caption-xl">Components</span>
+<h1 class="govuk-heading-l">Button</h1>
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
-    <p class="govuk-body">Use the button component to help users carry out an action like starting an application or saving their information.</p>
 
-    <div class="fcdo-component">
-        <div class="fcdo-component__example">
-            {% include "includes/component-html/button.html" %}
-        </div>
-        {% include "includes/app-view-component-code.html" %}
+<h1 class="govuk-heading-l">Component information</h1>
+<p class="govuk-body">
+    Use the button component to help users carry out an action like starting an application or saving their information.
+</p>
+
+<h2 class="govuk-heading-m">Primary button</h2>
+<p class="govuk-body">
+    The FCDO primary button is used to draw attention to the most important action on a page. It should be reserved for the key task a user needs to complete, such as downloading a release, continuing a journey, or submitting a form.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "primary" %}
+        {% include "includes/component-html/button.html" %}
     </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
+<h2 class="govuk-heading-m">Disabled button</h2>
+<p class="govuk-body">
+    The disabled button is used when an action is temporarily unavailable or cannot be completed.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "disabled" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
+<h2 class="govuk-heading-m">Outline button</h2>
+<p class="govuk-body">
+    The FCDO outline button is used for alternative or supporting actions that are less important than the primary action on a page.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "outline" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
+<h2 class="govuk-heading-m">Button group</h2>
+<p class="govuk-body">
+    Button groups are used when users need to choose between multiple actions, with a clear primary and secondary option.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "group" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
 {% endblock %}

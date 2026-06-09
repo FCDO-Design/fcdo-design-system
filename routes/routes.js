@@ -32,13 +32,13 @@ router.get('/get-started/download', (req, res) => {
 });
 
 // import css route
-router.get('/get-started/css', (req, res) => {
-    res.render('get-started/css.html');
+router.get('/get-started/css-and-javascript', (req, res) => {
+    res.render('get-started/css-and-javascript.html');
 });
 
 // import assets route
-router.get('/get-started/import-assets', (req, res) => {
-    res.render('get-started/import-assets.html');
+router.get('/get-started/copying-files', (req, res) => {
+    res.render('get-started/copying-files.html');
 });
 
 // html template route

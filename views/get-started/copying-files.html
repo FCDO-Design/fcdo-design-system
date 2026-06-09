@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+FCDO Design System
+{% endblock %}
+
+{% block pageTitle %}
+<span class="govuk-caption-xl">Get Started</span>
+<h1 class="govuk-heading-l">Import Assets</h1>
+{% endblock %}
+
+{% block content %}
+<h1 class="govuk-heading-l">Copy and install the precompiled files</h1>
+
+<p class="govuk-body">After downloading, you need to extract the files and copy them into your project directory.</p>
+
+<div class="fcdo-card govuk-!-margin-top-6">
+
+    <h2 class="govuk-heading-m">CSS</h2>
+    <p class="govuk-body">Copy the <code>.css</code> file to a <code>stylesheets</code> folder in the root of your project's public folder.</p>
+    <p class="govuk-body">For example:</p>
+
+    <div class="govuk-!-margin-bottom-3">
+        &lt;YOUR-SITE-URL&gt;/stylesheets/fcdo-frontend.min.css
+    </div>
+
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">JavaScript</h2>
+    <p class="govuk-body">Copy the <code>.js</code> file to a <code>javascripts</code> folder in the root of your project's public folder.</p>
+    <p class="govuk-body">For example:</p>
+
+    <div class="govuk-!-margin-bottom-7">
+        &lt;YOUR-SITE-URL&gt;/javascripts/fcdo-frontend.min.js
+    </div>
+
+    <p class="govuk-body">
+        <a href="/get-started/css-and-javascript" class="govuk-link">Using the CSS and JavaScript</a>
+    </p>
+</div>
+
+{% endblock %}

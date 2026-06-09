@@ -1,6 +1,8 @@
 .fcdo-card {
   border: 1px solid fcdo-color("default", "7");
-  padding: $fcdo-spacing-3;
+  background-color: #fff;
+  padding: $fcdo-spacing-4;
+  margin-bottom: $fcdo-spacing-6;
 
   &__container {
     display: flex;

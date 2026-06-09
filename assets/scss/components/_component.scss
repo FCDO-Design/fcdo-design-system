@@ -4,6 +4,21 @@
     border: 1px solid $govuk-border-colour;
     background-color: #fff;
 
+    &__button {
+        padding: $fcdo-spacing-1 $fcdo-spacing-3;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid $govuk-text-colour;
+        color: 1px solid $govuk-text-colour;
+        @include fcdo-font-size(16, 1);
+
+        &:disabled,
+        &[disabled] {
+            opacity: 0.5;
+        }
+
+    }
+
     &__example {
         padding: $fcdo-spacing-5;
         border-bottom: 1px solid $govuk-border-colour;
@@ -96,60 +111,6 @@
 
                 &:focus {
                     color: #000 !important;
-                }
-            }
-        }
-    }
-
-
-}
-
-[data-theme="dark"] {
-    .fcdo-component {
-        background-color: $fcdo-dark-colour-1;
-
-        &__tabs {
-            li {
-                &.govuk-tabs__list-item {
-                    background-color: $fcdo-dark-colour-1;
-
-                    .govuk-tabs__tab {
-                        color: #fff !important;
-
-                        &:focus {
-                            color: #000 !important;
-                        }
-                    }
-
-                    &--selected:after {
-                        background-color: $fcdo-dark-colour-1;
-                    }
-                }
-            }
-        }
-    }
-}
-
-[data-theme="highContrast"] {
-    .fcdo-component {
-        background-color: $fcdo-high-contrast-colour-1;
-
-        &__tabs {
-            li {
-                &.govuk-tabs__list-item {
-                    background-color: $fcdo-high-contrast-colour-1;
-
-                    .govuk-tabs__tab {
-                        color: $fcdo-high-contrast-colour-2 !important;
-
-                        &:focus {
-                            color: #000 !important;
-                        }
-                    }
-
-                    &--selected:after {
-                        background-color: $fcdo-high-contrast-colour-1;
-                    }
                 }
             }
         }

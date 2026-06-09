@@ -1,3 +1,7 @@
 .hljs {
     background-color: #fff !important;
 }
+
+pre code.hljs span {
+    font-family: $fcdo-font-family-mono !important;
+}
