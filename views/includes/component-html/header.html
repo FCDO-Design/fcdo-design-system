@@ -8,12 +8,22 @@
           </span>
         </button>
         <div class="fcdo-header__logo"></div>
-      {%else%}
-        <div class="fcdo-header__logo"></div>
+      {%else%}<div class="fcdo-header__logo"></div>
       {%endif%}<div class="fcdo-header__service-name">
         <a href="/" class="fcdo-header__link govuk-!-font-size-24">
           <strong>FCDO</strong>{% if headerTitle %} {{ headerTitle }}{% else%} Design System{% endif %}
         </a>
-      </div>
+      </div>{% if fcdoTemplate == "application" %}
+        <div class="fcdo-actions">
+          <a href="/account" class="fcdo-actions__item">
+            <span class="material-symbols-outlined fcdo-actions__icon">account_circle</span>
+            <span class="fcdo-actions__text">Account</span>
+          </a>
+          <a href="/account" class="fcdo-actions__item fcdo-actions__item--border">
+            <span class="material-symbols-outlined fcdo-actions__icon">settings</span>
+            <span class="fcdo-actions__text">Setttings</span>
+          </a>
+        </div>
+      {% endif %}
     </div>
   </header>

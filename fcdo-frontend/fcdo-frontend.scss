@@ -18,7 +18,10 @@ select,
 input,
 button {
     font-family: $fcdo-font-family !important;
-    @include fcdo-font-size(17);
+}
+
+body {
+     @include fcdo-font-size(17);
 }
 
 .fcdo-template {
@@ -28,36 +31,5 @@ button {
         display: flex;
         flex-direction: column;
         min-height: 100vh;
-    }
-}
-
-[data-theme="dark"] {
-    body {
-        background-color: fcdo-color("dark", "1");
-        color: #fff;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    ul {
-        color: #fff;
-    }
-
-}
-
-[data-theme="highContrast"] {
-    body {
-        background-color: fcdo-color("high-contrast", "1");
-        color: fcdo-color("high-contrast", "2");
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    ul {
-        color: fcdo-color("high-contrast", "2");
     }
 }

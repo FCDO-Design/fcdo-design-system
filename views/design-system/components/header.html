@@ -14,8 +14,20 @@ Header
     <p class="govuk-body">The Header component serves as the primary navigation and branding element across all digital products in the FCDO ecosystem.</p>
     <p class="govuk-body">It provides a consistent, accessible, and responsive framework for users to identify the FCDO brand, navigate key sections, and access essential actions such as search, language selection, and user account controls.</p>
 
+    <h2 class="govuk-heading-m">Default template header</h2>
+    <p class="govuk-body">The default template header is the standard top section used across FCDO digital services to ensure users immediately recognise they are interacting with an official government service and can navigate consistently.</p>   
     <div class="fcdo-component">
         <div class="fcdo-component__example">
+            {% include "includes/component-html/header.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+
+    <h2 class="govuk-heading-m">Application template header</h2>
+    <p class="govuk-body">The Application template header in the FCDO Design System is designed specifically for staff-facing or internal digital services, where users need fast access to tools, navigation, and workspace layout control rather than public-facing branding.</p>   
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set fcdoTemplate = "application" %}
             {% include "includes/component-html/header.html" %}
         </div>
         {% include "includes/app-view-component-code.html" %}

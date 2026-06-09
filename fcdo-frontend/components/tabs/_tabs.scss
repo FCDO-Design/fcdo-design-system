@@ -2,8 +2,15 @@
     margin-bottom: $fcdo-spacing-6;
 
     .govuk-tabs__list-item--selected {
-        border-top: 5px solid fcdo-color("default", "1");
-        padding-bottom: 12px;
+        &:after {
+            content: "";
+            position: absolute;
+            left: -1px;
+            right: -1px;
+            top: -1px;
+            height: 5px;
+            background-color: fcdo-color("default", "1");
+        }
     }
 
     .govuk-tabs__panel {

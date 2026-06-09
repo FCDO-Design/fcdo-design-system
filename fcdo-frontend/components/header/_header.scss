@@ -9,6 +9,7 @@
   }
 
   &__logo {
+    display: none;
     width: 40px;
     height: 40px;
     margin-right: $fcdo-spacing-1;
@@ -17,6 +18,11 @@
     mask-repeat: no-repeat;
     mask-position: 50% 0%;
     mask-size: 36px 36px;
+
+    @include fcdo-media-query('tablet') {
+          display: block;
+      }
+
   }
 
   &__service-name a {
@@ -90,11 +96,54 @@
       transition: transform 0.3s ease, opacity 0.3s ease;
     }
   }
+}
 
-  /* menu text always visible */
-  &__menu-text {
-    font-family: $fcdo-font-family;
-    @include fcdo-font-size(19);
-    font-weight: 700;
+.fcdo-actions {
+  margin-left: auto;
+  display: flex;
+  gap: $fcdo-spacing-3;
+  color: #fff;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #fff;
+    @include fcdo-font-size(16, 1);
+    text-decoration: none;
+
+    &:hover, &:focus {
+      background-color: fcdo-color("default", "2");
+      outline: none;
+    }
+
+    &--border {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left:-6px;
+        top: 3px;
+        bottom: 3px;
+        width: 1px;
+        background-color: #fff;
+        opacity: 0.75;
+      }
+
+    }
+  }
+
+  &__text {
+    display: none;
+    @include fcdo-font-size(16, 1);
+
+      @include fcdo-media-query('tablet') {
+          display: block;
+      }
+  }
+
+  &__icon {
+    display: inline-flex;
   }
 }
