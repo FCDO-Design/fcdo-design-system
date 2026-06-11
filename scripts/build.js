@@ -7,6 +7,7 @@ const path = require('path');
 const fse = require('fs-extra');
 const crypto = require("crypto");
 const archiver = require("archiver");
+const componentLastUpdated = require('../lib/component-last-updated');
 
 // login and password protection
 const password = process.env.SITE_PASSWORD;
@@ -20,8 +21,6 @@ const hash = crypto
   .createHash("sha256")
   .update(password)
   .digest("hex");
-
-
 
 // import navigation data
 const navigationData = require('../data/navigation-data');
@@ -53,6 +52,8 @@ const env = nunjucks.configure(TEMPLATE_DIR, {
   noCache: true,
   autoescape: true
 });
+
+env.addGlobal("componentLastUpdated", componentLastUpdated);
 
 // recursively walk the views directory to get all html files
 function getAllHtmlFiles(dir, base = '') {

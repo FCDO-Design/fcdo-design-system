@@ -11,6 +11,9 @@
 <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
   {{ heading }}
 </h1>
+
+{% if htmlFilePath and scssFilePath %}
 <span class="govuk-tag govuk-tag--teal fcdo-last-updated">
-  Last updated on {{ componentLastUpdated(htmlFilePath, scssFilePath) }}
+  Last update on {{ componentLastUpdated(htmlFilePath, scssFilePath) }}
 </span>
+{%endif%}
