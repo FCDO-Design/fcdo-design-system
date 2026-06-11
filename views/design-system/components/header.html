@@ -10,7 +10,10 @@ Header
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+   {% set htmlFilePath = "component-html/header.html" %}
+{% set scssFilePath = "components/header/_header.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">The Header component serves as the primary navigation and branding element across all digital products in the FCDO ecosystem.</p>
     <p class="govuk-body">It provides a consistent, accessible, and responsive framework for users to identify the FCDO brand, navigate key sections, and access essential actions such as search, language selection, and user account controls.</p>
 

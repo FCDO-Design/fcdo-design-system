@@ -10,8 +10,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
-    <p class="govuk-body">Use the text input component to allow users to input text.</p>
+   {% set htmlFilePath = "component-html/date-input.html" %}
+{% set scssFilePath = "components/date-input/_date-input.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <p class="govuk-body">Use the date input component to allow users to input a date.</p>
 
     <div class="fcdo-component">
         <div class="fcdo-component__example">

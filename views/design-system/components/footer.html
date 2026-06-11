@@ -10,7 +10,10 @@ Header
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+    {% set htmlFilePath = "component-html/footer.html" %}
+{% set scssFilePath = "components/footer/_footer.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">The FCDO footer provides copyright, licensing and other information about your service.</p>
     <div class="fcdo-component">
         <div class="fcdo-component__example">

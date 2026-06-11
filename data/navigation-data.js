@@ -6,7 +6,8 @@ module.exports = {
         {
           name: 'Components', slug: 'components', url: '/design-system/components',
           children: [
-            { name: 'About Components', slug: 'components', url: '/design-system/components' },
+            // { name: 'About Components', slug: 'components', url: '/design-system/components' },
+            { name: 'Add Another', slug: 'add-another', url: '/design-system/components/add-another' },
             { name: 'Alert', slug: 'alert', url: '/design-system/components/alert' },
             { name: 'Button', slug: 'button', url: '/design-system/components/button' },
             { name: 'Card', slug: 'card', url: '/design-system/components/card' },
@@ -36,13 +37,13 @@ module.exports = {
             { name: 'Typography', slug: 'typography', url: '/design-system/styles/typography' }
           ]
         },
-        {
-          name: 'Patterns', slug: 'patterns', url: '/design-system/patterns',
-          children: [
-            { name: 'Phone Numbers', slug: 'phone-numbers', url: '#' },
-            { name: 'Address', slug: 'address', url: '#' }
-          ]
-        },
+        // {
+        //   name: 'Patterns', slug: 'patterns', url: '/design-system/patterns',
+        //   children: [
+        //     { name: 'Phone Numbers', slug: 'phone-numbers', url: '#' },
+        //     { name: 'Address', slug: 'address', url: '#' }
+        //   ]
+        // },
         {
           name: 'Page Templates', slug: 'page-templates', url: '/design-system/page-templates',
           children: [

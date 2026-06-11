@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+   {% set htmlFilePath = "component-html/page-navigation.html" %}
+{% set scssFilePath = "components/page-navigation/_page-navigation.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">The Page Navigation component helps users navigate around your service.</p>
 
     <div class="fcdo-component">

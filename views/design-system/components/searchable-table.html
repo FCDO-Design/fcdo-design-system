@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+    {% set htmlFilePath = "component-html/searchable-table.html" %}
+{% set scssFilePath = "components/searchable-table/_searchable-table.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">Use the searchable and sortable table component to let users sort columns in ascending or descending order and search through the table data.</p>
 
     <div class="fcdo-component">

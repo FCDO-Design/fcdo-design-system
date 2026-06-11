@@ -11,7 +11,10 @@ Button
 
 {% block content %}
 
-<h1 class="govuk-heading-l">Component information</h1>
+{% set htmlFilePath = "component-html/button.html" %}
+{% set scssFilePath = "components/button/_button.scss" %}
+{% include "includes/app-component-updated-date.html" %}
+
 <p class="govuk-body">
     Use the button component to help users carry out an action like starting an application or saving their information.
 </p>
@@ -42,6 +45,19 @@ Button
     {% include "includes/app-view-component-code.html" %}
 </div>
 
+<h2 class="govuk-heading-m">Warning button</h2>
+<p class="govuk-body">
+    The FCDO warning buttons are designed to make users think carefully before they use them. They only work if used very sparingly. 
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "warning" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
 <h2 class="govuk-heading-m">Outline button</h2>
 <p class="govuk-body">
     The FCDO outline button is used for alternative or supporting actions that are less important than the primary action on a page.
@@ -50,6 +66,32 @@ Button
 <div class="fcdo-component">
     <div class="fcdo-component__example">
         {% set buttonVariant = "outline" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
+<h2 class="govuk-heading-m">Outline warning button</h2>
+<p class="govuk-body">
+    The FCDO outline warning button is designed to make users think carefully before they use it. It only works if used very sparingly.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "outline-warning" %}
+        {% include "includes/component-html/button.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+
+<h2 class="govuk-heading-m">Icon button</h2>
+<p class="govuk-body">
+    The FCDO icon button is used for actions that are best represented by an icon rather than text.
+</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% set buttonVariant = "icon" %}
         {% include "includes/component-html/button.html" %}
     </div>
     {% include "includes/app-view-component-code.html" %}

@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+   {% set htmlFilePath = "component-html/alert.html" %}
+{% set scssFilePath = "components/alert/_alert.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">Use the textarea input component to allow users to input text.</p>
 
     <div class="fcdo-component">

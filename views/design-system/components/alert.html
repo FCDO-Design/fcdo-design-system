@@ -10,7 +10,12 @@ Alert
 {% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-l">Component information</h1>
+
+{% set htmlFilePath = "component-html/alert.html" %}
+{% set scssFilePath = "components/alert/_alert.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+
 <p class="govuk-body">Use the alert component to provide contextual feedback messages for typical user actions and tasks.</p>
 
 <div class="fcdo-component">

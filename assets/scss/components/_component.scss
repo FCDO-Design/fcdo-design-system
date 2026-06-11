@@ -1,5 +1,5 @@
 .fcdo-component {
-    margin-top: $fcdo-spacing-7;
+    margin-top: $fcdo-spacing-5;
     margin-bottom: $fcdo-spacing-5;
     border: 1px solid $govuk-border-colour;
     background-color: #fff;
@@ -16,7 +16,6 @@
         &[disabled] {
             opacity: 0.5;
         }
-
     }
 
     &__example {
@@ -41,6 +40,11 @@
             left: 0;
             right: 0;
         }
+
+        &:focus-visible {
+            outline: none;
+        }
+
     }
 
     &__new-window {
@@ -50,7 +54,7 @@
 
     &__html {
         display: none;
-        padding: $fcdo-spacing-5;
+        padding: $fcdo-spacing-5 $fcdo-spacing-4;
         border-top: 1px solid $govuk-border-colour;
 
         &--open {
@@ -117,6 +121,13 @@
     }
 }
 
+.fcdo-last-updated {
+    max-width:fit-content;
+    @include fcdo-font-size(16, 1);
+    margin-bottom: $fcdo-spacing-5;
+    padding: $fcdo-spacing-1 $fcdo-spacing-3;
+}
+
 pre code.hljs {
-    padding-left: 0 !important;
+    // padding-left: 0 !important;
 }

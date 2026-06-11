@@ -10,6 +10,10 @@
 {% endblock %}
 
 {% block content %}
+   {% set htmlFilePath = "component-html/text-input.html" %}
+{% set scssFilePath = "components/text-input/_text-input.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <h1 class="govuk-heading-l">Component information</h1>
     <p class="govuk-body">Use the text input component to allow users to input text.</p>
 

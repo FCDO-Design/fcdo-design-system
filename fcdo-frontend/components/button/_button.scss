@@ -2,11 +2,12 @@
   padding: 8px $fcdo-spacing-3;
   border-radius: $fcdo-border-radius;
   background-color: fcdo-color("default", "1");
-  @include fcdo-font-size(19, 1);
+  @include fcdo-font-size(17, 1);
   line-height: 1;
   color: #fff;
   border: 2px solid transparent;
-  box-shadow: 0 2px 0 fcdo-color("default", "7");
+  box-shadow: none;
+  max-height: 40px;
 
   &:hover {
     background-color: fcdo-color("default", "2");
@@ -27,6 +28,22 @@
     cursor: not-allowed;
   }
 
+  &--warning {
+    background-color: govuk-color("red", "primary");
+    border-color: govuk-color("red", "primary");
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+
+    &:hover {
+    background-color: govuk-color("red", "shade-25");
+    border-color: govuk-color("red", "shade-25");
+    color: #fff;
+    box-shadow: none;
+    outline: none;
+    }
+  }
+
   &--outline {
     color: fcdo-color("default", "1");
     border: 1px solid fcdo-color("default", "1");
@@ -35,6 +52,8 @@
 
     &:hover {
       background-color: #fff;
+      border-color: fcdo-color("default", "2");
+      color: fcdo-color("default", "2");
     }
 
     &:focus {
@@ -48,6 +67,56 @@
       cursor: not-allowed;
     }
 
+    &-warning {
+        color: govuk-color("red", "primary"); 
+        border-color: govuk-color("red", "primary");
+
+        &:hover {
+          background-color: fcdo-color("default", "10");
+          color: govuk-color("red", "primary"); 
+          border-color: govuk-color("red", "primary");
+        }
+
+        &:focus {
+          background-color: govuk-color("red", "primary");
+          border-color: govuk-color("red", "primary");
+          color: #fff;
+          box-shadow: none;
+          outline: none;
+        }
+
+        &:disabled,
+        &[disabled] {
+          background-color: #fff;
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+    }
+
+  }
+
+  &--icon {
+    background-color: transparent;
+    color: fcdo-color("default", "1");
+    box-shadow: none;
+    padding:0;
+    border:none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+
+    &:hover, &:active, &:focus, &:focus-visible {
+      color: fcdo-color("default", "2");
+      background-color: transparent;
+      box-shadow: none;
+      outline: none;
+    }
+
+    &:disabled,
+    &[disabled] {
+      background-color: transparent;
+      opacity: 0.5;
+    }
   }
 
   &:link {

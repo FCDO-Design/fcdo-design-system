@@ -10,10 +10,13 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+    {% set htmlFilePath = "component-html/checkboxes.html" %}
+{% set scssFilePath = "components/checkboxes/_checkboxes.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">Use the checkboxes component when you need to help users:</p>
 
-    <ul class="govuk-list">
+    <ul class="govuk-list govuk-list govuk-list--bullet">
         <li>select multiple options from a list</li>
         <li>toggle a single option on or off</li>
     </ul>

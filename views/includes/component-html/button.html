@@ -15,16 +15,34 @@
     Back
 </button>
 
+{% elif buttonVariant == "outline-warning" %}
+
+<button class="fcdo-button fcdo-button--outline fcdo-button--outline-warning" type="button">
+    Delete
+</button>
+
 {% elif buttonVariant == "disabled" %}
 
 <button class="fcdo-button" type="button" aria-disabled="true" disabled="disabled">
     Save and continue
 </button>
 
+{% elif buttonVariant == "icon" %}
+
+<button class="fcdo-button fcdo-button--icon" type="button">
+    <span class="material-symbols-outlined">add_circle</span> Icon button
+</button>
+
+{% elif buttonVariant == "warning" %}
+
+<button class="fcdo-button fcdo-button--warning" type="button">
+    Delete
+</button>
+
+
 {% else %}
 
 <button class="fcdo-button" type="button">
     Save and continue
 </button>
-
 {% endif %}

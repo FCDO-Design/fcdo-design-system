@@ -2,7 +2,7 @@
 
 {% block title %}
     Dashboard card
-{% endblock %}`
+{% endblock %}
 
 {% block pageTitle %}
     <span class="govuk-caption-m">Components</span>
@@ -10,7 +10,11 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+  {% set htmlFilePath = "component-html/dashboard-card.html" %}
+{% set scssFilePath = "components/alert/_dashboard-card.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+
     <p class="govuk-body">The Dashboard card is a simple component used to display a single key performance indicator clearly and prominently.</p>
     <p class="govuk-body">It helps users quickly understand key metrics and track performance at a glance, typically within dashboards and reporting views.</p>
 

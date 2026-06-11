@@ -1,0 +1,16 @@
+.fcdo-display-none {
+    display: none !important;
+}
+
+.fcdo-display-flex {
+    display: flex;
+
+    &--column {
+        flex-direction: column;
+    }
+
+    &--row {
+        flex-direction: row;
+    }
+
+}

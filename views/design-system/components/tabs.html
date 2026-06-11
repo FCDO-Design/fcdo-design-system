@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+   {% set htmlFilePath = "component-html/tabs.html" %}
+{% set scssFilePath = "components/tabs/_tabs.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">The tabs component lets users navigate between related sections of content, displaying one section at a time.</p>
     <div class="fcdo-component">
         <div class="fcdo-component__example">

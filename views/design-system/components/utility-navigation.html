@@ -10,8 +10,11 @@ Alert
 {% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-l">Component information</h1>
-<p class="govuk-body">Use the utility navigation component to provide quick access to important link and services.</p>
+   {% set htmlFilePath = "component-html/utility-navigation.html" %}
+{% set scssFilePath = "components/utility-navigation/_utility-navigation.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <p class="govuk-body">Use the utility navigation component to provide quick access to important link and services.</p>
 
 <div class="fcdo-component">
     <div class="fcdo-component__example">

@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+   {% set htmlFilePath = "component-html/table.html" %}
+{% set scssFilePath = "components/table/_table.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">Use the table component to make information easier to compare and scan for users.</p>
 
     <div class="fcdo-component">

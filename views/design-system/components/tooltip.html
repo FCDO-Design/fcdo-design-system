@@ -10,8 +10,12 @@ Tooltip
 {% endblock %}
 
 {% block content %}
-<h1 class="govuk-heading-l">Component information</h1>
-<p class="govuk-body">Use the alert component to provide contextual feedback messages for typical user actions and tasks.</p>
+   {% set htmlFilePath = "component-html/tooltip.html" %}
+{% set scssFilePath = "components/tooltip/_tooltip.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <h1 class="govuk-heading-l">Component information</h1>
+    <p class="govuk-body">Use the tooltip component to provide additional information about an element when the user hovers over it.</p>
 
 <div class="fcdo-component">
     <div class="fcdo-component__example">

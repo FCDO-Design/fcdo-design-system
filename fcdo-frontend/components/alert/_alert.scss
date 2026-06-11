@@ -51,9 +51,9 @@
     }
 
     &--error {
-        background-color: govuk-color("red", "tint-80");
-        color: govuk-color("red", "shade-50"); 
-        border-color: govuk-color("red", "shade-50");
+        background-color: fcdo-color("default", "10");
+        color: govuk-color("red", "primary"); 
+        border-color: govuk-color("red", "primary");
         
         .fcdo-alert__link {
             color: govuk-color("red", "shade-50");
@@ -70,3 +70,5 @@
         }
     }
 }
+
+

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Add another
+{% endblock %}
+
+{% block pageTitle %}
+<span class="govuk-caption-m">Components</span>
+<h1 class="govuk-heading-l">Add Another</h1>
+{% endblock %}
+
+{% block content %}
+
+{% set htmlFilePath = "component-html/add-another.html" %}
+{% set scssFilePath = "components/add-another/_add-another.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+
+<p class="govuk-body">The FCDO “Add another” component is a reusable pattern for forms where users may need to enter multiple instances of the same type of information (for example countries, applicants, documents, or contact details). It supports progressive enhancement, so users can still complete the form with a single item if JavaScript fails, while allowing them to dynamically add or remove additional items when JS is available.</p>
+
+<h2 class="govuk-heading-m">When to use</h2>
+<p class="govuk-body">
+    The key design principle is consistency and safety: users should always start with one required item, and additional items are optional and repeatable. The component also ensures that form fields remain accessible and correctly labelled, while preventing common issues such as duplicate IDs, broken label associations, or invalid empty states.
+</p>
+
+<p class="govuk-body"> It is intended to be used across FCDO services to standardise multi-entry form patterns and reduce variation in implementation.</p>
+
+<div class="fcdo-component">
+    <div class="fcdo-component__example">
+        {% include "includes/component-html/add-another.html" %}
+    </div>
+    {% include "includes/app-view-component-code.html" %}
+</div>
+{% endblock %}

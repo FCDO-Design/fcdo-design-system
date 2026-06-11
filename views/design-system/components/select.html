@@ -10,6 +10,10 @@
 {% endblock %}
 
 {% block content %}
+    {% set htmlFilePath = "component-html/select.html" %}
+{% set scssFilePath = "components/select/_select.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <h1 class="govuk-heading-l">Component information</h1>
     <p class="govuk-body">The select component should only be used as a last resort in public-facing services because research shows that some users find selects very difficult to use.</p>
     <div class="fcdo-component">

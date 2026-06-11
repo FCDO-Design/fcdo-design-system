@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+    {% set htmlFilePath = "component-html/card.html" %}
+{% set scssFilePath = "components/card/_card.scss" %}
+    {% include "includes/app-component-updated-date.html" %}
+
     <p class="govuk-body">The card component is a versatile user interface element used to display grouped information in a visually appealing and organised way.</p>
     <p class="govuk-body">They can enhance user interaction and content presentation across various applications and devices.</p>
 

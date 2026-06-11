@@ -10,7 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <h1 class="govuk-heading-l">Component information</h1>
+  {% set htmlFilePath = "component-html/radios.html" %}
+{% set scssFilePath = "components/radios/_radios.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
     <p class="govuk-body">Use the radios component when users can only select one option from a list.</p>
    <div class="fcdo-component">
         <div class="fcdo-component__example">

@@ -207,4 +207,9 @@ router.get('/design-system/components/dashboard-card', (req, res) => {
     res.render('design-system/components/dashboard-card.html');
 });
 
+// add another route
+router.get('/design-system/components/add-another', (req, res) => {
+    res.render('design-system/components/add-another.html');
+});
+
 module.exports = router;

@@ -1,5 +1,6 @@
 .hljs {
-    background-color: #fff !important;
+    background-color: fcdo-color("default", "9") !important;
+    border: 1px solid $govuk-border-colour;
 }
 
 pre code.hljs span {

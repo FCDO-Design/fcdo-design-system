@@ -1,3 +1,9 @@
 .app-footer {
     padding: $fcdo-spacing-3;
+
+    .govuk-footer__copyright-logo::before {
+        padding-top: 55px;
+        mask-size: 63px 51px;
+    }
+
 }
