@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Switch
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Switch</h1>
+{% endblock %}
+
+{% block content %}
+    {% set htmlFilePath = "component-html/switch.html" %}
+    {% set scssFilePath = "components/text-input/_switch.scss" %}
+
+    {% include "includes/app-component-updated-date.html" %}
+    <p class="govuk-body">Use the switch component to turn a setting or feature on or off. Use it for options that take effect immediately when changed, without requiring a separate save or submit action.</p>
+
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/switch.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

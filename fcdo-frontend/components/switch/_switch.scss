@@ -1,0 +1,59 @@
+.fcdo-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: $fcdo-spacing-3;
+
+    &__input {
+        appearance: none;
+        -webkit-appearance: none;
+        position: relative;
+        width: 48px;
+        height: 25px;
+        margin: 0;
+        border: 1px solid govuk-color("black", "tint-80");
+        border-radius: 999px;
+        background: govuk-color("black", "tint-80");
+        cursor: pointer;
+        transition: .2s;
+        flex-shrink: 0;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            transition: .2s;
+        }
+
+        &:checked {
+            border: 1px solid fcdo-color("default", "2");
+            background-color: fcdo-color("default", "2");
+
+            &:before {
+                transform: translateX(22px);
+            }
+        }
+
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+.fds-hint {
+    margin-top: 8px;
+    margin-left: 68px;
+    color: #505a5f;
+    font-size: 16px;
+
+}

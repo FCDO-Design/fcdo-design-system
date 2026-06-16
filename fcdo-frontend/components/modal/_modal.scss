@@ -1,0 +1,86 @@
+.fcdo-dialog {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: $fcdo-spacing-3;
+    background-color: #fff;
+    min-height: 100vh;
+    // full-screen fallback (mobile)
+    inset: 0;
+
+    &__header {
+        display: flex;
+        padding: $fcdo-spacing-3 $fcdo-spacing-2;
+        background-color: fcdo-color("default", "1");
+        color: #fff;
+    }
+
+    &__title {
+        margin:0;
+        color: #fff;
+        font-weight: 400;
+        @include fcdo-font-size(20, 25px);
+    }
+
+    &__close {
+        margin-left: auto;
+        background-color: transparent;
+        border: none;
+        color: #fff !important;
+    }
+
+    &__content {
+       padding: $fcdo-spacing-4 0 $fcdo-spacing-4 0;
+    }
+
+    &__footer {
+        display: flex;
+        gap: 10px;
+        justify-content: flex-end;
+        margin-top: auto;
+        padding: $fcdo-spacing-4 0 0 0;
+        border-top: 1px solid fcdo-color("default", "7");
+    }
+}
+
+@include fcdo-media-query('tablet') {
+  .fcdo-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    min-height: auto;
+    min-width: 400px;
+
+    max-width: calc(100vw - $fcdo-spacing-6);
+    max-height: calc(100vh - $fcdo-spacing-6);
+    overflow: auto;
+  }
+}
+
+/* native <dialog> element uses the ::backdrop pseudo-element */
+.fcdo-dialog-backdrop {
+    display: none;
+    position: fixed;
+    overflow-y: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    @include fcdo-media-query('tablet') {
+        background: rgb(0 0 0 / 30%);
+    }
+
+    &--active {
+        display: block;
+    }
+}
+
+/* this is added to the body when a dialog is open */
+.fcdo-has-dialog {
+  overflow: hidden;
+}

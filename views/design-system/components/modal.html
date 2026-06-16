@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Modal
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Modal</h1>
+{% endblock %}
+
+{% block content %}
+   {% set htmlFilePath = "component-html/modal.html" %}
+{% set scssFilePath = "components/modal/_modal.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <p class="govuk-body">The FCDO modal component is used to focus a user’s attention on a specific task or message without navigating away from the current page. It appears as an overlay on top of the main content and temporarily disables interaction with the rest of the interface until it is dismissed or completed.</p>
+
+    <p class="govuk-body">It should be used sparingly in applications, only for important, time-sensitive, or interruptive actions such as confirming a destructive change, displaying critical information, or collecting focused input that cannot be handled inline. Modals should not be used for general navigation, large amounts of content, or tasks that can be completed within the page layout itself.</p>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/modal.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

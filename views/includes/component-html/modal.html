@@ -1,0 +1,19 @@
+<button type="button" class="fcdo-button" data-dialog-open="dialog">Open Modal</button>
+
+<div role="dialog" id="dialog" aria-labelledby="dialogLabel" aria-describedby="dialogDesc" aria-modal="true" class="fcdo-display-none">
+    <div class="fcdo-dialog__header">
+        <h1 id="dialogLabel" class="fcdo-dialog__title">Modal title</h1>
+        <button type="button" class="fcdo-dialog__close fcdo-button fcdo-button--icon" data-dialog-close aria-label="Close dialog">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+    </div>
+    <div class="fcdo-dialog__content">
+        <p class="govuk-body" id="dialogDesc">
+            A FCDO basic modal
+        </p>
+    </div>
+    <div class="fcdo-dialog__footer">
+        <button type="button" class="fcdo-button">Save</button>
+        <button type="button" class="fcdo-button fcdo-button--outline" data-dialog-close>Cancel</button>
+    </div>
+</div>

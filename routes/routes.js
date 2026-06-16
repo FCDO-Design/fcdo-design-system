@@ -212,4 +212,14 @@ router.get('/design-system/components/add-another', (req, res) => {
     res.render('design-system/components/add-another.html');
 });
 
+// switch route
+router.get('/design-system/components/switch', (req, res) => {
+    res.render('design-system/components/switch.html');
+});
+
+// modal route 
+router.get('/design-system/components/modal', (req, res) => {
+    res.render('design-system/components/modal.html');
+});
+
 module.exports = router;
