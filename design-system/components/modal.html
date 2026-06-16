@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-    Typography
+    Modal
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -206,6 +206,8 @@
     
     
     
+    
+    
 
     
 
@@ -216,10 +218,10 @@
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -435,7 +437,7 @@
       
       
       
-      <a href="/design-system/components/modal" class="app-nav__link ">
+      <a href="/design-system/components/modal" class="app-nav__link app-nav__link--active">
         Modal
       </a>
       
@@ -702,8 +704,6 @@
     
     
     
-    
-    
 
     
 
@@ -714,10 +714,10 @@
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Styles</button>
+      <button class="app-nav__toggle ">Styles</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -753,7 +753,7 @@
       
       
       
-      <a href="/design-system/styles/typography" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/styles/typography" class="app-nav__link ">
         Typography
       </a>
       
@@ -1034,8 +1034,8 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-    <span class="govuk-caption-m">Styles</span>
-    <h1 class="govuk-heading-l">Typography</h1>
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Modal</h1>
 
             </div>
           </div>
@@ -1044,75 +1044,53 @@
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
+   
 
 
 
 
-
-
-
-
-  
 
 
 <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
-  FCDO type face
+  Component information
 </h1>
 
 
 <span class="govuk-tag govuk-tag--teal fcdo-last-updated">
-  Last update on 11 June 2026
+  Last update on 16 June 2026
 </span>
 
+    <p class="govuk-body">The FCDO modal component is used to focus a user’s attention on a specific task or message without navigating away from the current page. It appears as an overlay on top of the main content and temporarily disables interaction with the rest of the interface until it is dismissed or completed.</p>
 
-<p class="govuk-body">For the FCDO design system, Inter has been selected as the primary typeface due to its clarity, accessibility, and strong performance across digital interfaces.</p>
+    <p class="govuk-body">It should be used sparingly in applications, only for important, time-sensitive, or interruptive actions such as confirming a destructive change, displaying critical information, or collecting focused input that cannot be handled inline. Modals should not be used for general navigation, large amounts of content, or tasks that can be completed within the page layout itself.</p>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            <button type="button" class="fcdo-button" data-dialog-open="dialog">Open Modal</button>
 
-<div class="fcdo-component">
-    <div class="fcdo-component__example"><h2 class="govuk-heading-l">Inter</h2>
-
-<p class="govuk-body">Inter is a variable font family carefully crafted & designed for computer screens, making it well suited to the wide range of services, content types, and user journeys delivered by the Foreign, Commonwealth & Development Office.</p>
-
-<p class="govuk-body">The font has also been chosen for its accessibility credentials. Inter includes a large x-height, open letterforms, and clear distinction between similar characters, helping improve readability for users with visual or cognitive impairments. These characteristics support compliance with WCAG accessibility standards and reinforce the FCDO’s commitment to inclusive digital services.</p>
-
-<h3 class="govuk-heading-s">Examples</h3>
-
-<details class="govuk-details fcdo-details govuk-!-margin-bottom-2">
-    <summary class="govuk-details__summary fcdo-details__summary">
-        <span class="govuk-details__summary-text">Headings</span>
-    </summary>
-    <div class="govuk-details__text">
-        <h1 class="govuk-heading-l">Heading 1</h1>
-        <h2 class="govuk-heading-m">Heading 2</h2>
-        <h3 class="govuk-heading-s">Heading 3</h3>
+<div role="dialog" id="dialog" aria-labelledby="dialogLabel" aria-describedby="dialogDesc" aria-modal="true" class="fcdo-display-none">
+    <div class="fcdo-dialog__header">
+        <h1 id="dialogLabel" class="fcdo-dialog__title">Modal title</h1>
+        <button type="button" class="fcdo-dialog__close fcdo-button fcdo-button--icon" data-dialog-close aria-label="Close dialog">
+            <span class="material-symbols-outlined">close</span>
+        </button>
     </div>
-</details>
-
-<details class="govuk-details fcdo-details govuk-!-margin-bottom-2">
-    <summary class="govuk-details__summary fcdo-details__summary">
-        <span class="govuk-details__summary-text">Body text</span>
-    </summary>
-    <div class="govuk-details__text">
-        <p class="govuk-body">Body text</p>
+    <div class="fcdo-dialog__content">
+        <p class="govuk-body" id="dialogDesc">
+            A FCDO basic modal
+        </p>
     </div>
-</details>
-
-<details class="govuk-details fcdo-details">
-    <summary class="govuk-details__summary fcdo-details__summary">
-        <span class="govuk-details__summary-text">Lists</span>
-    </summary>
-    <div class="govuk-details__text">
-        <p class="govuk-body">You can buy:</p>
-        <ul class="govuk-list govuk-list--bullet">
-        <li>apples</li>
-        <li>oranges</li>
-        <li>pears</li>
-        </ul>
+    <div class="fcdo-dialog__footer">
+        <button type="button" class="fcdo-button">Save</button>
+        <button type="button" class="fcdo-button fcdo-button--outline" data-dialog-close>Cancel</button>
     </div>
-</details>
-
-<p class="govuk-body">Inter is a Google font - <a href="https://fonts.google.com/specimen/Inter?query=inter" target="_blank" class="govuk-link">View font on Google</a></p></div>
 </div>
-
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
 
             </div>
           </div>
