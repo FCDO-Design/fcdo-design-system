@@ -65,16 +65,20 @@
     padding: $fcdo-spacing-3;
 
     @include fcdo-media-query('desktop') {
-      padding: $fcdo-spacing-3 $fcdo-spacing-4 0 $fcdo-spacing-4;
+      padding: $fcdo-spacing-5 $fcdo-spacing-6 0 $fcdo-spacing-6;
     }
   }
 
   &__card {
-    margin: $fcdo-spacing-4;
+    margin: $fcdo-spacing-2 $fcdo-spacing-3;
     padding: $fcdo-spacing-4;
     flex-direction: column;
     background-color: #fff;
     border: 1px solid govuk-color("black", "tint-80");
+
+    @include fcdo-media-query('desktop') {
+      margin: $fcdo-spacing-4 $fcdo-spacing-6;
+    }
 
     &-title {
       margin-bottom: 0;
