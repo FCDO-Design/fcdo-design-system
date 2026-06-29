@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Accordion
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Accordion</h1>
+{% endblock %}
+
+{% block content %}
+   {% set htmlFilePath = "component-html/accordion.html" %}
+{% set scssFilePath = "components/text-input/_accordion.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <p class="govuk-body">Use the accordion component to allow users to view information that is...</p>
+
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/accordion.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

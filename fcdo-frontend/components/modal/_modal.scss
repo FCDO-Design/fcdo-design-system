@@ -36,7 +36,6 @@
     &__footer {
         display: flex;
         gap: 10px;
-        justify-content: flex-end;
         margin-top: auto;
         padding: $fcdo-spacing-4 0 0 0;
         border-top: 1px solid fcdo-color("default", "7");

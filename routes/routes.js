@@ -222,4 +222,9 @@ router.get('/design-system/components/modal', (req, res) => {
     res.render('design-system/components/modal.html');
 });
 
+// accordion route 
+router.get('/design-system/components/accordion', (req, res) => {
+    res.render('design-system/components/accordion.html');
+});
+
 module.exports = router;
