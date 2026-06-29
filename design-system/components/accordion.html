@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-Header
+    Accordion
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -240,7 +240,7 @@ Header
       
       
       
-      <a href="/design-system/components/accordion" class="app-nav__link ">
+      <a href="/design-system/components/accordion" class="app-nav__link app-nav__link--active">
         Accordion
       </a>
       
@@ -420,7 +420,7 @@ Header
       
       
       
-      <a href="/design-system/components/footer" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/components/footer" class="app-nav__link ">
         Footer
       </a>
       
@@ -1058,7 +1058,7 @@ Header
             <div class="govuk-grid-column-full">
               
     <span class="govuk-caption-m">Components</span>
-    <h1 class="govuk-heading-l">Footer</h1>
+    <h1 class="govuk-heading-l">Accordion</h1>
 
             </div>
           </div>
@@ -1067,7 +1067,7 @@ Header
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-    
+   
 
 
 
@@ -1080,27 +1080,39 @@ Header
 
 
 <span class="govuk-tag govuk-tag--teal fcdo-last-updated">
-  Last update on 14 May 2026
+  Last update on 23 June 2026
 </span>
 
-    <p class="govuk-body">The FCDO footer provides copyright, licensing and other information about your service.</p>
-    <div class="fcdo-component">
+    <p class="govuk-body">Use the accordion component to allow users to view information that is...</p>
+
+   <div class="fcdo-component">
         <div class="fcdo-component__example">
-            <footer class="fcdo-footer">
-  <div class="govuk-width-container fcdo-footer__content">
-    <div class="fcdo-footer__navigation">
-      <ul class="fcdo-footer__list">
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Accessibility</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Privacy</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Cookies</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Terms and conditions</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Contact</a></li>
-        <li class="fcdo-footer__item"><a href="#" class="fcdo-footer__link">Help</a></li>
-      </ul>
+            <div class="govuk-accordion fcdo-accordion" data-module="govuk-accordion" id="accordion-default">
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+          Writing well for the web
+        </span>
+      </h2>
     </div>
-    <a class="fcdo-footer__logo" href="#">© Crown copyright </a>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for the web.</p>
+    </div>
   </div>
-</footer>
+  <div class="govuk-accordion__section">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+          Writing well for specialists
+        </span>
+      </h2>
+    </div>
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content">
+      <p class="govuk-body">This is the content for Writing well for specialists.</p>
+    </div>
+  </div>
+</div>
         </div>
         <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
