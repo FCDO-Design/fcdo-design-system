@@ -1,5 +1,5 @@
 .fcdo-header {
-  padding: $fcdo-spacing-3 $fcdo-spacing-2;
+  padding: 0 0 0 $fcdo-spacing-2;
   background-color: fcdo-color("default", "1");
   border-bottom: $fcdo-spacing-2 solid fcdo-color("default", "2");
 
@@ -52,7 +52,7 @@
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 8px;
+    padding: 10px;
     margin-right: $fcdo-spacing-4;
     margin-left: -3px; // visually align with logo
 
@@ -101,20 +101,38 @@
 .fcdo-actions {
   margin-left: auto;
   display: flex;
-  gap: $fcdo-spacing-3;
   color: #fff;
 
   &__item {
     display: flex;
     align-items: center;
-    gap: 2px;
+    position: relative;
+    padding: $fcdo-spacing-4 $fcdo-spacing-2;
+    margin-right: -1px;
     color: #fff;
     @include fcdo-font-size(16, 1);
     text-decoration: none;
 
-    &:hover, &:focus {
+    &:hover, &:focus, &--active {
       background-color: fcdo-color("default", "2");
       outline: none;
+
+      &::before {
+        background-color: fcdo-color("default", "2");
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        right:0;
+        top: 20px;
+        bottom: 20px;
+        width: 1px;
+        background-color: fcdo-color("default", "2");
+        opacity: 1;
+        z-index: 1;
+      }
+
     }
 
     &--border {
@@ -123,14 +141,13 @@
       &::before {
         content: "";
         position: absolute;
-        left:-6px;
-        top: 3px;
-        bottom: 3px;
+        left:0;
+        top: 20px;
+        bottom: 20px;
         width: 1px;
         background-color: #fff;
         opacity: 0.75;
       }
-
     }
   }
 

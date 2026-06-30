@@ -20,6 +20,7 @@
     &__item {
         padding: 0 $fcdo-spacing-3;
         border-right: 1px solid govuk-color("black", "tint-80");
+        display: flex;
 
         &:last-child {
             border-right: none;
@@ -32,12 +33,9 @@
         color: govuk-color("blue", "primary");
         text-decoration: none;
         @include fcdo-font-size(16, 1);
-        padding-bottom: $fcdo-spacing-1;
-        border-bottom: 3px solid transparent;
 
         &:hover, &:focus, &:focus-visible {
             outline: none;
-            border-bottom: 3px solid;
         }
 
     }

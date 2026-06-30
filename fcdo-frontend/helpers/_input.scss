@@ -1,6 +1,7 @@
 @mixin fcdo-input {
   border-width: 1px;
   border-color: #888;
+  padding-left: $fcdo-spacing-2;
 
   &:focus {
     outline-width: 2px;
