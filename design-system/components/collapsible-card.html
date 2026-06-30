@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-FCDO Design System
+    Collapsible Card
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -212,6 +212,8 @@ FCDO Design System
     
     
     
+    
+    
 
     
 
@@ -222,10 +224,10 @@ FCDO Design System
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -341,7 +343,7 @@ FCDO Design System
       
       
       
-      <a href="/design-system/components/collapsible-card" class="app-nav__link ">
+      <a href="/design-system/components/collapsible-card" class="app-nav__link app-nav__link--active">
         Collapsible Card
       </a>
       
@@ -932,8 +934,6 @@ FCDO Design System
     
     
     
-    
-    
 
     
 
@@ -944,10 +944,10 @@ FCDO Design System
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Importing Assets</button>
+      <button class="app-nav__toggle ">Importing Assets</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -963,7 +963,7 @@ FCDO Design System
       
       
       
-      <a href="/get-started/copying-files" class="app-nav__link app-nav__link--active">
+      <a href="/get-started/copying-files" class="app-nav__link ">
         Copying Files
       </a>
       
@@ -1080,8 +1080,8 @@ FCDO Design System
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-<span class="govuk-caption-m">Get Started</span>
-<h1 class="govuk-heading-l">Import Assets</h1>
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Collapsible Card</h1>
 
             </div>
           </div>
@@ -1090,35 +1090,42 @@ FCDO Design System
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-<h1 class="govuk-heading-l">Copy and install the precompiled files</h1>
+    
 
-<p class="govuk-body">After downloading, you need to extract the files and copy them into your project directory.</p>
+    
 
-<div class="fcdo-card govuk-!-margin-top-6">
 
-    <h2 class="govuk-heading-m">CSS</h2>
-    <p class="govuk-body">Copy the <code>.css</code> file to a <code>stylesheets</code> folder in the root of your project's public folder.</p>
-    <p class="govuk-body">For example:</p>
 
-    <div class="govuk-!-margin-bottom-3">
-        &lt;YOUR-SITE-URL&gt;/stylesheets/fcdo-frontend.min.css
+<h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+  Component information
+</h1>
+
+
+<span class="govuk-tag govuk-tag--teal fcdo-last-updated">
+  Last update on 30 June 2026
+</span>
+
+
+    <p class="govuk-body">The collapsible card component is used to present summary content that can be expanded to reveal additional information. It helps reduce visual clutter while keeping supporting details easily accessible when needed.</p>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            <div class="fcdo-collapsible-card">
+  <details class="fcdo-collapsible-card__container">
+    <summary class="govuk-heading-m fcdo-card__title">
+      Card title
+    </summary>
+    <div class="fcdo-collapsible-card__content">
+      Card content
     </div>
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-    <h2 class="govuk-heading-m">JavaScript</h2>
-    <p class="govuk-body">Copy the <code>.js</code> file to a <code>javascripts</code> folder in the root of your project's public folder.</p>
-    <p class="govuk-body">For example:</p>
-
-    <div class="govuk-!-margin-bottom-7">
-        &lt;YOUR-SITE-URL&gt;/javascripts/fcdo-frontend.min.js
-    </div>
-
-    <p class="govuk-body">
-        <a href="/get-started/css-and-javascript" class="govuk-link">Using the CSS and JavaScript</a>
-    </p>
+  </details>
 </div>
-
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
 
             </div>
           </div>
