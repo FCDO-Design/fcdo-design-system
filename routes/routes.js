@@ -227,4 +227,10 @@ router.get('/design-system/components/accordion', (req, res) => {
     res.render('design-system/components/accordion.html');
 });
 
+// collapsible card route 
+router.get('/design-system/components/collapsible-card', (req, res) => {
+    res.render('design-system/components/collapsible-card.html');
+});
+
+
 module.exports = router;

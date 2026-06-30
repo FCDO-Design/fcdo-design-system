@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Collapsible Card
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Collapsible Card</h1>
+{% endblock %}
+
+{% block content %}
+    {% set htmlFilePath = "component-html/collapsible-card.html" %}
+{% set scssFilePath = "components/card/_collapsible-card.scss" %}
+    {% include "includes/app-component-updated-date.html" %}
+
+    <p class="govuk-body">The collapsible card component is used to present summary content that can be expanded to reveal additional information. It helps reduce visual clutter while keeping supporting details easily accessible when needed.</p>
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/collapsible-card.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

@@ -12,6 +12,7 @@ module.exports = {
             { name: 'Alert', slug: 'alert', url: '/design-system/components/alert' },
             { name: 'Button', slug: 'button', url: '/design-system/components/button' },
             { name: 'Card', slug: 'card', url: '/design-system/components/card' },
+            { name: 'Collapsible Card', slug: 'collapsible-card', url: '/design-system/components/collapsible-card' },
             { name: 'Dashboard Card', slug: 'dashboard-card', url: '/design-system/components/dashboard-card' },
             { name: 'Checkboxes', slug: 'checkboxes', url: '/design-system/components/checkboxes' },
             { name: 'Date Input', slug: 'date-input', url: '/design-system/components/date-input' },

@@ -1,0 +1,39 @@
+.fcdo-collapsible-card {
+  border: 1px solid fcdo-color("default", "7");
+  background-color: #fff;
+  padding: $fcdo-spacing-4;
+  margin-bottom: $fcdo-spacing-6;
+
+  &__container {
+    display: block;
+  }
+
+  &__content {
+    margin-top: $fcdo-spacing-4;
+  }
+}
+
+.fcdo-card__title {
+  margin: 0;
+  cursor: pointer;
+  position: relative;
+  padding-right: $fcdo-spacing-6;
+}
+
+.fcdo-card__title::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  width: 11px;
+  height: 11px;
+  border-right: 2px solid fcdo-color("default", "2");
+  border-bottom: 2px solid fcdo-color("default", "2");
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.fcdo-collapsible-card__container[open] .fcdo-card__title::after {
+    top: 12px;
+    transform: rotate(-135deg);
+}

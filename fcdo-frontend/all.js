@@ -1,4 +1,5 @@
 import "./components/add-another/add-another.js";
+import "./components/collapsible-card/collapsible-card.js";
 import "./components/modal/modal.js";
 import "./components/navigation/navigation.js";
 import "./components/page-navigation/page-navigation.js";
