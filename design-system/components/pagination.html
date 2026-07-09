@@ -1,4 +1,125 @@
-<nav class="app-nav">
+<!DOCTYPE html>
+<html lang="en" class="govuk-template fcdo-template" data-theme="">
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+    Pagination
+ - FCDO Design System
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1d70b8">
+  <link rel="icon" sizes="48x48" href="/assets/images/favicon.ico">
+  <link rel="icon" sizes="any" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="mask-icon" href="/assets/rebrand/images/govuk-icon-mask.svg" color="#1d70b8">
+  <link rel="apple-touch-icon" href="/assets/images/govuk-icon-180.png">
+  <link rel="manifest" href="/assets/manifest.json">
+  <link rel="stylesheet" href="/assets/css/fcdo-design-system.min.css">
+  <link rel="stylesheet" href="/assets/css/fcdo-frontend.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/stackoverflow-light.min.css"
+/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+</head>
+
+<body class="govuk-template__body fcdo-template__body">
+  <script>
+    if (window.location.hostname !== "localhost" &&
+      sessionStorage.getItem("auth") !== "true") {
+      window.location = "/login.html";
+    }
+  </script>
+  <script type="module" src="/assets/javascript/govuk-frontend.min.js"></script>
+  <script type="module">
+    import { initAll } from '/assets/javascript/govuk-frontend.min.js'
+    initAll()
+  </script>
+  <script type="module" src="/assets/javascript/fcdo-frontend.min.js"></script>
+  <script>
+    document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');
+  </script>
+
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+  <header class="app-header" data-module="fcdo-header">
+  <div class="app-header__container">
+    <div class="app-header__logo"></div>
+    <div class="app-header__service-name">
+      <a href="/" class="app-header__link">
+        <strong>FCDO</strong> Design System 
+      </a>
+    </div>
+    <ul id="fcdoThemeList" class="app-header__theme-list govuk-!-display-none"></ul>
+    <button class="app-header__toggle-nav" id="toggleAppPageNavigation" aria-expanded="false" aria-controls="pageNavigation">
+      <span>Menu</span>
+    </button>
+  </div>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const root = document.documentElement;
+    const themeList = document.getElementById("fcdoThemeList");
+
+    // map of internal theme values to user-facing labels
+    const themes = {
+        normal: "Standard",
+        dark: "Dark Mode",
+        highContrast: "High Contrast Mode"
+    };
+
+    // load saved preference or default
+    let currentTheme = localStorage.getItem("theme") || "normal";
+    applyTheme(currentTheme);
+
+    function renderList() {
+        // clear previous list
+        themeList.innerHTML = "";
+
+        // rebuild list with <li><a></a></li> structure
+        Object.entries(themes).forEach(([value, label]) => {
+            if (value !== currentTheme) {
+                const li = document.createElement("li");
+                const a = document.createElement("a");
+
+                a.textContent = label;
+                a.href = "#";
+                a.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    currentTheme = value;
+                    applyTheme(currentTheme);
+                    localStorage.setItem("theme", currentTheme);
+                    renderList(); // re-render to show remaining themes
+                });
+
+                li.appendChild(a);
+                themeList.appendChild(li);
+            }
+        });
+    }
+
+    function applyTheme(theme) {
+        if (theme === "dark") {
+            root.setAttribute("data-theme", "dark");
+        } else if (theme === "highContrast") {
+            root.setAttribute("data-theme", "highContrast");
+        } else {
+            root.removeAttribute("data-theme");
+        }
+    }
+
+    renderList();
+});
+</script>
+
+  <div class="app-layout">
+    <div class="app-layout__sidebar" id="appPageNavigation">
+      <nav class="app-nav">
   <ul class="app-nav__list">
     
 
@@ -94,6 +215,8 @@
     
     
     
+    
+    
 
     
 
@@ -104,10 +227,10 @@
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -423,7 +546,7 @@
       
       
       
-      <a href="/design-system/components/pagination" class="app-nav__link ">
+      <a href="/design-system/components/pagination" class="app-nav__link app-nav__link--active">
         Pagination
       </a>
       
@@ -972,3 +1095,160 @@
 
   </ul>
 </nav>
+    </div>
+    <div class="app-layout__content" id="main-content">
+      
+        <div class="app-page-title">
+          
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Pagination</h1>
+
+            </div>
+          </div>
+        </div>
+        <div class="app-page-content">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+   
+
+
+
+
+
+
+<h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+  Component information
+</h1>
+
+
+<span class="govuk-tag govuk-tag--teal fcdo-last-updated">
+  Last update on 9 July 2026
+</span>
+
+    <p class="govuk-body">Help users navigate forwards and backwards through a series of pages.</p>
+
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            <nav class="fcdo-pagination" aria-label="Pagination">
+    <div class="fcdo-pagination__prev">
+        <a class="fcdo-pagination__link" href="#" rel="prev">
+            <svg class="fcdo-pagination__icon fcdo-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="fcdo-pagination__link-title">
+                Previous<span class="fcdo-display-none"> page</span>
+            </span>
+        </a>
+    </div>
+    <ul class="fcdo-pagination__list">
+        <li class="fcdo-pagination__item">
+            <a class="fcdo-pagination__link" href="#" aria-label="Page 1">
+                1
+            </a>
+        </li>
+        <li class="fcdo-pagination__item fcdo-pagination__item--current">
+            <a class="fcdo-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+            </a>
+        </li>
+        <li class="fcdo-pagination__item">
+            <a class="fcdo-pagination__link" href="#" aria-label="Page 3">
+                3
+            </a>
+        </li>
+    </ul>
+    <div class="fcdo-pagination__next">
+        <a class="fcdo-pagination__link" href="#" rel="next">
+            <span class="fcdo-pagination__link-title">
+                Next<span class="fcdo-display-none"> page</span>
+            </span>
+
+            <svg class="fcdo-pagination__icon fcdo-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+        </a>
+    </div>
+</nav>
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+  </div>
+ <div class="govuk-footer app-footer">
+  <div>
+    <div class="govuk-footer__meta">
+      <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+        <h2 class="govuk-visually-hidden">Support links</h2>
+        <ul class="govuk-footer__inline-list">
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Get help
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Accessibilty
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Cookies
+            </a>
+          </li>
+          <li class="govuk-footer__inline-list-item">
+            <a class="govuk-footer__link" href="#">
+              Privacy
+            </a>
+          </li>
+        </ul>
+        <!-- <svg
+          aria-hidden="true"
+          focusable="false"
+          class="govuk-footer__licence-logo"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 483.2 195.7"
+          height="17"
+          width="41">
+          <path
+            fill="currentColor"
+            d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145" />
+        </svg> -->
+        <span class="govuk-footer__licence-description govuk-!-font-size-16">
+          All content is available under the
+          <a
+            class="govuk-footer__link"
+            href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+            rel="license">Open Government Licence v3.0</a>, except where otherwise stated
+        </span>
+      </div>
+      <div class="govuk-footer__meta-item">
+        <a
+          class="govuk-footer__link govuk-footer__copyright-logo govuk-!-font-size-16"
+          href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">
+          © Crown copyright
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="/assets/javascript/fcdo-design-system.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+</body>
+
+</html>
