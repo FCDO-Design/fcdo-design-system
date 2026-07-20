@@ -1,5 +1,5 @@
 .fcdo-table {
-  @include fcdo-font-size(19, 25px);
+  @include fcdo-font-size(17, 25px);
   border-collapse: collapse;
   width: 100%;
 
@@ -21,8 +21,6 @@
   }
 
   &--sortable {
-    table-layout: fixed;
-
     .fcdo-table__header {
       position: relative;
       cursor: pointer;
@@ -40,8 +38,8 @@
         height: 9px;
         margin: auto 0;
         border: solid;
-        border-width: 2px 2px 0 0 !important;
-        border-color: var(--govuk-link-colour, #1a65a6) !important;
+        border-width: 1px 1px 0 0 !important;
+        border-color: #000 !important;
         clip-path: none !important;
       }
 

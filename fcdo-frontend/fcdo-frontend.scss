@@ -18,7 +18,8 @@ dd,
 label,
 select,
 input,
-button {
+button,
+strong {
     font-family: $fcdo-font-family !important;
     @include fcdo-font-size(17);
 }

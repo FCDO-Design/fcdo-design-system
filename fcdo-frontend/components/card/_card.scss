@@ -5,12 +5,13 @@
   margin-bottom: $fcdo-spacing-6;
 
   &__container {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 
   &__title {
+    @include fcdo-font-size(20);
     margin-bottom: $fcdo-spacing-2;
+    margin-top: 0;
   }
 
   &__description {

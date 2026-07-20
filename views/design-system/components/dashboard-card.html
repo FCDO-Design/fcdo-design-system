@@ -24,4 +24,15 @@
         </div>
         {% include "includes/app-view-component-code.html" %}
     </div>
+
+    <h2 class="govuk-heading-m">Full width</h2>
+    <p class="govuk-body">The full-width variant expands the component to fill the available horizontal space.</p>
+    
+    <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set isFullWidth = "true"%}
+            {% include "includes/component-html/dashboard-card.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
 {% endblock %}

@@ -1,3 +1,7 @@
 .fcdo-input {
     @include fcdo-input;
 }
+
+.fcdo-label {
+  @include fcdo-font-size(17);
+}

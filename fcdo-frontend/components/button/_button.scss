@@ -98,7 +98,7 @@
 
   &--icon {
     background-color: transparent;
-    color: fcdo-color("default", "1");
+    color: govuk-color("blue", "primary");
     box-shadow: none;
     padding:0;
     border:none;
@@ -107,7 +107,7 @@
     gap: 5px;
 
     &:hover, &:active, &:focus, &:focus-visible {
-      color: fcdo-color("default", "2");
+      color: fcdo-color("default", "1");
       background-color: transparent;
       box-shadow: none;
       outline: none;
@@ -118,6 +118,11 @@
       background-color: transparent;
       opacity: 0.5;
     }
+
+    &-divider {
+      padding-left: 15px;
+      border-left: 1px solid fcdo-color("default", "7");
+    }
   }
 
   &:link {
@@ -127,5 +132,6 @@
 
 .fcdo-button-group {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 15px;
 }

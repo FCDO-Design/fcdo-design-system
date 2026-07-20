@@ -146,22 +146,31 @@
   }
 
   &__sublink {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: $fcdo-spacing-2 $fcdo-spacing-3;
     text-decoration: none;
     color: govuk-color("blue");
     @include fcdo-font-size(17);
 
     &:hover {
-      text-decoration: underline;
-      text-decoration-thickness: 3px;
-      text-underline-offset: 5px;
+      color: fcdo-color("default", "1");
     }
 
     &:focus-visible {
       outline: 3px solid transparent;
       background: fcdo-color("default", "2");
       color: #fff;
+    }
+
+    &--active {
+      background-color: govuk-color("blue");
+      color: #fff;
+
+      &:hover {
+        color: #fff;
+      }
+
     }
   }
 

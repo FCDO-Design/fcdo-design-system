@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Data List
+{% endblock %}
+
+{% block pageTitle %}
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Data list</h1>
+{% endblock %}
+
+{% block content %}
+   {% set htmlFilePath = "component-html/data-list.html" %}
+{% set scssFilePath = "components/text-input/_data-list.scss" %}
+
+{% include "includes/app-component-updated-date.html" %}
+    <h1 class="govuk-heading-l">Component information</h1>
+    <p class="govuk-body">The data list component displays related pieces of information as a collection of key and value pairs. It is designed for presenting summary information, metadata, or details about an item, record, or entity.</p>
+
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% include "includes/component-html/data-list.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+
+    <h2 class="govuk-heading-s">Vertical</h2>
+      <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            {% set dataListType = "column" %}
+            {% include "includes/component-html/data-list.html" %}
+        </div>
+        {% include "includes/app-view-component-code.html" %}
+    </div>
+{% endblock %}

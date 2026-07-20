@@ -149,6 +149,11 @@
         opacity: 0.75;
       }
     }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
   }
 
   &__text {

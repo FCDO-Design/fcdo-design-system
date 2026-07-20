@@ -232,5 +232,14 @@ router.get('/design-system/components/collapsible-card', (req, res) => {
     res.render('design-system/components/collapsible-card.html');
 });
 
+// paginantion
+router.get('/design-system/components/pagination', (req, res) => {
+    res.render('design-system/components/pagination.html');
+});
+
+// data list
+router.get('/design-system/components/data-list', (req, res) => {
+    res.render('design-system/components/data-list.html');
+});
 
 module.exports = router;

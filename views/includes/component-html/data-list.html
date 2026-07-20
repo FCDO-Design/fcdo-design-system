@@ -1,0 +1,36 @@
+{% if dataListType != "column" %}
+<dl class="fcdo-data-list">
+  <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+
+   <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+
+   <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+</dl>
+
+{%else%}
+  <dl class="fcdo-data-list fcdo-data-list--column">
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+  </dl>
+{% endif %}

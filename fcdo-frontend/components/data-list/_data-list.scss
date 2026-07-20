@@ -1,0 +1,63 @@
+.fcdo-data-list {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  @include fcdo-media-query('desktop') {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  &--background {
+    padding: $fcdo-spacing-3;
+    background-color: fcdo-color("default", "9");
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px 15px 0;
+    border-bottom: 1px solid fcdo-color("default", "7");
+
+   @include fcdo-media-query('desktop') {
+    border-right: 1px solid fcdo-color("default", "7");
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+    &:last-child {
+      border-right: 0;
+      border-bottom: 0;
+    }
+  }
+
+  &__key {
+    font-weight: 700;
+  }
+
+  &__value {
+    margin: 0;
+  }
+
+  &__link {
+    display: block;
+    margin-top: $fcdo-spacing-2;
+  }
+
+  &--column {
+    gap: 15px;
+    flex-direction: column;
+
+    .fcdo-data-list__item {
+      padding: 0 0 $fcdo-spacing-3;
+      border-right: 0;
+      border-bottom: 1px solid fcdo-color("default", "7");
+
+      &:last-child {
+        border: 0;
+      }
+
+    }
+  }
+}
