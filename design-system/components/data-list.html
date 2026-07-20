@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-FCDO Design System - FCDO Frontend CSS
+    Data List
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -218,6 +218,8 @@ FCDO Design System - FCDO Frontend CSS
     
     
     
+    
+    
 
     
 
@@ -228,10 +230,10 @@ FCDO Design System - FCDO Frontend CSS
 
       
       
-      <button class="app-nav__toggle ">Components</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -407,7 +409,7 @@ FCDO Design System - FCDO Frontend CSS
       
       
       
-      <a href="/design-system/components/data-list" class="app-nav__link ">
+      <a href="/design-system/components/data-list" class="app-nav__link app-nav__link--active">
         Data List
       </a>
       
@@ -978,8 +980,6 @@ FCDO Design System - FCDO Frontend CSS
     
     
     
-    
-    
 
     
 
@@ -990,10 +990,10 @@ FCDO Design System - FCDO Frontend CSS
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Importing Assets</button>
+      <button class="app-nav__toggle ">Importing Assets</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -1029,7 +1029,7 @@ FCDO Design System - FCDO Frontend CSS
       
       
       
-      <a href="/get-started/css-and-javascript" class="app-nav__link app-nav__link--active">
+      <a href="/get-started/css-and-javascript" class="app-nav__link ">
         Using CSS and JavaScript
       </a>
       
@@ -1126,8 +1126,8 @@ FCDO Design System - FCDO Frontend CSS
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-<span class="govuk-caption-m">Get Started</span>
-<h1 class="govuk-heading-l">Importing Assets</h1>
+    <span class="govuk-caption-m">Components</span>
+    <h1 class="govuk-heading-l">Data list</h1>
 
             </div>
           </div>
@@ -1136,30 +1136,84 @@ FCDO Design System - FCDO Frontend CSS
           <div class="govuk-grid-row">
             <div class="govuk-grid-column-full">
               
-<h1 class="govuk-heading-l">Using CSS and JavaScript</h1>
-<p class="govuk-body">To use the CSS and JavaScript from FCDO Frontend include the compiled CSS file directly in your HTML:</p>
+   
 
-<div class="fcdo-card">
-    <h2 class="govuk-heading-m">Set up and extend GOV.UK Frontend</h2>
 
-    <p class="govuk-body">Next, follow <a href="https://frontend.design-system.service.gov.uk/install-using-precompiled-files/" class="govuk-link">the instructions for installing GOV.UK Frontend</a> and continue to:</p>
 
-    <p class="govuk-body">1. Add another link tag for FCDO Frontend styles following GOV.UK Frontend styles in the <code>head</code> tag:</p>
 
-    <pre><code class="language-html">&lt;link rel="stylesheet" href="/stylesheets/govuk-frontend.min.css" /&gt;
-&lt;link rel="stylesheet" href="/stylesheets/fcdo-frontend.min.css"&gt;</code></pre>
 
-    <p class="govuk-body">
-        2. Add script tags for FCDO Frontend JavaScript alongside GOV.UK Frontend scripts at the bottom of the <code>body</code> tag.
-    </p>
 
-    <pre><code class="language-html">&lt;script type="module" src="/javascript/govuk-frontend.min.js"&gt;&lt;/script&gt;
-&lt;script type="module"&gt;
-    import { initAll } from '/javascript/govuk-frontend.min.js'
-    initAll()
-&lt;/script&gt;
-&lt;script type="module" src="/javascript/fcdo-frontend.min.js"&gt;&lt;/script&gt;</code></pre>
-    
+<h1 class="govuk-heading-l govuk-!-margin-bottom-2">
+  Component information
+</h1>
+
+
+<span class="govuk-tag govuk-tag--teal fcdo-last-updated">
+  Last update on 13 July 2026
+</span>
+
+    <h1 class="govuk-heading-l">Component information</h1>
+    <p class="govuk-body">The data list component displays related pieces of information as a collection of key and value pairs. It is designed for presenting summary information, metadata, or details about an item, record, or entity.</p>
+
+   <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            
+<dl class="fcdo-data-list">
+  <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+
+   <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+
+   <div class="fcdo-data-list__item">
+    <dt class="fcdo-data-list__key">Programme finance</dt>
+    <dd class="fcdo-data-list__value">£25,000,000 <a href="#" class="govuk-link fcdo-data-list__link">Optional link</a></dd>
+  </div>
+</dl>
+
+
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
+
+    <h2 class="govuk-heading-s">Vertical</h2>
+      <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            
+            
+  <dl class="fcdo-data-list fcdo-data-list--column">
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+
+    <div class="fcdo-data-list__item">
+      <dt class="fcdo-data-list__key">Programme finance</dt>
+      <dd class="fcdo-data-list__value">£25,000,000</dd>
+    </div>
+  </dl>
+
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
+
             </div>
           </div>
         </div>
