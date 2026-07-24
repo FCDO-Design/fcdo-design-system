@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title>
     
-Alert
+Grid
  - FCDO Design System
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -218,8 +218,6 @@ Alert
     
     
     
-    
-    
 
     
 
@@ -230,10 +228,10 @@ Alert
 
       
       
-      <button class="app-nav__toggle app-nav__toggle--active">Components</button>
+      <button class="app-nav__toggle ">Components</button>
       
 
-      <ul class="app-nav__sublist app-nav__sublist--show">
+      <ul class="app-nav__sublist ">
         
     
     
@@ -769,7 +767,7 @@ Alert
       
       
       
-      <a href="/design-system/components/utility-navigation" class="app-nav__link app-nav__link--active">
+      <a href="/design-system/components/utility-navigation" class="app-nav__link ">
         Utility navigation
       </a>
       
@@ -793,6 +791,8 @@ Alert
     
     
     
+    
+    
 
     
 
@@ -803,10 +803,10 @@ Alert
 
       
       
-      <button class="app-nav__toggle ">Layout</button>
+      <button class="app-nav__toggle app-nav__toggle--active">Layout</button>
       
 
-      <ul class="app-nav__sublist ">
+      <ul class="app-nav__sublist app-nav__sublist--show">
         
     
     
@@ -822,7 +822,7 @@ Alert
       
       
       
-      <a href="/design-system/layout/grid" class="app-nav__link ">
+      <a href="/design-system/layout/grid" class="app-nav__link app-nav__link--active">
         Grid system
       </a>
       
@@ -1179,8 +1179,8 @@ Alert
           <div class="fcdo-row">
             <div class="fcdo-col">
               
-<span class="govuk-caption-m">Components</span>
-<h1 class="govuk-heading-l">Utility navigation</h1>
+<span class="govuk-caption-m">Layout</span>
+<h1 class="govuk-heading-l">Grid system</h1>
 
             </div>
           </div>
@@ -1189,15 +1189,17 @@ Alert
           <div class="fcdo-row">
             <div class="fcdo-col">
               
-   
 
 
 
 
+
+
+  
 
 
 <h1 class="govuk-heading-l govuk-!-margin-bottom-2">
-  Component information
+  Grid system information
 </h1>
 
 
@@ -1205,38 +1207,428 @@ Alert
   Last update on 24 July 2026
 </span>
 
-    <p class="govuk-body">Use the utility navigation component to provide quick access to important link and services.</p>
 
-<div class="fcdo-component">
-    <div class="fcdo-component__example">
-        <div class="fcdo-utility-navigation">
-    <ul class="fcdo-utility-navigation__list">
-        <li class="fcdo-utility-navigation__item">
-            <a href="#" class="fcdo-utility-navigation__link">
-                <span class="fcdo-utility-navigation__icon material-symbols-outlined">search</span>
-                <span class="fcdo-utility-navigation__text">Search Programmes</span>
-            </a>
-        </li>
-        <li class="fcdo-utility-navigation__item">
-            <a href="#" class="fcdo-utility-navigation__link">
-                <span class="fcdo-utility-navigation__icon material-symbols-outlined">assignment</span>
-                <span class="fcdo-utility-navigation__text">My Programmes</span>
-            </a>
-        </li>
-        <li class="fcdo-utility-navigation__item">
-            <a href="#" class="fcdo-utility-navigation__link">
-                <span class="fcdo-utility-navigation__icon material-symbols-outlined">notifications</span>
-                <span class="fcdo-utility-navigation__text">Notifications</span>
-            </a>
-        </li>
-    </ul>
-</div>
+<p class="govuk-body">
+    The FCDO Grid is a responsive 12-column layout system for creating flexible page layouts.
+</p>
+
+<h2 class="govuk-heading-m">Basic grid example</h2>
+          <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            
+            
+<div class="fcdo-container">
+    <div class="fcdo-row">
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
     </div>
-    <a class="fcdo-component__link" href="#">HTML</a>
+</div>
+
+
+
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
 <div class="fcdo-component__html html">
     <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
     <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
 </div>
+    </div>
+<h2 class="govuk-heading-m">Fluid grid example</h2>
+          <div class="fcdo-component">
+        <div class="fcdo-component__example">
+            
+            
+
+
+<div class="fcdo-container-fluid">
+    <div class="fcdo-row">
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
+        <div class="fcdo-col-sm-12 fcdo-col-lg-4">Column</div>
+    </div>
+</div>
+
+        </div>
+        <a class="fcdo-component__link" href="#">HTML</a>
+<div class="fcdo-component__html html">
+    <button class="fcdo-button fcdo-button--icon fcdo-component__button copyHTML" type="button"><span class="material-symbols-outlined">content_copy</span> Copy code</button>
+    <pre class="language-html"><code class="language-html" id="htmlCode"></code></pre>
+</div>
+    </div>
+
+    <div class="fcdo-collapsible-card">
+  <details class="fcdo-collapsible-card__container">
+    <summary class="govuk-heading-m fcdo-collapsible-card__title">
+      How it works
+    </summary>
+    <div class="fcdo-collapsible-card__content">
+        <p class="govuk-body">
+            The FCDO Grid uses a 12-column flexbox layout system to create responsive page structures.
+            It allows content to be arranged into columns that adapt across different screen sizes.
+        </p>
+
+        <p class="govuk-body">
+            The grid is made up of three main building blocks:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <strong>Container</strong> - controls the maximum width of page content and provides horizontal spacing.
+            </li>
+            <li>
+                <strong>Row</strong> - creates a horizontal group of columns and manages spacing between them.
+            </li>
+            <li>
+                <strong>Columns</strong> - define how much space content occupies within the 12-column grid.
+            </li>
+        </ul>
+        <div class="govuk-inset-text">
+            Columns should always be placed inside a row. Rows should be placed inside a container.
+        </div>
+        <h2 class="govuk-heading-m">
+            Containers
+        </h2>
+        <p class="govuk-body">
+            Containers provide the structure for page content by controlling the maximum width and
+            applying horizontal spacing.
+        </p>
+        <p class="govuk-body">
+            Use <code class="fcdo-code--in-page">fcdo-container</code> for a responsive fixed-width container or
+            <code class="fcdo-code--in-page">fcdo-container-fluid</code> when content should span the full available width.
+        </p>
+        <h2 class="govuk-heading-m">
+            Rows
+        </h2>
+        <p class="govuk-body">
+            Rows group columns together and manage the spacing between columns using gutters.
+        </p>
+        <p class="govuk-body">
+            A row should only contain columns or nested rows within columns.
+        </p>
+        <h2 class="govuk-heading-m">
+            Columns
+        </h2>
+        <p class="govuk-body">
+            The grid is divided into 12 equal columns. Column classes define how many of these
+            columns an element should occupy.
+        </p>
+        <p class="govuk-body">
+            For example, <code class="fcdo-code--in-page">fcdo-col-6</code> occupies half of the available row width,
+            while <code class="fcdo-code--in-page">fcdo-col-12</code> occupies the full width.
+        </p>
+
+        
+        <h2 class="govuk-heading-m">
+            Responsive columns
+        </h2>
+        <p class="govuk-body">
+            Responsive classes allow layouts to change depending on screen size.
+        </p>
+        <p class="govuk-body">
+            Add a breakpoint prefix to change the column width at different viewport sizes.
+        </p>
+        <table class="fcdo-table govuk-!-margin-bottom-5">
+            <thead class="fcdo-table__head">
+                <tr class="fcdo-table__row">
+                    <th class="fcdo-table__header">
+                        Prefix
+                    </th>
+                    <th class="fcdo-table__header">
+                        Breakpoint
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="fcdo-table__body">
+                <tr class="fcdo-table__row">
+                    <td class="fcdo-table__cell">
+                        fcdo-col-sm
+                    </td>
+                    <td class="fcdo-table__cell">
+                        576px and above
+                    </td>
+                </tr>
+                <tr class="fcdo-table__row">
+                    <td class="fcdo-table__cell">
+                        fcdo-col-md
+                    </td>
+                    <td class="fcdo-table__cell">
+                        768px and above
+                    </td>
+                </tr>
+                <tr class="fcdo-table__row">
+                    <td class="fcdo-table__cell">
+                        fcdo-col-lg
+                    </td>
+                    <td class="fcdo-table__cell">
+                        992px and above
+                    </td>
+                </tr>
+                <tr class="fcdo-table__row">
+                    <td class="fcdo-table__cell">
+                        fcdo-col-xl
+                    </td>
+                    <td class="fcdo-table__cell">
+                        1200px and above
+                    </td>
+                </tr>
+                <tr class="fcdo-table__row">
+                    <td class="fcdo-table__cell">
+                        fcdo-col-xxl
+                    </td>
+                    <td class="fcdo-table__cell">
+                        1400px and above
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="govuk-heading-m">
+            Gutters
+        </h2>
+        <p class="govuk-body">
+            Gutters control the spacing between columns.
+        </p>
+        <p class="govuk-body">
+            Use gutter classes to increase or decrease spacing while maintaining consistent
+            alignment across layouts.
+        </p>
+        <p class="govuk-body">
+            Available classes include:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <code class="fcdo-code--in-page">fcdo-g-0</code> to <code class="fcdo-code--in-page">fcdo-g-5</code> - horizontal and vertical spacing
+            </li>
+            <li>
+                <code class="fcdo-code--in-page">fcdo-gx-0</code> to <code class="fcdo-code--in-page">fcdo-gx-5</code> - horizontal spacing only
+            </li>
+            <li>
+                <code class="fcdo-code--in-page">fcdo-gy-0</code> to <code class="fcdo-code--in-page">fcdo-gy-5</code> - vertical spacing only
+            </li>
+        </ul>
+        <h2 class="govuk-heading-m">
+            Offsets
+        </h2>
+        <p class="govuk-body">
+            Offsets allow columns to be moved to the right by a specified number of columns.
+        </p>
+        <p class="govuk-body">
+            Use offset classes when content needs additional spacing before it begins.
+        </p>
+        <h2 class="govuk-heading-m">
+            Column ordering
+        </h2>
+        <p class="govuk-body">
+            The grid supports changing the visual order of columns without changing the HTML structure.
+        </p>
+        <p class="govuk-body">
+            Ordering classes can also be applied responsively using breakpoint prefixes.
+        </p>
+        <h2 class="govuk-heading-m">
+            Alignment
+        </h2>
+        <p class="govuk-body">
+            Alignment utilities allow rows and columns to be positioned horizontally or vertically.
+        </p>
+        <p class="govuk-body">
+            Available utilities include:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Horizontal alignment using <code class="fcdo-code--in-page">fcdo-justify-content-*</code>
+            </li>
+            <li>
+                Vertical alignment using <code class="fcdo-code--in-page">fcdo-align-items-*</code>
+            </li>
+            <li>
+                Individual column alignment using <code class="fcdo-code--in-page">fcdo-align-self-*</code>
+            </li>
+        </ul>
+        <h2 class="govuk-heading-m">
+            Nesting
+        </h2>
+        <p class="govuk-body">
+            Columns can contain nested rows to create more complex layouts.
+        </p>
+        <p class="govuk-body">
+            Nested grids should always remain inside a column to maintain correct spacing
+            and alignment.
+        </p>
+        <h2 class="govuk-heading-m">
+            Best practice
+        </h2>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Use containers to create consistent page widths.
+            </li>
+            <li>
+                Keep column structures simple and avoid unnecessary nesting.
+            </li>
+            <li>
+                Use responsive classes to create layouts that work across devices.
+            </li>
+            <li>
+                Use gutters instead of custom margins for spacing between columns.
+            </li>
+            <li>
+                Ensure column widths do not exceed twelve columns within a row.
+            </li>
+        </ul>
+
+
+        <h2 class="govuk-heading-m">
+    Breakpoints
+</h2>
+<p class="govuk-body">
+    Breakpoints define the screen sizes where the grid layout can change.
+    The FCDO Grid uses a mobile-first approach, meaning layouts start from
+    the smallest screen size and progressively adapt for larger screens.
+</p>
+<p class="govuk-body">
+    Breakpoint classes apply from the specified width and above. For example,
+    <code>fcdo-col-md-6</code> applies at 768px and larger screen sizes.
+</p>
+
+<table class="govuk-table">
+    <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th class="govuk-table__header">
+                Name
+            </th>
+            <th class="govuk-table__header">
+                Prefix
+            </th>
+            <th class="govuk-table__header">
+                Value
+            </th>
+            <th class="govuk-table__header">
+                Description
+            </th>
+        </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Extra small
+            </td>
+            <td class="govuk-table__cell">
+                -
+            </td>
+            <td class="govuk-table__cell">
+                0px
+            </td>
+            <td class="govuk-table__cell">
+                Default layout for mobile devices.
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Small
+            </td>
+            <td class="govuk-table__cell">
+                <code>sm</code>
+            </td>
+            <td class="govuk-table__cell">
+                576px
+            </td>
+            <td class="govuk-table__cell">
+                Larger mobile devices.
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Medium
+            </td>
+            <td class="govuk-table__cell">
+                <code>md</code>
+            </td>
+            <td class="govuk-table__cell">
+                768px
+            </td>
+            <td class="govuk-table__cell">
+                Tablet devices.
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Large
+            </td>
+            <td class="govuk-table__cell">
+                <code>lg</code>
+            </td>
+            <td class="govuk-table__cell">
+                992px
+            </td>
+            <td class="govuk-table__cell">
+                Desktop devices.
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Extra large
+            </td>
+            <td class="govuk-table__cell">
+                <code>xl</code>
+            </td>
+            <td class="govuk-table__cell">
+                1200px
+            </td>
+            <td class="govuk-table__cell">
+                Large desktop screens.
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                Extra extra large
+            </td>
+            <td class="govuk-table__cell">
+                <code>xxl</code>
+            </td>
+            <td class="govuk-table__cell">
+                1400px
+            </td>
+            <td class="govuk-table__cell">
+                Wide desktop screens.
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 class="govuk-heading-s">
+    Sass variables
+</h3>
+
+<pre class="app-code"><code>$fcdo-breakpoint-sm: 576px;
+$fcdo-breakpoint-md: 768px;
+$fcdo-breakpoint-lg: 992px;
+$fcdo-breakpoint-xl: 1200px;
+$fcdo-breakpoint-xxl: 1400px;</code></pre>
+
+<h3 class="govuk-heading-s">
+    Example
+</h3>
+
+<pre class="app-code"><code>&lt;div class="fcdo-col-12 fcdo-col-md-6 fcdo-col-lg-4"&gt;
+    Content
+&lt;/div&gt;</code></pre>
+
+<p class="govuk-body">
+    In this example:
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>
+        Below 768px: the column spans the full width.
+    </li>
+    <li>
+        From 768px: the column spans 6 of 12 columns.
+    </li>
+    <li>
+        From 992px: the column spans 4 of 12 columns.
+    </li>
+</ul>
+
+    </div>
+  </details>
 </div>
 
             </div>
