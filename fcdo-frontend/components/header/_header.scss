@@ -6,6 +6,12 @@
   &__container {
     display: flex;
     align-items: center;
+    padding: $fcdo-spacing-2 0;
+
+    &--application {
+      padding: 0;
+    }
+
   }
 
   &__logo {
@@ -19,7 +25,7 @@
     mask-position: 50% 0%;
     mask-size: 36px 36px;
 
-    @include fcdo-media-query('tablet') {
+    @include fcdo-media-query(md) {
           display: block;
       }
 
@@ -38,6 +44,10 @@
   &__link {
     text-decoration: none;
 
+    strong {
+           @include fcdo-font-size(24, 1);
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -47,12 +57,12 @@
     position:relative;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-    padding: 10px;
+    width: 45px;
+    height: 45px;
     margin-right: $fcdo-spacing-4;
     margin-left: -3px; // visually align with logo
 
@@ -84,8 +94,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20px;
-    height: 17px;
+    margin: auto;
+    width: 23px;
+    height: 20px;
     transition: transform 0.3s ease;
 
     span {
@@ -106,6 +117,7 @@
   &__item {
     display: flex;
     align-items: center;
+    gap: 5px;
     position: relative;
     padding: $fcdo-spacing-4 $fcdo-spacing-2;
     margin-right: -1px;
@@ -160,7 +172,7 @@
     display: none;
     @include fcdo-font-size(16, 1);
 
-      @include fcdo-media-query('tablet') {
+      @include fcdo-media-query(md) {
           display: block;
       }
   }

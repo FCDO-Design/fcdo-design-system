@@ -1,0 +1,267 @@
+// ==========================================================================
+// fcdo grid system
+// ==========================================================================
+
+// --------------------------------------------------------------------------
+// settings
+// --------------------------------------------------------------------------
+
+$fcdo-grid-columns: 12 !default;
+$fcdo-spacing-unit: 5px;
+
+$fcdo-grid-gutter-width: $fcdo-spacing-unit * 6;
+$fcdo-grid-gutter-width: 30px !default;
+
+$fcdo-grid-breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+
+$fcdo-container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+
+// --------------------------------------------------------------------------
+// mixins
+// --------------------------------------------------------------------------
+
+@mixin fcdo-breakpoint-up($breakpoint) {
+  $min: map-get($fcdo-grid-breakpoints, $breakpoint);
+
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// containers
+// --------------------------------------------------------------------------
+
+.fcdo-container,
+.fcdo-container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: calc(#{$fcdo-grid-gutter-width} / 2);
+  padding-right: calc(#{$fcdo-grid-gutter-width} / 2);
+  box-sizing: border-box;
+}
+
+@each $breakpoint, $width in $fcdo-container-max-widths {
+  @include fcdo-breakpoint-up($breakpoint) {
+    .fcdo-container {
+      max-width: $width;
+    }
+  }
+}
+
+// --------------------------------------------------------------------------
+// fcdo row
+// --------------------------------------------------------------------------
+
+.fcdo-row {
+  --fcdo-gutter-x: #{$fcdo-grid-gutter-width};
+  --fcdo-gutter-y: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: calc(var(--fcdo-gutter-x) / -2);
+  margin-right: calc(var(--fcdo-gutter-x) / -2);
+  margin-top: calc(var(--fcdo-gutter-y) * -1);
+}
+
+.fcdo-row > * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding-left: calc(var(--fcdo-gutter-x) / 2);
+  padding-right: calc(var(--fcdo-gutter-x) / 2);
+  margin-top: var(--fcdo-gutter-y);
+}
+
+// --------------------------------------------------------------------------
+// equal width columns
+// --------------------------------------------------------------------------
+
+.fcdo-col {
+  flex: 1 0 0%;
+}
+
+.fcdo-col-auto {
+  flex: 0 0 auto;
+  width: auto;
+}
+
+// --------------------------------------------------------------------------
+// fixed columns
+// --------------------------------------------------------------------------
+
+@for $i from 1 through $fcdo-grid-columns {
+
+  .fcdo-col-#{$i} {
+    flex: 0 0 auto;
+    width: percentage($i / $fcdo-grid-columns);
+  }
+
+}
+
+// --------------------------------------------------------------------------
+// responsive columns
+// --------------------------------------------------------------------------
+
+@each $breakpoint, $value in $fcdo-grid-breakpoints {
+
+  @include fcdo-breakpoint-up($breakpoint) {
+
+    .fcdo-col-#{$breakpoint} {
+      flex: 1 0 0%;
+    }
+
+    .fcdo-col-#{$breakpoint}-auto {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    @for $i from 1 through $fcdo-grid-columns {
+
+      .fcdo-col-#{$breakpoint}-#{$i} {
+        flex: 0 0 auto;
+        width: percentage($i / $fcdo-grid-columns);
+      }
+
+    }
+
+  }
+
+}
+
+// --------------------------------------------------------------------------
+// offsets
+// --------------------------------------------------------------------------
+
+@for $i from 0 through ($fcdo-grid-columns - 1) {
+
+  .fcdo-offset-#{$i} {
+    margin-left: percentage($i / $fcdo-grid-columns);
+  }
+
+}
+
+@each $breakpoint, $value in $fcdo-grid-breakpoints {
+
+  @include fcdo-breakpoint-up($breakpoint) {
+
+    @for $i from 0 through ($fcdo-grid-columns - 1) {
+
+      .fcdo-offset-#{$breakpoint}-#{$i} {
+        margin-left: percentage($i / $fcdo-grid-columns);
+      }
+
+    }
+
+  }
+
+}
+
+// --------------------------------------------------------------------------
+// gutters
+// --------------------------------------------------------------------------
+
+@for $i from 0 through 5 {
+
+  $gutter: $i * .5rem;
+
+  .fcdo-g-#{$i},
+  .fcdo-gx-#{$i} {
+    --fcdo-gutter-x: #{$gutter};
+  }
+
+  .fcdo-g-#{$i},
+  .fcdo-gy-#{$i} {
+    --fcdo-gutter-y: #{$gutter};
+  }
+
+}
+
+// --------------------------------------------------------------------------
+// row alignment
+// --------------------------------------------------------------------------
+
+.fcdo-justify-content-start   { justify-content: flex-start; }
+.fcdo-justify-content-center  { justify-content: center; }
+.fcdo-justify-content-end     { justify-content: flex-end; }
+.fcdo-justify-content-between { justify-content: space-between; }
+.fcdo-justify-content-around  { justify-content: space-around; }
+.fcdo-justify-content-evenly  { justify-content: space-evenly; }
+
+.fcdo-align-items-start    { align-items: flex-start; }
+.fcdo-align-items-center   { align-items: center; }
+.fcdo-align-items-end      { align-items: flex-end; }
+.fcdo-align-items-stretch  { align-items: stretch; }
+.fcdo-align-items-baseline { align-items: baseline; }
+
+// --------------------------------------------------------------------------
+// column alignment
+// --------------------------------------------------------------------------
+
+.fcdo-align-self-start    { align-self: flex-start; }
+.fcdo-align-self-center   { align-self: center; }
+.fcdo-align-self-end      { align-self: flex-end; }
+.fcdo-align-self-stretch  { align-self: stretch; }
+.fcdo-align-self-baseline { align-self: baseline; }
+
+// --------------------------------------------------------------------------
+// ordering
+// --------------------------------------------------------------------------
+
+.fcdo-order-first { order: -1; }
+.fcdo-order-last  { order: 13; }
+
+@for $i from 0 through 12 {
+
+  .fcdo-order-#{$i} {
+    order: $i;
+  }
+
+}
+
+@each $breakpoint, $value in $fcdo-grid-breakpoints {
+
+  @include fcdo-breakpoint-up($breakpoint) {
+
+    .fcdo-col-#{$breakpoint} {
+      flex: 1 0 0%;
+    }
+
+    @for $i from 0 through 12 {
+
+      .fcdo-order-#{$breakpoint}-#{$i} {
+        order: $i;
+      }
+
+    }
+
+    .fcdo-order-#{$breakpoint}-first {
+      order: -1;
+    }
+
+    .fcdo-order-#{$breakpoint}-last {
+      order: 13;
+    }
+
+  }
+
+}

@@ -1,8 +1,12 @@
 .app-page-title {
     margin: 0;
-    padding: $fcdo-spacing-3 $fcdo-spacing-6;
+    padding: $fcdo-spacing-3 $fcdo-spacing-3;
     border-bottom: 1px solid govuk-colour("mid-grey");
     background-color: #fff;
+
+    @include fcdo-media-query(md) {
+       padding: $fcdo-spacing-3 $fcdo-spacing-6; 
+    }
 
     .govuk-caption-s, .govuk-heading-l {
         margin-bottom: 0;

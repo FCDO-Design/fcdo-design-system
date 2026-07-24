@@ -2,6 +2,8 @@
 
 {% if pageTemplateHeading %}
   {% set heading = "Template information" %}
+{% elseif gridHeading %}
+  {% set heading = "Grid system information" %}
 {% elseif coloursHeading %}
   {% set heading = "FCDO colour palette" %}
 {% elseif typographyHeading %}

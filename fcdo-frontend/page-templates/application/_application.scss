@@ -3,7 +3,7 @@
   flex-direction: column;
   flex: 1 0 auto;
 
-  @include fcdo-media-query('desktop') {
+  @include fcdo-media-query(lg) {
     flex-direction: row;
   }
 
@@ -22,7 +22,7 @@
         display: none;
     }
 
-    @include fcdo-media-query('desktop') {
+    @include fcdo-media-query(lg) {
       display: block;
       position: relative;
       width: 50px;
@@ -34,7 +34,7 @@
       width: 100%;
       padding-right: $fcdo-spacing-2;
 
-      @include fcdo-media-query('desktop') {
+      @include fcdo-media-query(lg) {
         width: 300px;
         min-width: 300px;
       }
@@ -63,7 +63,7 @@
   &__title {
     padding: $fcdo-spacing-3;
 
-    @include fcdo-media-query('desktop') {
+    @include fcdo-media-query(lg) {
       padding: $fcdo-spacing-5 $fcdo-spacing-6 0 $fcdo-spacing-6;
     }
   }
@@ -72,7 +72,7 @@
     margin: $fcdo-spacing-2 $fcdo-spacing-3;
     flex-direction: column;
 
-    @include fcdo-media-query('desktop') {
+    @include fcdo-media-query(lg) {
       margin: $fcdo-spacing-4 $fcdo-spacing-6;
     }
   }

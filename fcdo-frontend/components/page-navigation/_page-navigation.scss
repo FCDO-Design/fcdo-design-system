@@ -44,7 +44,7 @@
     &-text {
       display: inline;
 
-      @include fcdo-media-query('desktop') {
+      @include fcdo-media-query(lg) {
         display: none;
       }
     }

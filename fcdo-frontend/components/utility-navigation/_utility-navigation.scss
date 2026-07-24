@@ -3,7 +3,7 @@
     padding: $fcdo-spacing-2 0;
     border-bottom: 1px solid govuk-color("black", "tint-80");
 
-    @include fcdo-media-query('tablet') {
+    @include fcdo-media-query(md) {
         &__icon {
             margin-right: $fcdo-spacing-1;
         }
@@ -43,7 +43,7 @@
     &__text {
         display: none;
 
-        @include fcdo-media-query('tablet') {
+        @include fcdo-media-query(md) {
             display: inline;
         }
     }

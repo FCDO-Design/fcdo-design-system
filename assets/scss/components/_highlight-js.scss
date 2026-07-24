@@ -6,3 +6,14 @@
 pre code.hljs span {
     font-family: $fcdo-font-family-mono !important;
 }
+
+code.fcdo-code--in-page {
+    color: #c8102e;
+}
+
+.fcdo-component .fcdo-row > div {
+    border: 1px solid govuk-colour("blue", $variant: "tint-50");
+    background: govuk-colour("blue", $variant: "tint-80");
+    padding: 20px;
+    text-align: center;
+}

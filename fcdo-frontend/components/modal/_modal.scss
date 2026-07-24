@@ -44,7 +44,7 @@
     }
 }
 
-@include fcdo-media-query('tablet') {
+@include fcdo-media-query(md) {
   .fcdo-dialog {
     position: fixed;
     top: 50%;
@@ -72,7 +72,7 @@
     left: 0;
     z-index: 1;
 
-    @include fcdo-media-query('tablet') {
+    @include fcdo-media-query(md) {
         background: rgb(0 0 0 / 30%);
     }
 

@@ -19,8 +19,12 @@
     }
 
     &__example {
-        padding: $fcdo-spacing-5;
+        padding: $fcdo-spacing-3;
         border-bottom: 1px solid $govuk-border-colour;
+
+        @include fcdo-media-query(lg) {
+            padding: $fcdo-spacing-5;
+        }
     }
 
     &__link {

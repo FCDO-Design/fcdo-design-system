@@ -20,10 +20,17 @@
     text-align: left;
   }
 
+  &--no-wrap {
+    .fcdo-table__header, .fcdo-table__cell {
+      white-space: nowrap;
+    }
+  }
+
   &--sortable {
     .fcdo-table__header {
       position: relative;
       cursor: pointer;
+      padding-right: 55px;
 
       /* Display chevrons */
       &::before,

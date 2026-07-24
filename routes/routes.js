@@ -242,4 +242,9 @@ router.get('/design-system/components/data-list', (req, res) => {
     res.render('design-system/components/data-list.html');
 });
 
+// layout grid
+router.get('/design-system/layout/grid', (req, res) => {
+    res.render('design-system/layout/grid.html');
+});
+
 module.exports = router;

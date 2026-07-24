@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 15px;
 
-  @include fcdo-media-query('desktop') {
+  @include fcdo-media-query(lg) {
     flex-direction: row;
     gap: 30px;
   }
@@ -20,7 +20,7 @@
     padding: 0 30px 15px 0;
     border-bottom: 1px solid fcdo-color("default", "7");
 
-   @include fcdo-media-query('desktop') {
+   @include fcdo-media-query(lg) {
     border-right: 1px solid fcdo-color("default", "7");
     border-bottom: 0;
     padding-bottom: 0;

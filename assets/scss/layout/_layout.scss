@@ -3,7 +3,7 @@
     flex-direction: column;
     width: 100%;
 
-    @media (min-width: 992px) {
+    @include fcdo-media-query(lg) {
         flex-direction: row;
     }
 
@@ -32,6 +32,11 @@
 .app-page-content {
     min-height: 100%;
     max-width: 1500px;
-    padding: $fcdo-spacing-7 $fcdo-spacing-6;
+    padding: $fcdo-spacing-7 $fcdo-spacing-3;
     background-color: fcdo-color("default", "9");
+
+    @include fcdo-media-query(md) {
+       padding: $fcdo-spacing-7 $fcdo-spacing-6; 
+    }
+
 }
