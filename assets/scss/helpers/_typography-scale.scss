@@ -1,91 +1,114 @@
+// ---------------------------------------------------------------------------------------------
+// typography scale
+// ---------------------------------------------------------------------------------------------
+
 $typography-scale: (
     48: (
-        mobile: (
+        sm: (
             font-size: 32px,
             line-height: 35px
         ),
-        tablet: (
+        md: (
             font-size: 48px,
             line-height: 50px
         )
     ),
     36: (
-        mobile: (
+        sm: (
             font-size: 27px,
             line-height: 30px
         ),
-        tablet: (
+        md: (
             font-size: 36px,
             line-height: 40px
         )
     ),
     24: (
-        mobile: (
+        sm: (
             font-size: 21px,
             line-height: 25px
         ),
-        tablet: (
+        md: (
             font-size: 24px,
             line-height: 30px
         )
     ),
+    20: (
+        sm: (
+            font-size: 17px,
+            line-height: 25px
+        ),
+        md: (
+            font-size: 20px,
+            line-height: 20px
+        )
+    ),
     19: (
-        mobile: (
+        sm: (
             font-size: 16px,
             line-height: 25px
         ),
-        tablet: (
+        md: (
             font-size: 19px,
             line-height: 30px
         )
     ),
     17: (
-        mobile: (
+        sm: (
             font-size: 17px,
             line-height: 25px
         ),
-        tablet: (
+        md: (
             font-size: 17px,
             line-height: 25px
         )
     ),
     16: (
-        mobile: (
+        sm: (
             font-size: 16px,
             line-height: 20px
         )
     )
 );
 
+
+// ---------------------------------------------------------------------------------------------
+// typography mixin
+// ---------------------------------------------------------------------------------------------
+
 @mixin fcdo-font-size($size, $override-line-height: null) {
-  $settings: map-get($typography-scale, $size);
 
-  @if $settings {
+    $settings: map-get($typography-scale, $size);
 
-    $mobile: map-get($settings, mobile);
+    @if $settings {
 
-    font-size: map-get($mobile, font-size);
+        // Mobile first
+        $sm: map-get($settings, sm);
 
-    // Use override if provided, otherwise fall back to map
-    @if $override-line-height != null {
-      line-height: $override-line-height;
-    } @else if map-has-key($mobile, line-height) {
-      line-height: map-get($mobile, line-height);
-    }
-
-    // Tablet
-    @if map-has-key($settings, tablet) {
-      @include fcdo-media-query(tablet) {
-        $tablet: map-get($settings, tablet);
-
-        font-size: map-get($tablet, font-size);
+        font-size: map-get($sm, font-size);
 
         @if $override-line-height != null {
-          line-height: $override-line-height;
-        } @else if map-has-key($tablet, line-height) {
-          line-height: map-get($tablet, line-height);
+            line-height: $override-line-height;
+        } @else if map-has-key($sm, line-height) {
+            line-height: map-get($sm, line-height);
         }
-      }
+
+
+        // Medium and above
+        @if map-has-key($settings, md) {
+
+            @include fcdo-media-query(md) {
+
+                $md: map-get($settings, md);
+
+                font-size: map-get($md, font-size);
+
+                @if $override-line-height != null {
+                    line-height: $override-line-height;
+                } @else if map-has-key($md, line-height) {
+                    line-height: map-get($md, line-height);
+                }
+            }
+        }
     }
-  }
 }

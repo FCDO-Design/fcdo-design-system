@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
 
-     @include fcdo-media-query("tablet") {
+     @include fcdo-media-query(md) {
       flex-direction: row;
     }
   }
@@ -26,7 +26,7 @@
     grid-template-columns: 1fr; // mobile: stacked
     gap: 0.5rem;
 
-    @include fcdo-media-query("tablet") {
+    @include fcdo-media-query(md) {
       grid-template-columns: repeat(2, 1fr); // tablet/desktop: 2 columns
       column-gap: 2rem;
     }
@@ -50,7 +50,7 @@
     color: #fff;
     text-align: center;
 
-    @include fcdo-media-query("tablet") {
+    @include fcdo-media-query(md) {
       margin-left: auto;
     }
 

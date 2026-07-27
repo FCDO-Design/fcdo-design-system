@@ -13,7 +13,7 @@
             display: none;
         }
 
-        @include fcdo-media-query("tablet") {
+        @include fcdo-media-query(md) {
             margin: 0;
             display: flex !important;
             gap: 30px;
@@ -31,7 +31,7 @@
             padding-left: $fcdo-spacing-1;
         }
 
-        @include fcdo-media-query("tablet") {
+        @include fcdo-media-query(md) {
             padding: $fcdo-spacing-2 0 $fcdo-spacing-2 0;
 
             &:hover,
@@ -80,7 +80,7 @@
             cursor: pointer;
         }
 
-        @include fcdo-media-query("desktop") {
+        @include fcdo-media-query(lg) {
             display: none;
         }
 
